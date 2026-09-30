@@ -1,4 +1,4 @@
-// Zero-dependency Anthropic Messages API client (raw HTTP + SSE) for the local llmux gateway.
+// Zero-dependency Anthropic Messages API client (raw HTTP + SSE).
 // - streaming only (long outputs, no HTTP timeout surprises)
 // - global in-flight limiter (default 5)
 // - exponential backoff on 429 / 5xx / overloaded / network / idle-stream errors
@@ -7,12 +7,11 @@ import https from "node:https";
 import { appendFileSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 
-export const BASE_URL = process.env.KO_LLM_BASE_URL || "http://127.0.0.1:3456";
-const API_KEY = process.env.KO_LLM_API_KEY || "x";
-// llmux forwards to subscription (OAuth) accounts; upstream answers 429 on every account unless the
-// first system block is the Claude Code identity line (measured 2026-09-30: without it 502 after
-// ~30 s of account cycling, with it 200 in ~1.8 s). Set KO_LLM_SYSTEM_PREFIX="" for a plain API key.
-const SYSTEM_PREFIX = process.env.KO_LLM_SYSTEM_PREFIX ?? "You are Claude Code, Anthropic's official CLI for Claude.";
+export const BASE_URL = process.env.KO_LLM_BASE_URL || "https://api.anthropic.com";
+const API_KEY = process.env.KO_LLM_API_KEY || process.env.ANTHROPIC_API_KEY || "";
+// Optional first system block, for an Anthropic-compatible gateway that requires a fixed preamble.
+// Empty by default: a direct API call needs nothing extra.
+const SYSTEM_PREFIX = process.env.KO_LLM_SYSTEM_PREFIX ?? "";
 
 function withSystemPrefix(body) {
   if (!SYSTEM_PREFIX) return body;

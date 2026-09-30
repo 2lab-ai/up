@@ -23,9 +23,9 @@
 
 ## 준비
 
-- LLM 게이트웨이: 기본값은 로컬 llmux `http://127.0.0.1:3456`의 Anthropic Messages API다(`x-api-key` 아무 값, 스트리밍 SSE). 다른 곳을 쓰려면 환경 변수로 바꾼다.
-  - `KO_LLM_BASE_URL`, `KO_LLM_API_KEY`
-  - `KO_LLM_SYSTEM_PREFIX` — llmux는 구독(OAuth) 계정으로 중계하므로 첫 system 블록이 Claude Code 식별 문장이어야 429를 피한다(기본값). 일반 API 키로 직접 부를 때는 빈 문자열로 둔다.
+- LLM API: Anthropic Messages API를 스트리밍(SSE)으로 직접 부른다. 기본 주소는 `https://api.anthropic.com`이고, 키는 `ANTHROPIC_API_KEY`(또는 `KO_LLM_API_KEY`)로 준다.
+  - `KO_LLM_BASE_URL` — Anthropic 호환 게이트웨이를 쓸 때 그 주소
+  - `KO_LLM_SYSTEM_PREFIX` — 게이트웨이가 고정 머리말을 요구할 때 첫 system 블록으로 붙일 문장(기본값 없음)
   - `KO_MAX_INFLIGHT`(기본 5): 동시에 보내는 요청 수 상한. 429·5xx·overloaded·네트워크 오류는 지수 백오프로 재시도한다.
 - 모델(`config.mjs`): 번역 `claude-opus-5-5`(effort high), 검토 `claude-fable-5-1`(effort high, 구조화 출력 JSON, 거절 시 서버 측 폴백 `claude-opus-4-8`). 번역 모델과 검토 모델이 같으면 `review.mjs`가 시작하지 않는다. 실제로 응답한 모델은 `review-report.json`의 `reviewer_served_by`에 남는다.
 - 원문은 작업 트리가 아니라 git 커밋에서 읽는다(`git show 7478ac2:<path>`). 작업 트리에는 번역본이 들어 있기 때문이다. 다른 커밋을 원문으로 쓰려면 `KO_SOURCE_REF=<ref>`를 준다.
