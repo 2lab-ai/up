@@ -5,7 +5,7 @@
     "content_license": "CC BY-NC 4.0",
     "code_license": "MIT"
   },
-  "generated_at": "2026-09-30T11:53:08.603Z",
+  "generated_at": "2026-09-30T12:34:27.562Z",
   "prompt_version": "ko-v1",
   "prompt_sha256": "92f02caf86c82a809c332a5517027c00f972f873a559ae3116d45f3b1cb7396d",
   "glossary_sha256": "c94f5052bafce23d9eddb5425ee8694dded6d01efc82e7b68eebef5662e1f8da",
@@ -596,7 +596,7 @@
     "docs/threads/part-1/7-ai.md": {
       "source_lang": "zh-CN",
       "source_sha256": "156263cb65310f6220a6836522c911ad02d0002aa47194fd42f906e93a6e5d12",
-      "output_sha256": "d1fcfee1880c03f5dc9983b3037b8e5f71b20a21c80dae6f2137c405bf19c93f",
+      "output_sha256": "b7ed4c85b86c5b02011d331594368856b72f963fddc0831a48c4f8f55b453305",
       "english_reference": "docs/en/threads/part-1/7-ai.md",
       "translate_attempts": 2,
       "gate_defects": 0,
@@ -680,7 +680,7 @@
     "docs/threads/part-2/my-story.md": {
       "source_lang": "zh-CN",
       "source_sha256": "87cae4c2ba5d838a873cc9d618373b8fb6b97c8fb681fbc01ba8b5b9bd1a90c5",
-      "output_sha256": "f7627b828462ae1f0d7fcbb16c4d04dad7ad51b25919c0a5ab1fa955ebe7e375",
+      "output_sha256": "b60f78dd77251b54eb2404adba656e16bfbac353b57fb634d6abf42eddce82a4",
       "english_reference": "docs/en/threads/part-2/my-story.md",
       "translate_attempts": 1,
       "gate_defects": 0,
