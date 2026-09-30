@@ -1,10 +1,10 @@
 ---
-title: Common 단어 목록
-description: Common 분야에서 가치가 높은 영어 용어를 모은 참고 목록. 실제 과제에서 항목을 골라 발음·연어·회상·문맥 속 사용을 연습한다.
+title: 공통 단어 목록
+description: 공통 분야에서 가치가 높은 영어 용어를 모은 참고 목록. 실제 과제에서 항목을 골라 발음·연어·회상·문맥 속 사용을 연습한다.
 updated: 2026-08-16
 ---
 
-# Common
+# 공통
 
 abstraction
 algorithm

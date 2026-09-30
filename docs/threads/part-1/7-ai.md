@@ -193,7 +193,7 @@ AI를 들이기 전후와 전이 후의 변화를 온전히 비교하고 싶다�
 
 고객, 동료, 학생, 아동의 정보, 의료 기록, 신분증, 공개되지 않은 계약서를 승인받지 않은 도구에 그대로 올리지 말라. 댓글이나 웹 페이지가 공개되어 있더라도 허락 여부, 꼭 필요한 최소 범위, 삭제 기한을 따져야 한다. 저작권이 있는 자료는 쓸 권리가 있는 범위 안에서만 다루고, 출처와 허가 기록을 남긴다.
 
-- OpenAI: [학습 모드 소개](https://openai.com/zh-Hans-CN/index/chatgpt-study-mode/); [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects)
+- OpenAI: [학습 모드 소개](https://openai.com/index/chatgpt-study-mode/); [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects)
 - Google: [Gemini 앱에서 학습 도구 사용하기](https://support.google.com/gemini/answer/16448384); [퀴즈, 플래시카드 등 만들기](https://support.google.com/gemini/answer/16275879); [Gemini Live](https://support.google.com/gemini/answer/15274899)
 - Anthropic: [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)
 - Google: [NotebookLM](https://notebooklm.google/)

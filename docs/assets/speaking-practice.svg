@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
-  <title id="title">Speaking practice setup</title>
-  <desc id="desc">A simple microphone, lyrics, and sound waves illustrating speaking and singing practice.</desc>
+  <title id="title">말하기 연습 장면</title>
+  <desc id="desc">마이크, 가사, 음파로 말하기와 노래 연습을 나타낸 그림. 연습 순환은 주의 깊게 듣기, 소리 내어 읽기, 리듬 따라 하기다.</desc>
   <rect width="1280" height="420" fill="#eef6f4"/>
-  <text x="640" y="60" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#153b45">speak out loud, then make it natural</text>
-  <text x="640" y="94" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" fill="#42656b">Pronunciation improves when sound leaves your mouth, not only when it stays in your head.</text>
+  <text x="640" y="60" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif" font-size="30" font-weight="700" fill="#153b45">소리 내어 말하고, 자연스럽게 다듬기</text>
+  <text x="640" y="94" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif" font-size="17" fill="#42656b">발음은 소리가 머릿속에만 머물 때가 아니라, 입 밖으로 나올 때 좋아진다.</text>
 
   <g transform="translate(145 125)">
     <rect x="78" y="0" width="92" height="156" rx="46" fill="#1f2933"/>
@@ -12,12 +12,12 @@
     <path d="M124 190 v48 M84 238 h80" stroke="#1f2933" stroke-width="14" stroke-linecap="round"/>
   </g>
 
-  <g transform="translate(455 132)" font-family="Inter, Arial, sans-serif">
+  <g transform="translate(455 132)" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif">
     <rect width="370" height="170" rx="18" fill="#ffffff" stroke="#cbd5d1" stroke-width="2"/>
-    <text x="32" y="48" font-size="22" font-weight="700" fill="#153b45">practice loop</text>
-    <text x="32" y="86" font-size="18" fill="#42656b">1. listen carefully</text>
-    <text x="32" y="118" font-size="18" fill="#42656b">2. read out loud</text>
-    <text x="32" y="150" font-size="18" fill="#42656b">3. imitate rhythm</text>
+    <text x="32" y="48" font-size="22" font-weight="700" fill="#153b45">연습 순환</text>
+    <text x="32" y="86" font-size="18" fill="#42656b">1. 주의 깊게 듣기</text>
+    <text x="32" y="118" font-size="18" fill="#42656b">2. 소리 내어 읽기</text>
+    <text x="32" y="150" font-size="18" fill="#42656b">3. 리듬 따라 하기</text>
   </g>
 
   <g transform="translate(910 142)">
@@ -25,6 +25,6 @@
     <path d="M0 120 C45 60 90 180 135 120 S225 180 270 120" fill="none" stroke="#2dd4bf" stroke-width="12" stroke-linecap="round"/>
     <circle cx="36" cy="32" r="11" fill="#0f766e"/>
     <circle cx="229" cy="35" r="11" fill="#0f766e"/>
-    <text x="135" y="186" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#153b45">voice + rhythm</text>
+    <text x="135" y="186" text-anchor="middle" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif" font-size="18" font-weight="700" fill="#153b45">목소리 + 리듬</text>
   </g>
 </svg>

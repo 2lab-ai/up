@@ -1,5 +1,21 @@
+import { execFileSync } from "node:child_process";
+
+// Skip every directory git ignores (.gitignore and .git/info/exclude), e.g. local clones and caches.
+let gitIgnoredDirectories = [];
+try {
+  gitIgnoredDirectories = execFileSync("git", ["ls-files", "--others", "--ignored", "--exclude-standard", "--directory"], {
+    encoding: "utf8",
+  })
+    .split("\n")
+    .filter((entry) => entry.endsWith("/"))
+    .map((entry) => `${entry}**`);
+} catch {
+  gitIgnoredDirectories = [];
+}
+
 export default {
   ignores: [
+    ...gitIgnoredDirectories,
     ".codex-artifact-work/**",
     ".ko-work/**",
     "scripts/ko/prompts/**",

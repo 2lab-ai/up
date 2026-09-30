@@ -1,10 +1,10 @@
 ---
-title: Vibe Coding (Agent) 단어 목록
-description: Vibe Coding (Agent) 분야에서 가치가 높은 영어 용어를 모은 참고 목록. 실제 과제에서 항목을 골라 발음·연어·회상·문맥 속 사용을 연습한다.
+title: 바이브 코딩 (에이전트) 단어 목록
+description: 바이브 코딩 (에이전트) 분야에서 가치가 높은 영어 용어를 모은 참고 목록. 실제 과제에서 항목을 골라 발음·연어·회상·문맥 속 사용을 연습한다.
 updated: 2026-08-16
 ---
 
-# Vibe Coding (Agent)
+# 바이브 코딩 (에이전트)
 
 agent
 agentic

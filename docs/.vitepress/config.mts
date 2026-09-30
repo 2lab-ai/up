@@ -248,6 +248,8 @@ function koreanThemeStrings() {
   };
 }
 
+const codeLanguageLabels: Record<string, string> = { markdown: "마크다운", md: "마크다운", text: "텍스트", txt: "텍스트" };
+
 const legacyHashRedirect = `
 (function () {
   var hash = window.location.hash || '';
@@ -287,6 +289,27 @@ export default defineConfig({
         }
       });
       // VitePress labels heading permalinks in English inside its bundled anchor plugin; relabel them in Korean.
+      // README.md pages are served at their directory (see rewrites), so point links at the directory.
+      md.core.ruler.push("readme-directory-links", (state) => {
+        for (const token of state.tokens) {
+          for (const child of token.children || []) {
+            if (child.type !== "link_open") continue;
+            const href = child.attrGet("href") || "";
+            if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href)) continue;
+            const match = href.match(/^((?:.*\/)?)README\.md(#.*)?$/);
+            if (match) child.attrSet("href", `${match[1] || "./"}${match[2] || ""}`);
+          }
+        }
+      });
+      // VitePress prints the fence language (markdown, text) in the corner of every code block.
+      const fence = md.renderer.rules.fence;
+      if (fence) {
+        md.renderer.rules.fence = (...args) =>
+          fence(...args).replace(
+            /<span class="lang">(markdown|md|text|txt)<\/span>/,
+            (_, language) => `<span class="lang">${codeLanguageLabels[language]}</span>`,
+          );
+      }
       md.core.ruler.push("korean-anchor-labels", (state) => {
         state.tokens.forEach((token, index) => {
           if (token.type !== "heading_open") return;
@@ -384,7 +407,7 @@ export default defineConfig({
         `원작: 한셴카이(byoungd)의 『인생 레벨업 가이드』 · 원문 <a href="${originalRepositoryUrl}">github.com/byoungd/up</a>`,
         `본문 <a href="${contentLicenseUrl}deed.ko">CC BY-NC 4.0</a> · 코드 MIT · 한국어 번역 <a href="${repositoryUrl}">2lab.ai</a> — 중국어 원문을 한국어로 옮김`,
       ].join("<br>"),
-      copyright: "Copyright © 2017-present byoungd and contributors · 한국어 번역 © 2026 2lab.ai",
+      copyright: "저작권 © 2017–현재 byoungd와 기여자 · 한국어 번역 © 2026 2lab.ai",
     },
   },
   // The pre-rendered 404.html takes its head from VitePress's built-in (English) not-found page data.
@@ -410,8 +433,11 @@ export default defineConfig({
     }
   },
   transformHead({ pageData }) {
+    // The 404 page has no address of its own: no canonical, Open Graph URL, or structured data.
+    if (pageData.isNotFound) return [];
     const route = routeFromRelativePath(pageData.relativePath);
-    const canonical = `${siteUrl}${route}${route ? "/" : ""}`;
+    const isIndexPage = /(^|\/)(README|index)\.md$/.test(pageData.relativePath);
+    const canonical = `${siteUrl}${route}${route && isIndexPage ? "/" : ""}`;
     const isBookHome = route === "";
     const isChapter = route.startsWith("threads/");
     const title = pageData.title || siteTitle;

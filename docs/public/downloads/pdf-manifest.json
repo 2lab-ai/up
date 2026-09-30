@@ -2,7 +2,7 @@
   "version": 2,
   "format": "PDF 1.7",
   "pageSize": "6 × 9.6 in",
-  "scope": "Main manuscript, glossary, and toolkit; archive and word lists remain online-only.",
+  "scope": "본문 원고, 용어와 방법 색인, 도구 상자. 옛글 보관함과 단어 목록은 온라인에서만 제공한다.",
   "inspector": {
     "name": "pypdf",
     "version": "6.16.2"
@@ -13,10 +13,10 @@
       "language": "ko-KR",
       "pages": 381,
       "chapters": 62,
-      "bytes": 4674561,
-      "sha256": "adedd5c05ae2e0296eb3dcb009d4b5687d919a058ae44bbb91060d91143c8ac1",
-      "sourceEpubSha256": "6767037163fd14e573d9c505b7f2fc36c6f4a986a066bdb44fc8ff18df750bb9",
-      "semanticSha256": "b5c43b1a29278a8ae309f7d37e677982b3a9b4b9a4164ef89bf35b8316ab8a33",
+      "bytes": 4671142,
+      "sha256": "17f41c071559ccf48e34d22651b2f5485b7b28fe6b324591195577a843d01988",
+      "sourceEpubSha256": "dd8c9c979318b5ee14994b5c1463d5f735aff1ee270161c150393f5574f30884",
+      "semanticSha256": "fadfd28fe53c4769ec78575acdabd89ad512ec16884acf36471ef1e6e1176e8d",
       "outlineEntries": 779,
       "linkAnnotations": 802,
       "images": 21,
