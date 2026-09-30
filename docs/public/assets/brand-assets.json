@@ -1,36 +1,22 @@
 {
   "version": 1,
   "sources": {
-    "logo.svg": "f3f2c83b865090ebabee7e4ed794e3acc9d78ef675eaace5416b8ae91ea6c70e",
-    "feature.svg": "714354ecf7069282f1c9f9642661d2f1b618f43f5381b8be5531d256d018bf91",
-    "feature-en.svg": "0b187ee711c46ea179d5653a47565e20fa80274267ecba27645915f321adb439",
-    "cover-portrait.svg": "a2c324a411993bc691e7bcd1ab3cb288b49326a3126d86ecedba3fc0cc3d3556",
-    "cover-portrait-en.svg": "6ea672368e7efca8e207008b473844db05e416c26f0e89bccca2e7ef4870d9c2"
+    "logo.svg": "f5d824d9554cd354628cc5521cb0e231c419ea5f1991602393834a65dac99780",
+    "feature.svg": "df252ffccd1e2650c10adbb0d6ff0bc65cf632cd47e20287b0eae681de1e567d",
+    "cover-portrait.svg": "78ea1c5cd14e1f0ec5d02575e0f9162fdeb6a8ef95c77253daee9d2a79c2e0ce"
   },
   "outputs": {
     "feature.png": {
       "source": "feature.svg",
       "width": 1200,
       "height": 630,
-      "sha256": "8c5a8bc68f1ca0caee0c127c850b410ccdd3359630210be64daec160c5e93497"
-    },
-    "feature-en.png": {
-      "source": "feature-en.svg",
-      "width": 1200,
-      "height": 630,
-      "sha256": "ccf28486d64d44519cf93beb5e070a27438134415a8bf411cd9ad0d2689d802f"
+      "sha256": "c23a981c0e6cfea99e1da00fd4c846477027a74584e65e378042379464503e76"
     },
     "cover-portrait.png": {
       "source": "cover-portrait.svg",
       "width": 1600,
       "height": 2560,
-      "sha256": "abf59f79f38a57c940eb4cc38685b858c84dc4697bc4ffc92d237ef8e13d8b8e"
-    },
-    "cover-portrait-en.png": {
-      "source": "cover-portrait-en.svg",
-      "width": 1600,
-      "height": 2560,
-      "sha256": "c00cce19ae41003bc2c2ef5f784b0dd377be230e2cce2fadcd3e7e6f43e4f864"
+      "sha256": "1b12da527231133fd71a6912797afec1e1bdf3c885aacc3f969835dfb214fa97"
     }
   }
 }

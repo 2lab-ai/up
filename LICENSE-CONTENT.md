@@ -1,16 +1,16 @@
-# Creative Commons Attribution-NonCommercial 4.0 International
+# 크리에이티브 커먼즈 저작자표시-비영리 4.0 국제
 
-The content identified in [LICENSE.md](LICENSE.md) is licensed under **CC BY-NC 4.0**.
+[LICENSE.md](LICENSE.md)에 명시한 콘텐츠에는 **CC BY-NC 4.0** 라이선스가 적용된다.
 
-You are free to share and adapt that material under these conditions:
+다음 조건을 지키면 해당 자료를 자유롭게 공유하고 변형할 수 있다.
 
-- **Attribution**: give appropriate credit, provide a link to the license, and indicate whether changes were made. Do not imply endorsement.
-- **NonCommercial**: do not use the material for commercial purposes without separate permission from the copyright holder.
-- **No additional restrictions**: do not apply legal or technical restrictions that prevent others from exercising the permissions the license grants.
+- **저작자표시**: 적절한 출처를 밝히고, 라이선스 링크를 제공하며, 변경 여부를 표시한다. 저작권자가 보증하는 것처럼 암시하지 않는다.
+- **비영리**: 저작권자에게 별도 허락을 받지 않았다면 자료를 상업적 목적으로 이용하지 않는다.
+- **추가 제한 금지**: 라이선스가 허용하는 권한을 다른 사람이 행사하지 못하게 막는 법적·기술적 제한을 걸지 않는다.
 
-This summary does not replace the legal code. The authoritative license text is available at:
+이 요약은 법률 전문을 대신하지 않는다. 효력이 있는 라이선스 원문은 다음에서 볼 수 있다.
 
-- Deed: <https://creativecommons.org/licenses/by-nc/4.0/>
-- Legal code: <https://creativecommons.org/licenses/by-nc/4.0/legalcode>
+- 라이선스 요약: <https://creativecommons.org/licenses/by-nc/4.0/>
+- 법률 전문: <https://creativecommons.org/licenses/by-nc/4.0/legalcode>
 
-Third-party material is excluded unless its attribution entry explicitly says otherwise.
+제3자 자료는 해당 출처 표시 항목에서 따로 명시하지 않는 한 이 라이선스에서 제외된다.

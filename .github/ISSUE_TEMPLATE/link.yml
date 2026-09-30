@@ -1,21 +1,21 @@
-name: Broken link
-description: Report a local or external link that no longer works.
-title: "[Link]: "
+name: 깨진 링크
+description: 더 이상 작동하지 않는 내부 또는 외부 링크를 알려 주세요.
+title: "[링크]: "
 labels: [broken-link]
 body:
   - type: input
     id: page
     attributes:
-      label: Page URL or path
+      label: 페이지 URL 또는 경로
     validations:
       required: true
   - type: input
     id: link
     attributes:
-      label: Broken target
+      label: 깨진 링크 대상
     validations:
       required: true
   - type: textarea
     id: replacement
     attributes:
-      label: Suggested official replacement
+      label: 대신 쓸 공식 링크 제안

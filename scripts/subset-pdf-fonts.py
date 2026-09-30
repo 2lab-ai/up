@@ -14,22 +14,47 @@ from fontTools.varLib.instancer import instantiateVariableFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EPUB = ROOT / "docs/public/downloads/life-level-up-guide-zh.epub"
+EPUB = ROOT / "docs/public/downloads/life-level-up-guide-ko.epub"
 FONT_DIR = ROOT / "book-assets/fonts"
+FALLBACK_FONT = FONT_DIR / "NotoSans-LifeLevelUp-IPA.ttf"
 OUTPUTS = {
-    400: FONT_DIR / "NotoSerifSC-LifeLevelUp-Regular.ttf",
-    700: FONT_DIR / "NotoSerifSC-LifeLevelUp-Bold.ttf",
+    400: FONT_DIR / "NotoSerifKR-LifeLevelUp-Regular.ttf",
+    700: FONT_DIR / "NotoSerifKR-LifeLevelUp-Bold.ttf",
 }
+# Title page, running header, and metadata strings drawn by scripts/build-pdf.py.
 EXTRA_TEXT = (
-    "人生进阶指南 AI 时代终身学习指南 韩先凯 目录 "
-    "https://byoungd.github.io/up/ CC BY-NC 4.0 2026-09-01 •"
+    "인생 레벨업 가이드 AI 시대 평생학습 가이드 한셴카이 지음 2lab.ai 옮김 차례 "
+    "영어, AI, 실제 프로젝트, 인생의 바닥에서 출발해 재측정하고, 전이하고, 회복하고, "
+    "책임질 수 있는 평생학습 시스템을 세웁니다. "
+    "https://dosi.dev/up/ 원작: https://github.com/byoungd/up 중국어 원문을 한국어로 옮김 "
+    "본문 CC BY-NC 4.0 2026-09-30 0123456789 \u2022 \u00b7 ..."
 )
-IPA_FALLBACK_CHARACTERS = set("ɪʌː")
 REQUIRED_SPACING_CHARACTERS = set(" \u00a0")
+# Han ideographs are never published in the Korean edition, so they never enter the subset.
+HAN_RANGES = ((0x3400, 0x4DBF), (0x4E00, 0x9FFF), (0xF900, 0xFAFF), (0x20000, 0x2FA1F))
 
 
-def publication_characters(epub_path: Path) -> set[str]:
-    characters = set(EXTRA_TEXT)
+def is_han(character: str) -> bool:
+    code = ord(character)
+    return any(start <= code <= end for start, end in HAN_RANGES)
+
+
+def baseline_characters() -> set[str]:
+    """Printable ASCII, Latin-1, common punctuation, and the 2,350 KS X 1001 Hangul syllables."""
+    characters = {chr(code) for code in range(0x20, 0x7F)}
+    characters.update(chr(code) for code in range(0xA0, 0x100))
+    characters.update(chr(code) for code in range(0x2010, 0x2027))
+    characters.update("\u2190\u2191\u2192\u2193\u00d7\u00f7\u2248\u2264\u2265\u00b1\u2026\u2022\u00b7")
+    # CJK corner, double-corner, double-angle, and angle brackets used for Korean titles.
+    characters.update("\u300c\u300d\u300e\u300f\u300a\u300b\u3008\u3009")
+    for lead in range(0xB0, 0xC9):
+        for trail in range(0xA1, 0xFF):
+            characters.add(bytes([lead, trail]).decode("euc_kr"))
+    return characters
+
+
+def epub_characters(epub_path: Path) -> set[str]:
+    characters: set[str] = set()
     with zipfile.ZipFile(epub_path) as archive:
         chapters = sorted(
             name
@@ -42,6 +67,10 @@ def publication_characters(epub_path: Path) -> set[str]:
             root = ET.fromstring(archive.read(name))
             for value in root.itertext():
                 characters.update(value)
+    return characters
+
+
+def printable(characters: set[str]) -> set[str]:
     return {
         character
         for character in characters
@@ -49,7 +78,7 @@ def publication_characters(epub_path: Path) -> set[str]:
             (character.isprintable() and not character.isspace())
             or character in REQUIRED_SPACING_CHARACTERS
         )
-        and character not in IPA_FALLBACK_CHARACTERS
+        and not is_han(character)
     }
 
 
@@ -92,13 +121,51 @@ def build_subset(source: Path, weight: int, characters: set[str], output: Path) 
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Regenerate the Chinese PDF font subsets from the current EPUB.")
-    parser.add_argument("--source-font", type=Path, required=True, help="Pinned NotoSerifSC[wght].ttf source file")
+    parser = argparse.ArgumentParser(description="Regenerate the Korean PDF font subsets (Noto Serif KR 400/700).")
+    parser.add_argument("--source-font", type=Path, required=True, help="Pinned NotoSerifKR[wght].ttf source file")
+    parser.add_argument("--epub", type=Path, default=EPUB, help="Korean EPUB whose chapter text must be covered")
+    parser.add_argument(
+        "--baseline",
+        action="store_true",
+        help="Also cover the KS X 1001 Hangul syllables, Latin-1, and common punctuation; allows a missing EPUB",
+    )
+    parser.add_argument(
+        "--text",
+        type=Path,
+        action="append",
+        default=[],
+        help="Extra UTF-8 files (for example Markdown sources) whose non-Han characters must be covered",
+    )
     args = parser.parse_args()
     source = args.source_font.resolve()
     if not source.exists():
         raise FileNotFoundError(source)
-    characters = publication_characters(EPUB)
+
+    characters = set(EXTRA_TEXT)
+    if args.epub.exists():
+        characters |= epub_characters(args.epub)
+    elif not args.baseline:
+        raise FileNotFoundError(f"{args.epub}: build the Korean EPUB first or pass --baseline")
+    for path in args.text:
+        characters |= set(path.read_text(encoding="utf-8"))
+    characters = printable(characters)
+
+    # Characters absent from Noto Serif KR (for example IPA letters) are drawn with the Noto Sans fallback.
+    source_cmap = TTFont(source, lazy=True).getBestCmap() or {}
+    fallback_cmap = TTFont(FALLBACK_FONT, lazy=True).getBestCmap() or {}
+    if args.baseline:
+        # Baseline coverage is best effort: keep only what the source font can draw.
+        characters |= {character for character in printable(baseline_characters()) if ord(character) in source_cmap}
+    uncovered = sorted(character for character in characters if ord(character) not in source_cmap)
+    unrenderable = [character for character in uncovered if ord(character) not in fallback_cmap]
+    if unrenderable:
+        raise ValueError(
+            f"neither {source.name} nor {FALLBACK_FONT.name} covers {len(unrenderable)} characters: "
+            f"{''.join(unrenderable[:40])}"
+        )
+    characters -= set(uncovered)
+    if uncovered:
+        print(f"fallback font covers {len(uncovered)} characters: {''.join(uncovered)}")
 
     with tempfile.TemporaryDirectory(prefix="life-level-up-fonts-") as temp_dir:
         generated = {}
@@ -108,7 +175,7 @@ def main() -> None:
             generated[destination] = target
         for destination, target in generated.items():
             destination.write_bytes(target.read_bytes())
-            print(f"updated {destination.relative_to(ROOT)} ({destination.stat().st_size} bytes)")
+            print(f"updated {destination.relative_to(ROOT)} ({destination.stat().st_size} bytes, {len(characters)} characters)")
 
 
 if __name__ == "__main__":

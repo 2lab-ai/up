@@ -7,6 +7,10 @@ docs/.vitepress/dist/
 outputs/
 output/pdf/
 tmp/
+__pycache__/
+
+# Local scratch space of the Korean translation work; never committed.
+.ko-work/
 playwright-report/
 test-results/
 

@@ -27,7 +27,7 @@ for (const candidate of candidates) {
 }
 
 if (!python) {
-  console.error("PDF 依赖不可用；请运行 python3 -m pip install -r requirements-pdf.txt");
+  console.error("PDF 의존성을 찾을 수 없습니다. python3 -m pip install -r requirements-pdf.txt 를 실행하세요");
   process.exit(1);
 }
 

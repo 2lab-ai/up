@@ -18,51 +18,40 @@ import { tmpdir } from "node:os";
 import { basename, dirname, extname, join, normalize, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createMarkdownRenderer } from "vitepress";
-import { enNavigation, publicationSections, zhNavigation } from "../docs/.vitepress/navigation.mjs";
+import { navigation, publicationSections } from "../docs/.vitepress/navigation.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DOCS = join(ROOT, "docs");
 const PUBLIC = join(DOCS, "public");
 const OUTPUT_DIR = join(PUBLIC, "downloads");
-const ONLINE_ROOT = "https://byoungd.github.io/up/";
+const ONLINE_ROOT = "https://dosi.dev/up/";
+const ORIGINAL_ROOT = "https://github.com/byoungd/up";
 const checkOnly = process.argv.includes("--check");
 const fixedTime = new Date("1980-01-01T00:00:00Z");
 const zipEnv = { ...process.env, TZ: "UTC" };
 
+// Single Korean edition, translated from the original Chinese manuscript.
 const editions = [
   {
-    key: "zh",
-    file: "life-level-up-guide-zh.epub",
-    navigation: zhNavigation,
-    lang: "zh-CN",
-    title: "人生进阶指南",
-    subtitle: "AI 时代终身学习指南",
-    creator: "韩先凯",
-    frontMatter: "开卷",
-    appendices: "附录与工具箱",
-    contents: "目录",
-    coverAlt: "《人生进阶指南》封面",
-    description: "从英语、AI、真实项目与人生低谷出发，建立能够复测、迁移、恢复并承担责任的终身学习系统。",
+    key: "ko",
+    file: "life-level-up-guide-ko.epub",
+    navigation,
+    lang: "ko-KR",
+    title: "인생 레벨업 가이드",
+    subtitle: "AI 시대 평생학습 가이드",
+    creator: "한셴카이",
+    translator: "2lab.ai",
+    frontMatter: "책을 열며",
+    appendices: "부록과 도구 상자",
+    contents: "차례",
+    coverAlt: "인생 레벨업 가이드 표지",
+    description: "영어, AI, 실제 프로젝트, 인생의 바닥에서 출발해 재측정하고, 전이하고, 회복하고, 책임질 수 있는 평생학습 시스템을 세웁니다.",
+    attribution: "원작: 한셴카이(byoungd), 중국어 원문을 한국어로 옮김",
     coverSource: join(PUBLIC, "assets/cover-portrait.png"),
-  },
-  {
-    key: "en",
-    file: "life-level-up-guide-en.epub",
-    navigation: enNavigation,
-    lang: "en-US",
-    title: "Life Level-up Guide",
-    subtitle: "Lifelong Learning Guide for the AI Era",
-    creator: "Han Xiankai",
-    frontMatter: "Front Matter",
-    appendices: "Appendices and Toolkit",
-    contents: "Contents",
-    coverAlt: "Life Level-up Guide cover",
-    description: "A lifelong-learning system for English, AI, real projects, difficult seasons, evidence, transfer, recovery, and responsibility.",
-    coverSource: join(PUBLIC, "assets/cover-portrait-en.png"),
   },
 ];
 
-const allNavigationItems = [...zhNavigation, ...enNavigation].flatMap(({ items }) => items);
+const allNavigationItems = navigation.flatMap(({ items }) => items);
 const sourceToRoute = new Map(allNavigationItems.map(({ source, link }) => [source, link]));
 const routeToSource = new Map(
   allNavigationItems.map(({ source, link }) => [link.replace(/^\/+|\/+$/g, ""), source]),
@@ -127,7 +116,6 @@ function onlineUrlForSource(source, hash = "", query = "") {
   let route = configured;
   if (!route) {
     if (source === "README.md") route = "/";
-    else if (source === "en/README.md") route = "/en/";
     else if (source.endsWith("/README.md")) route = `/${source.slice(0, -"README.md".length)}`;
     else route = `/${source.replace(/\.md$/, "")}`;
   }
@@ -220,18 +208,18 @@ function validateEpubRoot(epubRoot, edition, chapterRecords) {
 
   for (const file of files) {
     if (file === "package.opf") continue;
-    if (!manifestFiles.has(file)) throw new Error(`${edition.file}: manifest 未收录 ${file}`);
+    if (!manifestFiles.has(file)) throw new Error(`${edition.file}: manifest에 없는 파일 ${file}`);
   }
   for (const file of manifestFiles) {
-    if (!files.has(file)) throw new Error(`${edition.file}: manifest 目标不存在 ${file}`);
+    if (!files.has(file)) throw new Error(`${edition.file}: manifest 대상 파일이 없습니다 ${file}`);
   }
 
   const spineIds = [...opf.matchAll(/<itemref\s+idref="([^"]+)"\s*\/>/g)].map((match) => match[1]);
   if (spineIds.length !== chapterRecords.length + 2) {
-    throw new Error(`${edition.file}: spine 数量错误: ${spineIds.length}`);
+    throw new Error(`${edition.file}: spine 항목 수가 틀렸습니다: ${spineIds.length}`);
   }
   for (const id of spineIds) {
-    if (!manifestById.has(id)) throw new Error(`${edition.file}: spine 引用未声明资源 ${id}`);
+    if (!manifestById.has(id)) throw new Error(`${edition.file}: spine이 선언되지 않은 리소스를 참조합니다 ${id}`);
   }
 
   const xhtmlFiles = [...files].filter((file) => file.endsWith(".xhtml"));
@@ -243,7 +231,7 @@ function validateEpubRoot(epubRoot, edition, chapterRecords) {
       const [pathAndQuery, rawHash = ""] = href.split("#", 2);
       const cleanPath = pathAndQuery.split("?", 1)[0];
       const targetFile = normalizeSource(cleanPath ? join(dirname(file), cleanPath) : file);
-      if (!files.has(targetFile)) throw new Error(`${edition.file}: ${file} 链接到不存在的 ${href}`);
+      if (!files.has(targetFile)) throw new Error(`${edition.file}: ${file}의 링크 대상이 없습니다 ${href}`);
       if (rawHash) {
         let hash;
         try {
@@ -254,7 +242,7 @@ function validateEpubRoot(epubRoot, edition, chapterRecords) {
         const targetContent = readFileSync(join(oebps, targetFile), "utf8");
         const escapedId = escapeXml(hash);
         if (!targetContent.includes(`id="${escapedId}"`)) {
-          throw new Error(`${edition.file}: ${file} 链接到不存在的锚点 ${href}`);
+          throw new Error(`${edition.file}: ${file}의 링크 앵커가 없습니다 ${href}`);
         }
       }
     }
@@ -263,26 +251,27 @@ function validateEpubRoot(epubRoot, edition, chapterRecords) {
   const nav = readFileSync(join(oebps, "nav.xhtml"), "utf8");
   const navLinks = [...nav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
   if (navLinks.length !== chapterRecords.length + 1) {
-    throw new Error(`${edition.file}: 导航条目数量错误: ${navLinks.length}`);
+    throw new Error(`${edition.file}: 차례 항목 수가 틀렸습니다: ${navLinks.length}`);
   }
 }
 
-function bookCss(lang) {
-  const isChinese = lang.startsWith("zh");
+function bookCss() {
   return `:root { color-scheme: light dark; }
 body {
-  font-family: ${isChinese ? '"Noto Serif CJK SC", "Songti SC", SimSun, serif' : 'Georgia, "Times New Roman", serif'};
-  line-height: 1.72;
+  font-family: "Noto Serif KR", "Noto Serif CJK KR", "Nanum Myeongjo", "AppleMyungjo", Batang, serif;
+  line-height: 1.8;
   margin: 5%;
   orphans: 2;
   widows: 2;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 main { max-width: 42rem; margin: 0 auto; }
 h1, h2, h3, h4 { line-height: 1.3; page-break-after: avoid; }
 h1 { font-size: 1.8em; margin: 0 0 1.2em; }
 h2 { font-size: 1.35em; margin-top: 2.2em; }
 h3 { font-size: 1.12em; margin-top: 1.8em; }
-p, li { text-align: ${isChinese ? "justify" : "left"}; }
+p, li { text-align: justify; }
 a { color: inherit; text-decoration: underline; text-decoration-thickness: 0.06em; }
 blockquote { border-left: 0.18em solid #737373; margin: 1.4em 0; padding-left: 1em; color: #555; }
 img { display: block; height: auto; margin: 1.6em auto; max-width: 100%; }
@@ -327,7 +316,7 @@ async function buildEdition(edition, markdown, tempBase) {
 
   writeFileSync(join(epubRoot, "mimetype"), "application/epub+zip");
   writeFileSync(join(metaDir, "container.xml"), containerXml());
-  writeFileSync(join(stylesDir, "book.css"), bookCss(edition.lang));
+  writeFileSync(join(stylesDir, "book.css"), bookCss());
   copyFileSync(edition.coverSource, join(assetsDir, "cover.png"));
 
   const imageTargets = new Map();
@@ -337,14 +326,14 @@ async function buildEdition(edition, markdown, tempBase) {
     let absolute;
     if (clean.startsWith("/assets/")) absolute = join(PUBLIC, clean.replace(/^\/+/, ""));
     else absolute = resolve(dirname(join(DOCS, source)), clean);
-    if (!existsSync(absolute)) throw new Error(`${source}: EPUB 图片不存在: ${href}`);
+    if (!existsSync(absolute)) throw new Error(`${source}: EPUB 이미지가 없습니다: ${href}`);
     let target;
     if (absolute.startsWith(`${join(DOCS, "assets")}${sep}`)) {
       target = `assets/${normalizeSource(relative(join(DOCS, "assets"), absolute))}`;
     } else if (absolute.startsWith(`${PUBLIC}${sep}`)) {
       target = `assets/public/${normalizeSource(relative(PUBLIC, absolute))}`;
     } else {
-      throw new Error(`${source}: EPUB 图片不在公开资源目录: ${href}`);
+      throw new Error(`${source}: EPUB 이미지가 공개 자산 디렉터리 밖에 있습니다: ${href}`);
     }
     imageTargets.set(absolute, target);
     return `../${target}`;
@@ -412,10 +401,11 @@ async function buildEdition(edition, markdown, tempBase) {
   const titleBody = `<section class="title-page" epub:type="titlepage">
   <h1>${escapeXml(edition.title)}</h1>
   <p class="subtitle">${escapeXml(edition.subtitle)}</p>
-  <p class="author">${escapeXml(edition.creator)}</p>
+  <p class="author">${escapeXml(edition.creator)} 지음 \u00b7 ${escapeXml(edition.translator)} 옮김</p>
   <p>${escapeXml(edition.description)}</p>
   <p><a href="${ONLINE_ROOT}">${ONLINE_ROOT}</a></p>
-  <p>CC BY-NC 4.0 · ${latestUpdated}</p>
+  <p>${escapeXml(edition.attribution)}: <a href="${ORIGINAL_ROOT}">${ORIGINAL_ROOT}</a></p>
+  <p>본문 CC BY-NC 4.0 \u00b7 ${latestUpdated}</p>
 </section>`;
   writeFileSync(
     join(textDir, "title.xhtml"),
@@ -444,7 +434,7 @@ ${navSections}
 
   const manifestImages = [...imageTargets.values()].sort().map((target, index) => {
     const type = mediaType(target);
-    if (!type) throw new Error(`EPUB 不支持图片类型: ${target}`);
+    if (!type) throw new Error(`EPUB가 지원하지 않는 이미지 형식입니다: ${target}`);
     return `    <item id="image-${String(index + 1).padStart(3, "0")}" href="${escapeXml(target)}" media-type="${type}" />`;
   });
   const manifestChapters = chapterRecords.map(
@@ -458,10 +448,13 @@ ${navSections}
     <dc:identifier id="pub-id">${escapeXml(identifier)}</dc:identifier>
     <dc:title>${escapeXml(edition.title)}</dc:title>
     <dc:language>${edition.lang}</dc:language>
-    <dc:creator>${escapeXml(edition.creator)}</dc:creator>
+    <dc:creator id="author">${escapeXml(edition.creator)}</dc:creator>
+    <meta refines="#author" property="role" scheme="marc:relators">aut</meta>
+    <dc:contributor id="translator">${escapeXml(edition.translator)}</dc:contributor>
+    <meta refines="#translator" property="role" scheme="marc:relators">trl</meta>
     <dc:description>${escapeXml(edition.description)}</dc:description>
     <dc:rights>CC BY-NC 4.0</dc:rights>
-    <dc:source>${ONLINE_ROOT}</dc:source>
+    <dc:source>${ORIGINAL_ROOT}</dc:source>
     <meta property="dcterms:modified">${latestUpdated}T00:00:00Z</meta>
   </metadata>
   <manifest>
@@ -511,9 +504,9 @@ ${navPoints.map(({ id, title, href }, index) => `    <navPoint id="${id}" playOr
   execFileSync("zip", ["-X9", output, ...entries], { cwd: epubRoot, env: zipEnv, stdio: "ignore" });
   execFileSync("unzip", ["-tqq", output], { stdio: "ignore" });
   const listed = execFileSync("unzip", ["-Z1", output], { encoding: "utf8" }).trim().split("\n");
-  if (listed[0] !== "mimetype") throw new Error(`${edition.file}: mimetype 必须是首个 ZIP 条目`);
+  if (listed[0] !== "mimetype") throw new Error(`${edition.file}: mimetype은 첫 번째 ZIP 항목이어야 합니다`);
   const mimetype = execFileSync("unzip", ["-p", output, "mimetype"], { encoding: "utf8" });
-  if (mimetype !== "application/epub+zip") throw new Error(`${edition.file}: mimetype 内容错误`);
+  if (mimetype !== "application/epub+zip") throw new Error(`${edition.file}: mimetype 내용이 틀렸습니다`);
 
   const sourceDigest = sha256(
     items
@@ -521,7 +514,7 @@ ${navPoints.map(({ id, title, href }, index) => `    <navPoint id="${id}" playOr
       .join("\n"),
   );
   const buffer = readFileSync(output);
-  if (buffer.length > 8_000_000) throw new Error(`${edition.file}: EPUB 超过 8MB 预算`);
+  if (buffer.length > 8_000_000) throw new Error(`${edition.file}: EPUB가 8MB 예산을 넘었습니다`);
   return {
     output,
     metadata: {
@@ -552,12 +545,12 @@ try {
     for (const { output, metadata } of built) {
       const committed = join(OUTPUT_DIR, metadata.file);
       if (!existsSync(committed) || !readFileSync(committed).equals(readFileSync(output))) {
-        throw new Error(`${relative(ROOT, committed)} 未与书稿同步；运行 npm run book:build`);
+        throw new Error(`${relative(ROOT, committed)} 파일이 원고와 동기화되지 않았습니다. npm run book:build를 실행하세요`);
       }
     }
     const manifestFile = join(OUTPUT_DIR, "epub-manifest.json");
     if (!existsSync(manifestFile) || readFileSync(manifestFile, "utf8") !== manifest) {
-      throw new Error(`${relative(ROOT, manifestFile)} 未与 EPUB 产物同步；运行 npm run book:build`);
+      throw new Error(`${relative(ROOT, manifestFile)} 파일이 EPUB 산출물과 동기화되지 않았습니다. npm run book:build를 실행하세요`);
     }
     console.log("EPUB editions are in sync");
   } else {

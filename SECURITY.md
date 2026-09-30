@@ -1,15 +1,15 @@
-# Security and Privacy Policy
+# 보안·프라이버시 정책
 
-## Supported Version
+## 지원 버전
 
-The current `master` branch and the deployed GitHub Pages site are supported. Historical commits and third-party mirrors are not maintained.
+현재 `master` 브랜치와 배포된 한국어판 사이트([dosi.dev/up](https://dosi.dev/up/))를 지원한다. 과거 커밋과 제3자 미러는 관리하지 않는다.
 
-## Report Privately
+## 비공개 신고
 
-For a vulnerability, exposed secret, precise location, personal contact detail, unredacted health/identity record, or unauthorised third-party image, use GitHub's private [Report a vulnerability](https://github.com/byoungd/up/security/advisories/new) form.
+취약점, 노출된 비밀 정보, 정확한 위치 정보, 개인 연락처, 가리지 않은 건강·신원 기록, 허락받지 않은 제3자 이미지를 발견하면 GitHub의 비공개 [취약점 신고](https://github.com/byoungd/up/security/advisories/new) 양식을 이용하라.
 
-Do not include sensitive reproduction data in a public issue. Provide the affected URL/path, impact, minimum evidence needed to locate it, and a safe contact method if follow-up is required. Do not download, redistribute, or retain more personal data than necessary to report the issue.
+공개 이슈에는 민감한 재현 데이터를 담지 마라. 문제가 있는 URL·경로, 영향, 위치를 찾는 데 필요한 최소한의 증거를 알려 주고, 후속 연락이 필요하면 안전한 연락 방법도 남겨라. 신고에 필요한 범위를 넘어 개인 데이터를 내려받거나 재배포하거나 보관하지 마라.
 
-Maintainers should acknowledge a report within 7 days, prioritise immediate removal of exposed personal data, and coordinate a fix before public disclosure. This is a best-effort community project, not a guaranteed service-level agreement.
+관리자는 7일 안에 신고 접수를 확인하고, 노출된 개인 데이터를 즉시 삭제하는 일을 최우선으로 처리하며, 공개하기 전에 수정 방안을 조율한다. 이 프로젝트는 할 수 있는 만큼 운영하는 커뮤니티 프로젝트이며, 서비스 수준을 보장하는 협약이 아니다.
 
-General broken links and non-sensitive content errors belong in public issue forms.
+일반적인 깨진 링크나 민감하지 않은 내용 오류는 공개 이슈 양식으로 알려 주면 된다.

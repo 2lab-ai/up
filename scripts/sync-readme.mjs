@@ -2,16 +2,15 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceFile = join(ROOT, "docs/README.md");
 const targetFile = join(ROOT, "README.md");
-const checkOnly = process.argv.includes("--check");
 
-function toRepositoryReadme(source) {
+// The repository README mirrors the site home page with links rewritten to repository paths.
+export function toRepositoryReadme(source) {
   return source
-    .replace("中文 | [English](en/)", "中文 | [English](docs/en/README.md)")
     .replace(/\]\((assets|threads|templates|reference)\//g, "](docs/$1/")
     .replace(/src="\.\/assets\//g, 'src="./docs/assets/')
     .replace(/href="\.\/downloads\//g, 'href="./docs/public/downloads/')
@@ -21,16 +20,21 @@ function toRepositoryReadme(source) {
     );
 }
 
-const expected = toRepositoryReadme(readFileSync(sourceFile, "utf8"));
-const actual = readFileSync(targetFile, "utf8");
+function main() {
+  const checkOnly = process.argv.includes("--check");
+  const expected = toRepositoryReadme(readFileSync(sourceFile, "utf8"));
+  const actual = readFileSync(targetFile, "utf8");
 
-if (actual !== expected) {
-  if (checkOnly) {
-    console.error("README.md: 未与 docs/README.md 同步；运行 npm run sync");
-    process.exit(1);
+  if (actual !== expected) {
+    if (checkOnly) {
+      console.error("README.md: docs/README.md와 동기화되지 않았습니다. npm run sync를 실행하세요");
+      process.exit(1);
+    }
+    writeFileSync(targetFile, expected);
+    console.log("updated README.md");
+  } else {
+    console.log("README mirror is in sync");
   }
-  writeFileSync(targetFile, expected);
-  console.log("updated README.md");
-} else {
-  console.log("README mirror is in sync");
 }
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) main();

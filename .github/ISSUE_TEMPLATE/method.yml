@@ -1,23 +1,23 @@
-name: Learning-method proposal
-description: Propose an evidence-aware change to a learning workflow.
-title: "[Method]: "
+name: 학습 방법 제안
+description: 근거를 갖춘 학습 흐름 변경을 제안해 주세요.
+title: "[방법]: "
 labels: [learning-method]
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Learner, context, and problem
+      label: 학습자, 상황, 문제
     validations:
       required: true
   - type: textarea
     id: method
     attributes:
-      label: Proposed task and measurable outcome
+      label: 제안하는 과제와 측정할 수 있는 결과
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Evidence, limitations, and primary sources
+      label: 근거, 한계, 1차 출처
     validations:
       required: true

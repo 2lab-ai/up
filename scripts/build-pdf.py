@@ -63,11 +63,19 @@ BOTTOM_MARGIN = 18 * mm
 CONTENT_WIDTH = PAGE_WIDTH - LEFT_MARGIN - RIGHT_MARGIN
 CONTENT_HEIGHT = PAGE_HEIGHT - TOP_MARGIN - BOTTOM_MARGIN
 NS = {"x": "http://www.w3.org/1999/xhtml"}
-ZH_REGULAR_FONT = ROOT / "book-assets/fonts/NotoSerifSC-LifeLevelUp-Regular.ttf"
-ZH_BOLD_FONT = ROOT / "book-assets/fonts/NotoSerifSC-LifeLevelUp-Bold.ttf"
-ZH_IPA_FONT = ROOT / "book-assets/fonts/NotoSans-LifeLevelUp-IPA.ttf"
-IPA_FALLBACK_CHARACTERS = set("ɪʌː")
+KO_REGULAR_FONT = ROOT / "book-assets/fonts/NotoSerifKR-LifeLevelUp-Regular.ttf"
+KO_BOLD_FONT = ROOT / "book-assets/fonts/NotoSerifKR-LifeLevelUp-Bold.ttf"
+FALLBACK_FONT = ROOT / "book-assets/fonts/NotoSans-LifeLevelUp-IPA.ttf"
+BODY_FONT_NAME = "NotoSerifKR-LifeLevelUp"
+BOLD_FONT_NAME = "NotoSerifKR-LifeLevelUp-Bold"
+FALLBACK_FONT_NAME = "NotoSans-LifeLevelUp-IPA"
 REQUIRED_SPACING_CHARACTERS = set(" \u00a0")
+# Filled by register_fonts(): code points of the Korean body subset and of the IPA fallback subset.
+BODY_GLYPHS: dict[int, int] = {}
+ONLINE_ROOT = "https://dosi.dev/up/"
+ATTRIBUTION_LINE = "원작: https://github.com/byoungd/up \u00b7 중국어 원문을 한국어로 옮김"
+TITLE_PAGE_TEXT = f"{ONLINE_ROOT} {ATTRIBUTION_LINE} 지음 옮김 본문 CC BY-NC 4.0 0123456789-"
+FALLBACK_GLYPHS: dict[int, int] = {}
 
 
 @dataclass(frozen=True)
@@ -79,6 +87,7 @@ class Edition:
     title: str
     subtitle: str
     author: str
+    translator: str
     contents: str
     cover: Path
     description: str
@@ -88,40 +97,38 @@ class Edition:
     mono_font: str
 
 
+# Single Korean edition, translated from the original Chinese manuscript.
 EDITIONS = [
     Edition(
-        key="zh",
-        language="zh-CN",
-        epub_file="life-level-up-guide-zh.epub",
-        pdf_file="life-level-up-guide-zh.pdf",
-        title="人生进阶指南",
-        subtitle="AI 时代终身学习指南",
-        author="韩先凯",
-        contents="目录",
+        key="ko",
+        language="ko-KR",
+        epub_file="life-level-up-guide-ko.epub",
+        pdf_file="life-level-up-guide-ko.pdf",
+        title="인생 레벨업 가이드",
+        subtitle="AI 시대 평생학습 가이드",
+        author="한셴카이",
+        translator="2lab.ai",
+        contents="차례",
         cover=ROOT / "docs/public/assets/cover-portrait.png",
-        description="从英语、AI、真实项目与人生低谷出发，建立能够复测、迁移、恢复并承担责任的终身学习系统。",
-        body_font="NotoSerifSC-LifeLevelUp",
-        bold_font="NotoSerifSC-LifeLevelUp-Bold",
-        italic_font="NotoSerifSC-LifeLevelUp",
-        mono_font="NotoSerifSC-LifeLevelUp",
-    ),
-    Edition(
-        key="en",
-        language="en-US",
-        epub_file="life-level-up-guide-en.epub",
-        pdf_file="life-level-up-guide-en.pdf",
-        title="Life Level-up Guide",
-        subtitle="Lifelong Learning Guide for the AI Era",
-        author="Han Xiankai",
-        contents="Contents",
-        cover=ROOT / "docs/public/assets/cover-portrait-en.png",
-        description="A lifelong-learning system for English, AI, real projects, difficult seasons, evidence, transfer, recovery, and responsibility.",
-        body_font="Times-Roman",
-        bold_font="Times-Bold",
-        italic_font="Times-Italic",
-        mono_font="Courier",
+        description="영어, AI, 실제 프로젝트, 인생의 바닥에서 출발해 재측정하고, 전이하고, 회복하고, 책임질 수 있는 평생학습 시스템을 세웁니다.",
+        body_font=BODY_FONT_NAME,
+        bold_font=BOLD_FONT_NAME,
+        italic_font=BODY_FONT_NAME,
+        mono_font=BODY_FONT_NAME,
     ),
 ]
+
+
+def register_fonts() -> None:
+    pdfmetrics.registerFont(TTFont(BODY_FONT_NAME, str(KO_REGULAR_FONT)))
+    pdfmetrics.registerFont(TTFont(BOLD_FONT_NAME, str(KO_BOLD_FONT)))
+    pdfmetrics.registerFont(TTFont(FALLBACK_FONT_NAME, str(FALLBACK_FONT)))
+    BODY_GLYPHS.update(pdfmetrics.getFont(BODY_FONT_NAME).face.charToGlyph)
+    FALLBACK_GLYPHS.update(pdfmetrics.getFont(FALLBACK_FONT_NAME).face.charToGlyph)
+
+
+def needs_fallback(character: str) -> bool:
+    return ord(character) not in BODY_GLYPHS and ord(character) in FALLBACK_GLYPHS
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -239,16 +246,16 @@ def pdf_semantics(reader: PdfReader) -> dict:
 
 def formatted_text(value: str | None, edition: Edition) -> str:
     text = clean_text(value)
-    if edition.key != "zh" or not any(character in IPA_FALLBACK_CHARACTERS for character in text):
+    if not any(needs_fallback(character) for character in text):
         return html.escape(text)
     parts = []
     buffer = []
     for character in text:
-        if character in IPA_FALLBACK_CHARACTERS:
+        if needs_fallback(character):
             if buffer:
                 parts.append(html.escape("".join(buffer)))
                 buffer = []
-            parts.append(f'<font name="NotoSans-LifeLevelUp-IPA">{html.escape(character)}</font>')
+            parts.append(f'<font name="{FALLBACK_FONT_NAME}">{html.escape(character)}</font>')
         else:
             buffer.append(character)
     if buffer:
@@ -379,7 +386,7 @@ class BookDocTemplate(BaseDocTemplate):
 
 def style_sheet(edition: Edition) -> dict[str, ParagraphStyle]:
     base = getSampleStyleSheet()
-    justify = TA_JUSTIFY if edition.key == "zh" else TA_LEFT
+    justify = TA_JUSTIFY
     styles = {
         "body": ParagraphStyle(
             "Body",
@@ -747,12 +754,11 @@ def inspect_pdf(edition: Edition, target: Path, source_epub_sha256: str, chapter
     if len(final_bytes) > 8_000_000:
         raise ValueError(f"{edition.pdf_file}: PDF exceeds 8MB budget")
     semantics = pdf_semantics(reader)
-    if edition.key == "zh":
-        embedded_fonts = {font["name"] for font in semantics["fonts"] if font["embedded"]}
-        required_fonts = {"NotoSerifSC-Regular", "NotoSerifSC-Bold", "NotoSans-Regular"}
-        missing_fonts = sorted(required_fonts - embedded_fonts)
-        if missing_fonts:
-            raise ValueError(f"{edition.pdf_file}: missing embedded fonts: {', '.join(missing_fonts)}")
+    embedded_fonts = {font["name"] for font in semantics["fonts"] if font["embedded"]}
+    required_fonts = {"NotoSerifKR-Regular", "NotoSerifKR-Bold"}
+    missing_fonts = sorted(required_fonts - embedded_fonts)
+    if missing_fonts:
+        raise ValueError(f"{edition.pdf_file}: missing embedded fonts: {', '.join(missing_fonts)}")
     return {
         "file": edition.pdf_file,
         "language": edition.language,
@@ -794,27 +800,28 @@ def build_pdf(edition: Edition, target: Path, temp_root: Path) -> dict:
         raw_id = h1.attrib.get("id", h1.text or file) if h1 is not None else file
         h1_anchors[file] = heading_anchor(file, raw_id)
 
-    if edition.key == "zh":
-        glyphs = pdfmetrics.getFont(edition.body_font).face.charToGlyph
-        fallback_glyphs = pdfmetrics.getFont("NotoSans-LifeLevelUp-IPA").face.charToGlyph
-        used_characters = set(edition.title + edition.subtitle + edition.author + edition.contents + edition.description)
-        for root in parsed.values():
-            for text in root.itertext():
-                used_characters.update(clean_text(text))
-        missing = sorted(
-            character
-            for character in used_characters
-            if (
-                (character.isprintable() and not character.isspace())
-                or character in REQUIRED_SPACING_CHARACTERS
-            )
-            and ord(character) not in glyphs
-            and ord(character) not in fallback_glyphs
+    used_characters = set(
+        edition.title + edition.subtitle + edition.author + edition.translator + edition.contents + edition.description
+        + TITLE_PAGE_TEXT
+    )
+    for root in parsed.values():
+        for text in root.itertext():
+            used_characters.update(clean_text(text))
+    missing = sorted(
+        character
+        for character in used_characters
+        if (
+            (character.isprintable() and not character.isspace())
+            or character in REQUIRED_SPACING_CHARACTERS
         )
-        if missing:
-            raise ValueError(
-                f"{edition.pdf_file}: embedded font misses {len(missing)} characters: {''.join(missing[:40])}"
-            )
+        and ord(character) not in BODY_GLYPHS
+        and ord(character) not in FALLBACK_GLYPHS
+    )
+    if missing:
+        raise ValueError(
+            f"{edition.pdf_file}: embedded font misses {len(missing)} characters: {''.join(missing[:40])}; "
+            "regenerate the subsets with scripts/subset-pdf-fonts.py"
+        )
 
     styles = style_sheet(edition)
     story = [NextPageTemplate("body"), PageBreak()]
@@ -823,12 +830,13 @@ def build_pdf(edition: Edition, target: Path, temp_root: Path) -> dict:
             Spacer(1, 34 * mm),
             Paragraph(edition.title, styles["title"]),
             Paragraph(edition.subtitle, styles["subtitle"]),
-            Paragraph(edition.author, styles["center"]),
+            Paragraph(f"{edition.author} 지음 \u00b7 {edition.translator} 옮김", styles["center"]),
             Spacer(1, 16 * mm),
             Paragraph(edition.description, styles["center"]),
             Spacer(1, 15 * mm),
-            Paragraph("https://byoungd.github.io/up/", styles["center"]),
-            Paragraph(f"CC BY-NC 4.0 · {publication_date}", styles["center"]),
+            Paragraph(ONLINE_ROOT, styles["center"]),
+            Paragraph(ATTRIBUTION_LINE, styles["center"]),
+            Paragraph(f"본문 CC BY-NC 4.0 \u00b7 {publication_date}", styles["center"]),
             PageBreak(),
             Paragraph(edition.contents, styles["title"]),
         ]
@@ -895,7 +903,7 @@ def main() -> None:
             for target, metadata in outputs:
                 committed = PUBLIC_OUTPUT / metadata["file"]
                 if not committed.exists():
-                    raise ValueError(f"{committed.relative_to(ROOT)} 不存在；运行 npm run book:pdf:build")
+                    raise ValueError(f"{committed.relative_to(ROOT)} 파일이 없습니다. npm run book:pdf:build를 실행하세요")
                 edition = next(value for value in EDITIONS if value.language == metadata["language"])
                 committed_metadata = inspect_pdf(
                     edition,
@@ -906,17 +914,18 @@ def main() -> None:
                 committed_outputs.append(committed_metadata)
                 if metadata["semanticSha256"] != committed_metadata["semanticSha256"]:
                     raise ValueError(
-                        f"{committed.relative_to(ROOT)} 的分页、文本、书签、链接、图片或字体未与书稿同步；"
-                        "运行 npm run book:pdf:build"
+                        f"{committed.relative_to(ROOT)}의 쪽 나눔, 텍스트, 책갈피, 링크, 이미지 또는 글꼴이 원고와 "
+                        "동기화되지 않았습니다. npm run book:pdf:build를 실행하세요"
                     )
                 if CHECK_EXACT and committed.read_bytes() != target.read_bytes():
                     raise ValueError(
-                        f"{committed.relative_to(ROOT)} 在当前平台未逐字节复现；运行 npm run book:pdf:build"
+                        f"{committed.relative_to(ROOT)} 파일이 이 플랫폼에서 바이트 단위로 재현되지 않습니다. "
+                        "npm run book:pdf:build를 실행하세요"
                     )
             committed_manifest = PUBLIC_OUTPUT / "pdf-manifest.json"
             expected_manifest_text = json.dumps(manifest_for(committed_outputs), ensure_ascii=False, indent=2) + "\n"
             if not committed_manifest.exists() or committed_manifest.read_text() != expected_manifest_text:
-                raise ValueError(f"{committed_manifest.relative_to(ROOT)} 未与 PDF 产物同步；运行 npm run book:pdf:build")
+                raise ValueError(f"{committed_manifest.relative_to(ROOT)} 파일이 PDF 산출물과 동기화되지 않았습니다. npm run book:pdf:build를 실행하세요")
             if CHECK_EXACT:
                 print("PDF editions are byte-for-byte reproducible on this platform")
             else:
@@ -940,7 +949,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    pdfmetrics.registerFont(TTFont("NotoSerifSC-LifeLevelUp", str(ZH_REGULAR_FONT)))
-    pdfmetrics.registerFont(TTFont("NotoSerifSC-LifeLevelUp-Bold", str(ZH_BOLD_FONT)))
-    pdfmetrics.registerFont(TTFont("NotoSans-LifeLevelUp-IPA", str(ZH_IPA_FONT)))
+    register_fonts()
     main()
