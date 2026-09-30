@@ -1,31 +1,31 @@
-name: Content error
-description: Report an inaccurate, unsupported, or outdated statement.
-title: "[Content]: "
+name: 내용 오류
+description: 부정확하거나 근거가 없거나 낡은 서술을 알려 주세요.
+title: "[내용]: "
 labels: [content]
 body:
   - type: input
     id: page
     attributes:
-      label: Page URL or path
+      label: 페이지 URL 또는 경로
     validations:
       required: true
   - type: textarea
     id: claim
     attributes:
-      label: Current claim and problem
-      description: Quote only the smallest necessary passage. Do not include private data.
+      label: 현재 서술과 문제점
+      description: 꼭 필요한 최소한의 구절만 인용해 주세요. 개인정보는 넣지 마세요.
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Proposed correction and primary sources
+      label: 고칠 내용과 1차 출처
     validations:
       required: true
   - type: checkboxes
     id: privacy
     attributes:
-      label: Privacy check
+      label: 개인정보 확인
       options:
-        - label: This report contains no sensitive personal information.
+        - label: 이 제보에는 민감한 개인정보가 없습니다.
           required: true

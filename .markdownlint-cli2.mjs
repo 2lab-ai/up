@@ -1,6 +1,8 @@
 export default {
   ignores: [
     ".codex-artifact-work/**",
+    ".ko-work/**",
+    "scripts/ko/prompts/**",
     "outputs/**",
     "docs/.vitepress/dist/**",
     "playwright-report/**",

@@ -8,6 +8,8 @@ export default defineConfig({
   reporter: process.env.CI ? [["html", { open: "never" }], ["list"]] : "list",
   use: {
     baseURL: "http://127.0.0.1:4173/up/",
+    locale: "ko-KR",
+    timezoneId: "Asia/Seoul",
     browserName: "chromium",
     ...(process.env.CI ? {} : { channel: "chrome" }),
     trace: "on-first-retry",

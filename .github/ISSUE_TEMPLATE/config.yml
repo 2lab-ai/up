@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Security or privacy report
-    url: https://github.com/byoungd/up/security/advisories/new
-    about: Report sensitive vulnerabilities and personal-data exposure privately.
+  - name: 보안 또는 개인정보 제보
+    url: https://github.com/2lab-ai/up/security/advisories/new
+    about: 민감한 취약점이나 개인정보 노출은 비공개로 제보해 주세요.

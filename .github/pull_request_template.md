@@ -1,23 +1,26 @@
-## Problem and outcome
+## 문제와 결과
 
-## Evidence or official sources
+## 근거 또는 공식 출처
 
-## Chinese and English pages
+## 원문 대조
 
-## Privacy and licensing impact
+- 바꾼 한국어 페이지와 대응하는 원문([byoungd/up](https://github.com/byoungd/up)) 경로:
 
-## Editorial gates
+## 개인정보와 라이선스 영향
 
-- [ ] Page type is explicit: method, personal narrative, project disclosure, archive, or template
-- [ ] Dynamic facts have a checked date; unverified plans and personal estimates are labelled
-- [ ] Third-party privacy, consent, health/legal/financial boundaries, and licensing were reviewed
-- [ ] Chinese and English pages preserve the same task, evidence level, and limits
-- [ ] New pages are in navigation and `tests/site.spec.mjs`
-- [ ] External links are stable entry points or clearly marked as historical
+## 편집 기준
 
-## Verification
+- [ ] 페이지 유형이 분명하다: 방법, 개인 서사, 프로젝트 공개, 보관 글, 템플릿
+- [ ] 변하는 사실에는 확인 날짜가 있고, 검증되지 않은 계획과 개인 추정은 그렇다고 밝혔다
+- [ ] 제3자 개인정보, 동의, 건강, 법률, 금융 경계, 라이선스를 검토했다
+- [ ] 한국어 번역이 원문과 같은 과제, 근거 수준, 한계를 유지한다
+- [ ] 새 페이지를 내비게이션과 `tests/site.spec.mjs`에 넣었다
+- [ ] 외부 링크는 안정적인 진입점이거나 과거 자료임을 밝혔다
+- [ ] 공개 Markdown에 한자가 없다(`npm run check:content`)
+
+## 검증
 
 - [ ] `npm run sync`
 - [ ] `npm run check`
 - [ ] `npm run docs:build`
-- [ ] `npm run test:smoke` (or reason not run)
+- [ ] `npm run test:smoke` (실행하지 않았다면 이유)

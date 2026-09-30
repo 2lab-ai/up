@@ -1,49 +1,49 @@
-name: Reader field note / 读者现场回执
-description: Share a privacy-safe reading attempt, action, delayed result, or point of confusion.
-title: "[Reader]: "
+name: 독자 실천 회신
+description: 개인정보를 지킨 선에서 읽고 해 본 시도, 행동, 시간이 지난 뒤의 결과, 헷갈린 점을 나눠 주세요.
+title: "[독자]: "
 labels: [content]
 body:
   - type: input
     id: chapter
     attributes:
-      label: Chapter or page / 章节或页面
-      description: Provide the URL or repository path.
+      label: 장 또는 페이지
+      description: URL이나 저장소 경로를 적어 주세요.
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: Real problem / 真实问题
-      description: What were you trying to understand, complete, change, or stop?
+      label: 실제 문제
+      description: 무엇을 이해하거나, 끝내거나, 바꾸거나, 멈추려 했나요?
     validations:
       required: true
   - type: textarea
     id: action
     attributes:
-      label: Action and artifact / 行动与作品
-      description: What did you actually do or make after reading? A small or unsuccessful attempt is useful evidence.
+      label: 행동과 작업물
+      description: 읽은 뒤 실제로 무엇을 했거나 만들었나요? 작거나 실패한 시도도 쓸모 있는 증거입니다.
     validations:
       required: true
   - type: textarea
     id: delayed_result
     attributes:
-      label: Delayed result / 延迟结果
-      description: What remained after several days, what transferred to a new situation, and what disappeared? Write "not retested yet" when applicable.
+      label: 시간이 지난 뒤의 결과
+      description: 며칠 뒤에 무엇이 남았고, 무엇이 새 상황으로 전이되었고, 무엇이 사라졌나요? 아직 재측정하지 않았다면 "아직 재측정 안 함"이라고 적어 주세요.
     validations:
       required: true
   - type: textarea
     id: revision
     attributes:
-      label: What should change / 哪些内容需要改变
-      description: Name one unclear passage, missing boundary, weak example, unusable tool, or unnecessary section.
+      label: 바뀌어야 할 부분
+      description: 불분명한 구절, 빠진 경계, 약한 예시, 쓰기 어려운 도구, 불필요한 절 가운데 하나를 짚어 주세요.
     validations:
       required: true
   - type: checkboxes
     id: privacy
     attributes:
-      label: Privacy and claims / 隐私与事实
+      label: 개인정보와 사실
       options:
-        - label: This note contains no private customer data, credentials, medical records, or unnecessary third-party identity details.
+        - label: 이 회신에는 고객 개인정보, 인증 정보, 의료 기록, 불필요한 제3자 신원 정보가 없습니다.
           required: true
-        - label: I have separated what I observed from what I infer or hope.
+        - label: 관찰한 사실과 추론하거나 바라는 내용을 구분해 적었습니다.
           required: true

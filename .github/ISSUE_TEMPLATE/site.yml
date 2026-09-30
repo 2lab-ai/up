@@ -1,6 +1,6 @@
-name: Site or accessibility problem
-description: Report build, route, search, responsive, keyboard, or accessibility issues.
-title: "[Site]: "
+name: 사이트 또는 접근성 문제
+description: 빌드, 경로, 검색, 반응형 화면, 키보드, 접근성 문제를 알려 주세요.
+title: "[사이트]: "
 labels: [site]
 body:
   - type: input
@@ -12,19 +12,19 @@ body:
   - type: dropdown
     id: type
     attributes:
-      label: Problem type
+      label: 문제 유형
       options:
-        - Route or redirect
-        - Search
-        - Mobile layout
-        - Keyboard or screen reader
-        - Image or media
-        - Build or other
+        - 경로 또는 리디렉션
+        - 검색
+        - 모바일 화면 배치
+        - 키보드 또는 스크린 리더
+        - 이미지 또는 미디어
+        - 빌드 또는 기타
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: Reproduction and expected result
+      label: 재현 방법과 기대한 결과
     validations:
       required: true

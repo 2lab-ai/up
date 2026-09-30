@@ -2,7 +2,7 @@
   "name": "life-level-up-guide",
   "version": "1.0.0",
   "private": true,
-  "description": "AI 时代终身学习指南：学习、真实项目、低谷复原与成长证据的开放内容项目",
+  "description": "인생 레벨업 가이드 한국어판: AI 시대의 평생학습, 실제 프로젝트, 바닥에서의 회복과 성장의 증거를 다루는 공개 콘텐츠 프로젝트",
   "type": "module",
   "engines": {
     "node": ">=24 <25"
@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
-    "markdownlint-cli2": "0.23.2",
-    "sharp": "0.35.3",
+    "markdownlint-cli2": "0.23.3",
+    "sharp": "0.35.5",
     "vitepress": "1.6.4"
   },
   "overrides": {

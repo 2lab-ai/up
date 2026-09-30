@@ -1,26 +1,26 @@
-# Contributor Covenant Code of Conduct
+# Contributor Covenant 행동 강령
 
-## Our Pledge
+## 우리의 서약
 
-We pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, experience, education, socioeconomic status, nationality, appearance, race, caste, colour, religion, or sexual identity and orientation.
+우리는 나이, 체형, 장애, 민족, 성적 특징, 성 정체성과 성별 표현, 경험, 학력, 사회경제적 지위, 국적, 외모, 인종, 카스트, 피부색, 종교, 성적 정체성과 지향에 관계없이 누구나 괴롭힘 없이 이 프로젝트에 참여할 수 있게 하겠다고 서약한다.
 
-We will act in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+우리는 열려 있고, 누구나 환영하며, 다양하고 포용적이며 건강한 공동체를 만드는 데 보탬이 되도록 행동한다.
 
-## Expected Behaviour
+## 기대하는 행동
 
-- Demonstrate empathy and kindness.
-- Respect differing opinions, experiences, and language levels.
-- Give and gracefully accept constructive feedback.
-- Focus criticism on claims and work, not people.
-- Protect privacy and avoid pressuring anyone to disclose personal history.
-- Accept responsibility, apologise, and repair harm when possible.
+- 공감과 친절을 보인다.
+- 다른 의견, 경험, 언어 수준을 존중한다.
+- 건설적인 피드백을 건네고, 받을 때는 너그럽게 받아들인다.
+- 비판은 사람이 아니라 주장과 작업을 향하게 한다.
+- 프라이버시를 지키고, 누구에게도 개인사를 밝히라고 압박하지 않는다.
+- 책임을 지고 사과하며, 가능하면 피해를 복구한다.
 
-## Unacceptable Behaviour
+## 용납하지 않는 행동
 
-Harassment, sexualised attention, insults, threats, stalking, doxxing, publishing private information, sustained disruption, and other conduct inappropriate in a professional community are not tolerated.
+괴롭힘, 성적인 관심이나 접근, 모욕, 위협, 스토킹, 신상 털기, 사적 정보 공개, 지속적인 방해, 그 밖에 전문적인 공동체에 어울리지 않는 행동은 용납하지 않는다.
 
-## Enforcement
+## 시행
 
-Report conduct concerns privately through the process in `SECURITY.md`. Maintainers may edit, reject, remove, lock, or ban contributions and participants when conduct threatens the community. Reports will be handled with discretion, conflicts of interest will be disclosed, and retaliation is prohibited.
+행동과 관련한 우려는 `SECURITY.md`에 적힌 절차에 따라 비공개로 신고한다. 누군가의 행동이 공동체를 위협하면 메인테이너는 기여물과 참여자를 수정·거부·삭제·잠금·차단할 수 있다. 신고는 신중하게 처리하고, 이해 충돌은 밝히며, 보복은 금지한다.
 
-This policy adapts the [Contributor Covenant 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html), licensed under CC BY 4.0.
+이 정책은 CC BY 4.0 라이선스로 배포되는 [Contributor Covenant 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html)을 바탕으로 한다.

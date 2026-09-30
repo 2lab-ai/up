@@ -8,17 +8,17 @@
     "version": "6.16.2"
   },
   "outputs": {
-    "zh-CN": {
-      "file": "life-level-up-guide-zh.pdf",
-      "language": "zh-CN",
-      "pages": 339,
+    "ko-KR": {
+      "file": "life-level-up-guide-ko.pdf",
+      "language": "ko-KR",
+      "pages": 381,
       "chapters": 62,
-      "bytes": 4701109,
-      "sha256": "238235821e2e29fe79f78204661a25a26272d2a4cf63ece04cc50af396b4e8d1",
-      "sourceEpubSha256": "0be770bfe1dbdb1635b6d23d32c958e0931a2047aed9b9856767f741318341cb",
-      "semanticSha256": "71161ff6e2f5b2eac0fa587ebb3b8d944a4ccc090ac0fe7565c747061f0d0323",
+      "bytes": 4674561,
+      "sha256": "adedd5c05ae2e0296eb3dcb009d4b5687d919a058ae44bbb91060d91143c8ac1",
+      "sourceEpubSha256": "6767037163fd14e573d9c505b7f2fc36c6f4a986a066bdb44fc8ff18df750bb9",
+      "semanticSha256": "b5c43b1a29278a8ae309f7d37e677982b3a9b4b9a4164ef89bf35b8316ab8a33",
       "outlineEntries": 779,
-      "linkAnnotations": 792,
+      "linkAnnotations": 802,
       "images": 21,
       "fonts": [
         {
@@ -32,64 +32,14 @@
           "embedded": true
         },
         {
-          "name": "NotoSerifSC-Bold",
+          "name": "NotoSerifKR-Bold",
           "subtype": "TrueType",
           "embedded": true
         },
         {
-          "name": "NotoSerifSC-Regular",
+          "name": "NotoSerifKR-Regular",
           "subtype": "TrueType",
           "embedded": true
-        }
-      ]
-    },
-    "en-US": {
-      "file": "life-level-up-guide-en.pdf",
-      "language": "en-US",
-      "pages": 381,
-      "chapters": 62,
-      "bytes": 3895358,
-      "sha256": "212e89dd801b340387cfb0084b739a8bf67d27d87b2c2e3711dcb3cf92dda822",
-      "sourceEpubSha256": "db2dd190d6de53442ed8c1aca8c9c37ea3b593a6433d3b7b6cfd2bb152b5aa23",
-      "semanticSha256": "f814de3aaedb337b90bef6baa8947da8eeeb12c321e48755c3047481768f09a1",
-      "outlineEntries": 779,
-      "linkAnnotations": 810,
-      "images": 21,
-      "fonts": [
-        {
-          "name": "Courier",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "Helvetica",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "Symbol",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "Times-Bold",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "Times-Italic",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "Times-Roman",
-          "subtype": "Type1",
-          "embedded": false
-        },
-        {
-          "name": "ZapfDingbats",
-          "subtype": "Type1",
-          "embedded": false
         }
       ]
     }

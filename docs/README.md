@@ -1,189 +1,190 @@
 ---
-title: 人生进阶指南｜AI 时代终身学习
-description: 《人生进阶指南》帮助普通人在 AI 时代持续学习、完成真实项目、穿越人生低谷并留下成长证据。
+title: "인생 레벨업 가이드 | AI 시대의 평생학습"
+description: 『인생 레벨업 가이드』는 평범한 사람이 AI 시대에 계속 배우고, 실제 프로젝트를 완성하고, 인생의 바닥을 지나며 성장의 증거를 남기도록 돕는다.
 updated: 2026-09-02
 ---
 
-# 人生进阶指南
+# 인생 레벨업 가이드
 
-中文 | [English](en/)
+**한셴카이 지음(필명 '리푸')**
 
-**韩先凯 著（笔名：离谱）**
+부제: **AI 시대 평생학습 가이드**. 계속 업데이트되는 원고다. 영어라는 구체적인 문에서 출발해 AI 학습, 실제 프로젝트, 창업 실패, 몸의 회복, 그리고 평범한 사람이 삶을 조금씩 자기 손에 되돌려받는 과정까지 다룬다.
 
-副标题：**AI 时代终身学习指南**。这是一份持续更新的书稿，从英语这扇具体的门出发，写到 AI 学习、真实项目、创业失败、身体恢复，以及一个普通人怎样把生活一点点交还给自己。
-
-<div class="book-meta" aria-label="书稿信息">
-  <span>持续更新书稿</span>
-  <a href="./downloads/life-level-up-guide-zh.epub" download>下载中文 EPUB</a>
-  <a href="./downloads/life-level-up-guide-en.epub" download>Download English EPUB</a>
-  <a href="./downloads/life-level-up-guide-zh.pdf" download>下载中文 PDF</a>
-  <a href="./downloads/life-level-up-guide-en.pdf" download>Download English PDF</a>
-  <a href="https://github.com/byoungd/up">源码与勘误</a>
-  <a href="./templates/reader-field-note">读者实践回执</a>
-  <a href="https://creativecommons.org/licenses/by-nc/4.0/">正文 CC BY-NC 4.0</a>
+<div class="book-meta" aria-label="원고 정보">
+  <span>계속 업데이트되는 원고</span>
+  <a href="./downloads/life-level-up-guide-ko.epub" download>한국어판 EPUB 다운로드</a>
+  <a href="./downloads/life-level-up-guide-ko.pdf" download>한국어판 PDF 다운로드</a>
+  <a href="https://github.com/2lab-ai/up">소스 코드와 정오표</a>
+  <a href="./templates/reader-field-note">독자 실천 회신</a>
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/">본문 CC BY-NC 4.0</a>
 </div>
 
-AI 正在让答案变得前所未有地廉价。几秒钟里，我们可以得到一份解释、一段代码、一张计划表，甚至一个看似笃定的人生建议。可真正稀缺的东西并没有因此消失：**知道什么问题值得追问，辨别什么证据可以相信，把建议变成真实作品，并为最后的判断承担责任。**
+> **원작과 한국어판** — 이 책은 한셴카이(byoungd)의 『인생 레벨업 가이드』를 한국어로 옮긴 판본이다. 원문은 [github.com/byoungd/up](https://github.com/byoungd/up)(커밋 `7478ac2` 기준)이고, 본문은 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.ko), 코드는 MIT를 따른다. 원작자의 검토나 보증을 받은 판본은 아니다.
+>
+> **바꾼 점** — 중국어 원문을 한국어로 번역했고, 영어판과 중국어판은 싣지 않았으며, 제3자 AI 중계 서비스 추천 카드를 뺐고, 배포 주소를 [dosi.dev/up](https://dosi.dev/up/)으로 바꿨다.
+>
+> **번역 방식** — Claude Opus 5.5가 번역하고 Claude Fable 5.1이 교차 검수했다. 번역 파이프라인은 [scripts/ko](https://github.com/2lab-ai/up/tree/master/scripts/ko)에 있다.
 
-这是一份面向普通人的终身学习指南。它不要求你先成为天才、专家或意志坚定的人，也不许诺某个工具会替你改变命运。它想做的，是陪你在变化加速的时代里，一次次重新学习：面对陌生问题，借助 AI，也保留自己的判断；完成一件真实的事，再把经验带到下一段路。
+AI 덕분에 답은 그 어느 때보다 값싸졌다. 몇 초면 설명 한 편, 코드 한 덩어리, 계획표 한 장, 심지어 자신만만해 보이는 인생 조언까지 얻을 수 있다. 그래도 정말 귀한 것은 사라지지 않았다. **어떤 질문을 끝까지 파고들 가치가 있는지 알고, 어떤 증거를 믿어도 되는지 가려내고, 조언을 실제 작업물로 바꾸고, 마지막 판단에 책임을 지는 일**이다.
 
-项目在 2017 年从《离谱的英语学习指南》开始。英语曾是全部地图，如今它成为地图上的一条基础路径。我们继续向外走，进入 AI 学习、项目开发、资源层创业、人生复盘与恢复。不是因为过去不再重要，而是因为所有训练最终都指向同一个问题：**当世界不断改变，我还能不能继续学习、继续创造、继续成为生活的参与者？**
+이 책은 평범한 사람을 위한 평생학습 가이드다. 먼저 천재나 전문가, 의지가 굳은 사람이 되라고 요구하지 않고, 어떤 도구가 운명을 바꿔 주리라 약속하지도 않는다. 이 책이 하려는 일은 변화가 빨라지는 시대에 곁에서 함께 몇 번이고 다시 배우는 것이다. 낯선 문제 앞에서 AI의 힘을 빌리되 자기 판단은 지키고, 실제로 한 가지 일을 끝낸 뒤 그 경험을 다음 길로 가져간다.
 
-我是韩先凯，也叫离谱，现任中国词元云计算有限公司董事长。我把这里的方法放进学习、开发、企业服务和真实生活中检验。身份与商业关系会被写在明处；能力、产品与收入结果，只接受作品、用户、成本和时间留下的证据。
+이 프로젝트는 2017년 『리푸의 영어 학습 가이드』에서 시작했다. 한때 영어가 지도의 전부였다면, 이제 영어는 그 지도 위의 기초 경로 하나가 되었다. 우리는 계속 바깥으로 걸어 나가 AI 학습, 프로젝트 개발, 리소스 계층 창업, 인생 회고와 회복으로 들어선다. 과거가 더는 중요하지 않아서가 아니다. 모든 훈련이 결국 같은 질문을 가리키기 때문이다. **세상이 끊임없이 바뀔 때, 나는 계속 배우고, 계속 만들고, 계속 삶에 참여하는 사람으로 남을 수 있을까?**
 
-这份指南反复练习一个循环：
+나는 한셴카이, 리푸라고도 불리며, 현재 중국 토큰 클라우드 컴퓨팅 유한회사 회장이다. 여기 담긴 방법을 학습, 개발, 기업 서비스, 실제 삶 속에 넣어 검증해 왔다. 신분과 사업 관계는 드러난 곳에 적어 둔다. 능력, 제품, 수익에 관한 결과는 작업물, 사용자, 비용, 시간이 남긴 증거로만 인정한다.
 
-**发现问题 → 主动学习 → 与 AI 协作 → 完成真实任务 → 保存证据 → 复盘迁移**
+이 가이드는 하나의 순환을 되풀이해 연습한다.
 
-它也始终区分三种信息：
+**문제 발견 → 능동적 학습 → AI와 협업 → 실제 과제 완성 → 증거 보존 → 회고와 전이**
 
-- **研究结论**：提供来源，并说明证据能覆盖到哪里；
-- **个人经验**：保留故事的温度，不把一条人生路径冒充成普遍规律；
-- **待验证假设**：允许想象进入讨论，但必须交给下一轮行动检验。
+그리고 세 종류의 정보를 끝까지 구분한다.
 
-<div class="guide-paths" aria-label="阅读路径">
+- **연구 결론**: 출처를 밝히고, 그 증거가 어디까지 뒷받침하는지 설명한다.
+- **개인 경험**: 이야기의 온기는 지키되, 한 사람의 인생 경로를 보편 법칙인 양 내세우지 않는다.
+- **검증할 가설**: 상상이 논의에 들어오는 것은 허용하되, 반드시 다음 행동에서 검증받게 한다.
+
+<div class="guide-paths" aria-label="읽기 경로">
   <section class="guide-path-group" aria-labelledby="guide-foundation">
-    <div class="guide-path-group-heading"><span class="guide-path-kicker">01</span><h2 id="guide-foundation">建立基础</h2><p>先把问题、语言和每日动作放到同一张地图上。</p></div>
+    <div class="guide-path-group-heading"><span class="guide-path-kicker">01</span><h2 id="guide-foundation">기초 세우기</h2><p>먼저 문제, 언어, 매일의 행동을 한 장의 지도 위에 올린다.</p></div>
     <div class="guide-path-group-items">
-      <a class="guide-path" href="./templates/learning-state"><strong>终身学习系统</strong>从真实问题、当前基线和最小任务出发，让每轮学习都能被继续、复测与迁移。</a>
-      <a class="guide-path" href="./threads/part-1/0-cefr"><strong>基础能力：英语</strong>用英语连接全球知识、技术文档与国际 AI 工具，以可理解度而不是口音相似度进入跨文化协作。</a>
-      <a class="guide-path" href="./threads/part-1/grammar"><strong>语法基础与真实表达</strong>不从背完整规则开始，而从时间、责任、条件与确定性是否被听清开始，用一项高影响结构完成十四天复测。</a>
-      <a class="guide-path" href="./threads/part-1/6-writing"><strong>写作与异步交付</strong>保留无辅助初稿、事实来源和修改理由，让邮件、报告、决定与交接在作者离线后仍然可用。</a>
+      <a class="guide-path" href="./templates/learning-state"><strong>평생학습 시스템</strong>실제 문제, 현재 기준선, 최소 과제에서 출발해 매 학습 회차를 이어 가고, 재측정하고, 전이할 수 있게 한다.</a>
+      <a class="guide-path" href="./threads/part-1/0-cefr"><strong>기초 능력: 영어</strong>영어로 전 세계의 지식, 기술 문서, 해외 AI 도구와 연결하고, 악센트가 얼마나 비슷한지가 아니라 얼마나 알아들을 수 있는지를 기준으로 문화 간 협업에 들어선다.</a>
+      <a class="guide-path" href="./threads/part-1/grammar"><strong>문법 기초와 실제 표현</strong>규칙을 전부 외우는 데서 시작하지 않고 시간, 책임, 조건, 확실성이 제대로 전달되는지에서 시작해, 영향이 큰 구조 하나로 14일 재측정을 마친다.</a>
+      <a class="guide-path" href="./threads/part-1/6-writing"><strong>쓰기와 비동기 전달</strong>도움 없이 쓴 초고, 사실의 출처, 수정 이유를 남겨 두어, 작성자가 자리를 비운 뒤에도 이메일, 보고서, 결정, 인계 문서가 제 역할을 하게 한다.</a>
     </div>
   </section>
   <section class="guide-path-group" aria-labelledby="guide-amplify">
-    <div class="guide-path-group-heading"><span class="guide-path-kicker">02</span><h2 id="guide-amplify">借工具放大能力</h2><p>让 AI 加速提问和验证，但把判断、测试与责任留在人手中。</p></div>
+    <div class="guide-path-group-heading"><span class="guide-path-kicker">02</span><h2 id="guide-amplify">도구로 능력을 키우다</h2><p>AI로 질문과 검증에 속도를 붙이되, 판단과 테스트와 책임은 사람 손에 남긴다.</p></div>
     <div class="guide-path-group-items">
-      <a class="guide-path" href="./threads/part-3/1-ai-learning"><strong>使用 AI 学习一切</strong>让 AI 帮助提问、研究和反馈，同时把事实核验与最终判断留在人手中。</a>
-      <a class="guide-path" href="./threads/part-3/2-ai-development-and-resource-layer"><strong>AI 项目与资源层创业</strong>从需求、原型、代码和测试走向模型接入、治理、企业交付与商业验证。</a>
+      <a class="guide-path" href="./threads/part-3/1-ai-learning"><strong>AI로 무엇이든 배우기</strong>AI가 질문, 조사, 피드백을 돕게 하되, 사실 점검과 최종 판단은 사람 손에 남긴다.</a>
+      <a class="guide-path" href="./threads/part-3/2-ai-development-and-resource-layer"><strong>AI 프로젝트와 리소스 계층 창업</strong>요구 사항, 프로토타입, 코드, 테스트에서 출발해 모델 연결, 거버넌스, 기업 납품, 사업성 검증으로 나아간다.</a>
     </div>
   </section>
   <section class="guide-path-group" aria-labelledby="guide-life">
-    <div class="guide-path-group-heading"><span class="guide-path-kicker">03</span><h2 id="guide-life">进入真实生活</h2><p>把学习带进工作、家庭、关系和作者正在承担的现实。</p></div>
+    <div class="guide-path-group-heading"><span class="guide-path-kicker">03</span><h2 id="guide-life">실제 삶으로 들어가기</h2><p>학습을 일, 가정, 관계, 그리고 저자가 지금 감당하고 있는 현실로 가져간다.</p></div>
     <div class="guide-path-group-items">
-      <a class="guide-path" href="./threads/part-1/8-job-search-english"><strong>海外求职与远程协作</strong>把岗位描述拆成招聘沟通、项目说明、陌生追问和异步写作，用真实样本判断这一场面试还缺什么。</a>
-      <a class="guide-path" href="./threads/part-4/family-learning"><strong>家庭与中学生学习</strong>让孩子参与定义目标，让家长保护环境、隐私与安全，用十四天证据替代监控、代做和焦虑加码。</a>
-      <a class="guide-path" href="./threads/part-2/my-story"><strong>人生复盘与恢复</strong>承认失败和代价，在失序之后重新建立判断、秩序与行动。</a>
-      <a class="guide-path" href="./projects"><strong>作者项目与现实实践</strong>公开关联、用途、更新时间和非赞助关系，让信任不必靠猜。</a>
+      <a class="guide-path" href="./threads/part-1/8-job-search-english"><strong>해외 구직과 원격 협업</strong>직무 기술서를 채용 커뮤니케이션, 프로젝트 설명, 낯선 추가 질문, 비동기 글쓰기로 쪼개고, 실제 샘플로 이번 면접에 아직 무엇이 부족한지 판단한다.</a>
+      <a class="guide-path" href="./threads/part-4/family-learning"><strong>가정과 중고등학생 학습</strong>아이가 목표를 정하는 데 직접 참여하고, 보호자는 환경과 프라이버시와 안전을 지킨다. 감시, 대신 해 주기, 불안 부추기기 대신 14일간의 증거를 쓴다.</a>
+      <a class="guide-path" href="./threads/part-2/my-story"><strong>인생 회고와 회복</strong>실패와 대가를 인정하고, 무너진 뒤에 판단과 질서와 행동을 다시 세운다.</a>
+      <a class="guide-path" href="./projects"><strong>저자 프로젝트와 현실 실천</strong>저자와의 관계, 용도, 업데이트 날짜, 비후원 여부를 공개해 신뢰가 추측에 기대지 않게 한다.</a>
     </div>
   </section>
   <section class="guide-path-group guide-path-group-external" aria-labelledby="guide-external">
-    <div class="guide-path-group-heading"><span class="guide-path-kicker">04</span><h2 id="guide-external">第三方资源</h2><p>可选的外部入口，不等于本书或作者的安全、质量与合规背书。</p></div>
+    <div class="guide-path-group-heading"><span class="guide-path-kicker">04</span><h2 id="guide-external">제3자 자료</h2><p>선택해서 쓸 수 있는 외부 입구일 뿐, 이 책이나 저자가 안전, 품질, 규정 준수를 보증한다는 뜻은 아니다.</p></div>
     <div class="guide-path-group-items">
-      <a class="guide-path" href="https://biezou.com/" target="_blank" rel="noopener noreferrer"><strong>AI 中转推荐：biezou.com</strong>官网公开定位为统一 AI API 网关与管理面板；这是第三方可选入口，使用前请自行核对服务条款、价格、隐私与可用性。</a>
-      <a class="guide-path" href="https://t.me/OpenHuge_ai" target="_blank" rel="noopener noreferrer"><strong>AI 资源 TG 频道：OpenHuge_ai</strong>一个用于发现 AI 资源的第三方 Telegram 频道推荐；频道内容、外链与可用性会变化，使用前请自行核对来源、隐私、版权与安全风险。</a>
+      <a class="guide-path" href="https://t.me/OpenHuge_ai" target="_blank" rel="noopener noreferrer"><strong>AI 자료 텔레그램 채널: OpenHuge_ai</strong>AI 자료를 찾는 데 쓸 만한 제3자 텔레그램 채널 추천이다. 채널 내용, 외부 링크, 가용성은 바뀔 수 있으니, 쓰기 전에 출처, 프라이버시, 저작권, 보안 위험을 직접 확인하라.</a>
     </div>
   </section>
 </div>
 
-## 书稿主线
+## 원고의 큰 줄기
 
-如果你愿意完整阅读，请先看[阅读指南：把书放回生活](threads/part-0/reader-guide.md)，再从[序章：先不要急着改变人生](threads/part-0/prologue.md)开始。前者负责告诉你如何选择入口、留下证据和在中断后回来，后者负责把这些方法放回一个人的生命故事。全书不是一条只向上的直线，而是一圈会反复经过的路径：
+처음부터 끝까지 읽을 생각이라면 먼저 [읽기 가이드: 책을 삶으로 돌려놓기](threads/part-0/reader-guide.md)를 보고, [서장: 인생을 바꾸려 서두르지 않기](threads/part-0/prologue.md)에서 시작하라. 앞의 글은 입구를 고르고, 증거를 남기고, 중간에 끊겼을 때 돌아오는 법을 알려 주고, 뒤의 글은 그 방법들을 한 사람의 삶의 이야기 안에 다시 놓는다. 이 책은 위로만 뻗는 직선이 아니라 몇 번이고 다시 지나가게 되는 둥근 길이다.
 
-遇到术语不清或不知道下一页该去哪时，可以打开[术语与方法索引](reference/glossary.md)，按“定义 → 证据 → 下一步”返回主线；不知道该用哪张工作纸时，先看[工具箱总览](templates/toolkit.md)，按眼前的问题选择一个入口。
+용어가 헷갈리거나 다음에 어느 페이지로 가야 할지 모르겠다면 [용어와 방법 색인](reference/glossary.md)을 열고 “정의 → 증거 → 다음 단계” 순서를 따라 큰 줄기로 돌아오면 된다. 어떤 작업지를 써야 할지 모르겠다면 먼저 [도구 상자 둘러보기](templates/toolkit.md)를 보고, 눈앞의 문제에 맞춰 입구 하나를 고르라.
 
-| 部分 | 核心问题 | 入口 |
+| 부분 | 핵심 질문 | 입구 |
 | --- | --- | --- |
-| 阅读指南与序章 | 我从哪里进入，又为什么要重新开始？ | [阅读指南](threads/part-0/reader-guide.md) · [先不要急着改变人生](threads/part-0/prologue.md) |
-| 第一部：打开输入 | 怎样建立英语和世界之间的通道，并把能力带进面试与远程协作？ | [本部导语](threads/part-1/open-input.md) · [CEFR 自测](threads/part-1/0-cefr.md) · [词汇](threads/part-1/2-vocabulary.md) · [语法](threads/part-1/grammar.md) · [听力](threads/part-1/3-listening.md) · [阅读](threads/part-1/4-reading.md) · [口语](threads/part-1/5-speaking.md) · [写作](threads/part-1/6-writing.md) · [求职英语](threads/part-1/8-job-search-english.md) |
-| 第二部：把自己放回生活 | 能力、事业、关系、失败、选择与恢复怎样互相影响？ | [本部导语](threads/part-2/return-to-life.md) · [我的故事](threads/part-2/my-story.md) · [叙事与证据](threads/part-2/narrative-and-evidence.md) · [恢复、选择、关系与创业](threads/part-2/recovery.md) |
-| 第三部：借工具放大能力 | 怎样使用 AI，而不把判断力和注意力一起外包？ | [本部导语](threads/part-3/amplify-ability.md) · [AI 学习](threads/part-3/1-ai-learning.md) · [注意力、作品与证据](threads/part-3/3-attention-and-judgment.md) · [项目实践](threads/part-3/2-ai-development-and-resource-layer.md) |
-| 第四部：实践与恢复 | 学习如何回到身体、家庭与日常，并在需要时保护未成年学习者的主体性？ | [本部导语](threads/part-4/practice-and-recovery.md) · [第一周实践](threads/part-4/week-1.md) · [家庭学习](threads/part-4/family-learning.md) · [生活系统](threads/part-4/daily-system.md) · [节律](threads/part-4/rhythm-and-compounding.md) |
-| 第五部：行动与长期改变 | 怎样完成九十天，也让方法在真实项目和九十天以后继续接受检验？ | [本部导语](threads/part-5/long-term-action.md) · [九十天行动篇](threads/part-5/90-day-plan.md) · [本书案例](threads/part-5/book-as-proof.md) · [九十天以后](threads/part-5/after-90-days.md) |
-| 后记 | 进阶之后，我想成为什么样的人？ | [进阶不是离开原来的自己](threads/part-6/afterword.md) |
+| 읽기 가이드와 서장 | 나는 어디로 들어가며, 왜 다시 시작해야 하는가? | [읽기 가이드](threads/part-0/reader-guide.md) · [인생을 바꾸려 서두르지 않기](threads/part-0/prologue.md) |
+| 제1부: 입력을 열다 | 영어와 세계 사이에 어떻게 통로를 내고, 그 능력을 면접과 원격 협업까지 어떻게 가져갈까? | [이 부 들어가며](threads/part-1/open-input.md) · [CEFR 자가 진단](threads/part-1/0-cefr.md) · [어휘](threads/part-1/2-vocabulary.md) · [문법](threads/part-1/grammar.md) · [듣기](threads/part-1/3-listening.md) · [읽기](threads/part-1/4-reading.md) · [말하기](threads/part-1/5-speaking.md) · [쓰기](threads/part-1/6-writing.md) · [구직 영어](threads/part-1/8-job-search-english.md) |
+| 제2부: 나를 삶으로 돌려놓다 | 능력, 일, 관계, 실패, 선택, 회복은 서로 어떻게 영향을 주고받는가? | [이 부 들어가며](threads/part-2/return-to-life.md) · [나의 이야기](threads/part-2/my-story.md) · [서사와 증거](threads/part-2/narrative-and-evidence.md) · [회복, 선택, 관계, 창업](threads/part-2/recovery.md) |
+| 제3부: 도구로 능력을 키우다 | 판단력과 주의력까지 함께 외주로 넘기지 않으면서 AI를 어떻게 쓸까? | [이 부 들어가며](threads/part-3/amplify-ability.md) · [AI 학습](threads/part-3/1-ai-learning.md) · [주의력, 작업물, 증거](threads/part-3/3-attention-and-judgment.md) · [프로젝트 실천](threads/part-3/2-ai-development-and-resource-layer.md) |
+| 제4부: 실천과 회복 | 학습은 어떻게 몸과 가정과 일상으로 돌아가며, 필요할 때 미성년 학습자의 주체성을 어떻게 지킬까? | [이 부 들어가며](threads/part-4/practice-and-recovery.md) · [첫 주 실천](threads/part-4/week-1.md) · [가정 학습](threads/part-4/family-learning.md) · [생활 시스템](threads/part-4/daily-system.md) · [리듬](threads/part-4/rhythm-and-compounding.md) |
+| 제5부: 행동과 장기적 변화 | 어떻게 90일을 완주하고, 방법이 실제 프로젝트와 90일 이후에도 계속 검증받게 할까? | [이 부 들어가며](threads/part-5/long-term-action.md) · [90일 행동 편](threads/part-5/90-day-plan.md) · [이 책의 사례](threads/part-5/book-as-proof.md) · [90일 이후](threads/part-5/after-90-days.md) |
+| 후기 | 레벨업한 뒤에 나는 어떤 사람이 되고 싶은가? | [레벨업은 원래의 나를 떠나는 일이 아니다](threads/part-6/afterword.md) |
 
-## 从今天的一件小事开始
+## 오늘의 작은 일 하나에서 시작하기
 
-终身学习不是同时打开十门课程，而是在今天完成一个能够留下痕迹的动作：
+평생학습은 강의 열 개를 한꺼번에 여는 일이 아니라, 오늘 흔적이 남는 행동 하나를 끝내는 일이다.
 
-1. 选一个真实问题：工作里卡住的一步、想理解的概念、想帮助的人，或一直没有完成的小项目。
-2. 在 [学习状态](templates/learning-state.md) 中写下当前基线：已经知道什么、还不会什么、什么结果算完成；遇到选择、注意力、关系或恢复问题时，使用[生活进阶工作表](templates/life-practice-toolkit.md)；准备一个完整周期时，复制[九十日行动总表](templates/90-day-cycle.md)。
-3. 让 AI 帮你拆出一个 25–45 分钟的任务，但亲自核对来源、做出选择并完成输出。
-4. 保存一页笔记、一段代码、一次录音、一封邮件或一份反馈，而不是只保存聊天记录。
-5. 一周后用 [每周复盘](templates/weekly-review.md) 检查完成、质量、保持与迁移，再决定下一步。
+1. 실제 문제 하나를 고른다. 일하다 막힌 한 단계, 이해하고 싶은 개념, 돕고 싶은 사람, 줄곧 끝내지 못한 작은 프로젝트 등이다.
+2. [학습 상태](templates/learning-state.md)에 현재 기준선을 적는다. 이미 아는 것, 아직 못 하는 것, 어떤 결과가 나와야 끝난 것으로 볼지를 쓴다. 선택, 주의력, 관계, 회복 문제에 부딪히면 [생활 레벨업 워크시트](templates/life-practice-toolkit.md)를 쓰고, 한 주기를 온전히 준비할 때는 [90일 행동 총괄표](templates/90-day-cycle.md)를 복사한다.
+3. AI에게 25–45분짜리 과제로 쪼개 달라고 하되, 출처 확인과 선택과 출력은 직접 해낸다.
+4. 대화 기록만 남기지 말고 노트 한 쪽, 코드 한 덩어리, 녹음 한 번, 이메일 한 통, 피드백 하나를 남긴다.
+5. 일주일 뒤 [주간 회고](templates/weekly-review.md)로 완료, 품질, 유지, 전이를 점검한 다음 다음 단계를 정한다.
 
-你不需要先看见整条路。今天留下的第一份证据，就是下一步可以站立的地方。
+길 전체가 먼저 보일 필요는 없다. 오늘 남긴 첫 번째 증거가 곧 다음 걸음을 디딜 자리가 된다.
 
-## AI 学习与项目实践：从回答走向交付
+## AI 학습과 프로젝트 실천: 답에서 전달로
 
-[使用 AI 学习一切](threads/part-3/1-ai-learning.md)不从“哪个模型最好”开始，而从“我要解决什么问题”开始。[注意力篇](threads/part-3/3-attention-and-judgment.md)进一步处理输入边界、专注和独立判断，[作品篇](threads/part-3/4-artifacts-and-delivery.md)把理解推进到可交付成果，[证据篇](threads/part-3/5-evidence-and-transfer.md)则检查即时表现、延迟保持和真实迁移：AI 可以循序提问、解释概念、比较方案、整理材料和生成练习；人需要确定目标、选择可信来源、识别幻觉，并在关闭对话之后独立解释和使用所学。
+[AI로 무엇이든 배우기](threads/part-3/1-ai-learning.md)는 “어떤 모델이 가장 좋은가”가 아니라 “나는 어떤 문제를 풀려고 하는가”에서 시작한다. [주의력 편](threads/part-3/3-attention-and-judgment.md)은 입력의 경계, 집중, 독립적 판단을 한층 더 다루고, [작업물 편](threads/part-3/4-artifacts-and-delivery.md)은 이해를 전달 가능한 결과물로 밀고 나가며, [증거 편](threads/part-3/5-evidence-and-transfer.md)은 즉시 수행, 지연 유지, 실제 전이를 점검한다. AI는 차근차근 질문하고, 개념을 설명하고, 방안을 비교하고, 자료를 정리하고, 연습 문제를 만들어 줄 수 있다. 사람은 목표를 정하고, 믿을 만한 출처를 고르고, 환각을 가려내고, 대화를 닫은 뒤에도 배운 것을 스스로 설명하고 써먹을 수 있어야 한다.
 
-当学习进入项目，[AI 学习、项目开发与资源层创业](threads/part-3/2-ai-development-and-resource-layer.md)把协作推进到需求拆解、原型、编码、测试、文档和交付。速度不是唯一尺度：每个关键决定都应当可以被解释、测试或回滚，客户数据、公司机密和第三方隐私不能因为方便而失去边界。
+학습이 프로젝트로 넘어가면 [AI 학습, 프로젝트 개발, 리소스 계층 창업](threads/part-3/2-ai-development-and-resource-layer.md)이 협업을 요구 사항 분석, 프로토타입, 코딩, 테스트, 문서화, 전달로 확장한다. 속도만이 잣대는 아니다. 중요한 결정은 하나하나 설명하거나 테스트하거나 롤백할 수 있어야 하고, 고객 데이터, 회사 기밀, 제3자의 프라이버시는 편하다는 이유로 경계를 잃어서는 안 된다.
 
-在中国词元云与 `token.love` 的实践中，这条路继续进入模型接入、路由、计量、权限、部署、运维和企业支持。项目可以讨论客户为什么付费、服务如何验收、成本如何覆盖，却不会把方向写成已经实现的利润，更不会承诺人人都能借 AI 赚钱。
+중국 토큰 클라우드와 `token.love`에서의 실천을 통해 이 길은 모델 연결, 라우팅, 계량, 권한, 배포, 운영, 기업 지원으로 이어진다. 고객이 왜 돈을 내는지, 서비스를 어떻게 검수하는지, 비용을 어떻게 메우는지는 논의할 수 있다. 그러나 방향을 이미 실현된 이익처럼 쓰지 않으며, 누구나 AI로 돈을 벌 수 있다고 약속하지는 더더욱 않는다.
 
-这套方法不是凭空设计的。2022 年的软件失败让我看见，缺失数据集、老旧架构和预设结果可以被 UI 和“AI”叙事暂时遮住，却无法通过真实用户、成本和故障验证。失败不是这里的装饰性故事，而是这套方法为什么强调基线、证据、回滚、成本和责任的原因。2026 年重新进入 AI 与实体产业之后，我仍然把每个方向当作待验证的工作，而不是已经兑现的结论。
+이 방법은 허공에서 설계된 것이 아니다. 2022년의 소프트웨어 실패에서 나는 데이터셋이 없고, 아키텍처가 낡고, 결과가 미리 정해져 있어도 UI와 ‘AI’라는 서사로 잠시 가릴 수는 있지만 실제 사용자, 비용, 장애 앞에서는 검증을 통과하지 못한다는 것을 보았다. 여기서 실패는 장식용 이야기가 아니다. 이 방법이 기준선, 증거, 롤백, 비용, 책임을 강조하는 이유다. 2026년 AI와 실물 산업에 다시 뛰어든 뒤에도 나는 모든 방향을 이미 이뤄 낸 결론이 아니라 아직 검증해야 할 일로 다룬다.
 
-产品会变化，方法应当能够迁徙。无论模型多强，来源核验、数据安全、验收标准和最终责任都不能外包。
+제품은 바뀌어도 방법은 옮겨 갈 수 있어야 한다. 모델이 아무리 강해져도 출처 점검, 데이터 보안, 검수 기준, 최종 책임은 외주로 넘길 수 없다.
 
-## 写给仍在寻找方向的人
+## 아직 방향을 찾고 있는 사람에게
 
-### 写给年轻人
+### 젊은이에게
 
-你不必在二十几岁就找到一个永远正确的方向。很多方向并不是想清楚之后才出现，而是在做过几个小项目、见过几种工作、承担过几次结果之后，才慢慢从雾里显形。比“选中完美赛道”更可靠的，是保留学习和转向的能力。
+이십 대에 영원히 옳은 방향을 찾아낼 필요는 없다. 많은 방향은 생각을 다 정리한 뒤에야 나타나는 것이 아니다. 작은 프로젝트를 몇 개 해 보고, 몇 가지 일을 겪어 보고, 몇 번 결과를 책임져 본 뒤에야 안개 속에서 서서히 모습을 드러낸다. ‘완벽한 트랙을 고르는 것’보다 믿을 만한 것은 배우고 방향을 틀 수 있는 능력을 지키는 일이다.
 
-如果职业焦虑让你不停收藏课程、证书和成功故事，试着把它换成一个两周可以结束的小项目：解决一个身边人的问题，做出一个能运行的工具，写完一篇有来源的文章，或者替真实用户改进一次流程。项目不一定成功，但它会告诉你喜欢什么、缺少什么、能否交付，以及别人是否愿意使用。
+진로 불안 때문에 강의, 자격증, 성공담을 끝없이 저장만 하고 있다면, 그것을 2주 안에 끝낼 수 있는 작은 프로젝트로 바꿔 보라. 주변 사람의 문제를 하나 해결하거나, 실제로 돌아가는 도구를 만들거나, 출처를 갖춘 글 한 편을 끝까지 쓰거나, 실제 사용자를 위해 업무 흐름 하나를 개선해 보라. 프로젝트가 꼭 성공하지는 않겠지만, 무엇을 좋아하는지, 무엇이 부족한지, 끝까지 전달할 수 있는지, 다른 사람이 기꺼이 쓰는지를 알려 줄 것이다.
 
-AI 可以降低探索、学习和创造的门槛，却不能替你建立信誉。真正会随时间增值的个人资产，是可以被看见的作品、代码、文章、客户反馈、复盘记录，以及那些因为你诚实可靠而愿意再次合作的人。
+AI는 탐색하고 배우고 만드는 문턱을 낮춰 줄 수 있지만, 신뢰를 대신 쌓아 주지는 못한다. 시간이 갈수록 값어치가 붙는 개인 자산은 눈에 보이는 작업물, 코드, 글, 고객 피드백, 회고 기록, 그리고 정직하고 믿을 만한 사람이라서 다시 함께 일하고 싶어 하는 사람들이다.
 
-不要拿别人的高光时刻审判自己的起点。更有用的问题是：**这一周，我是否比上一周多完成了一件真实的事？** 如果答案是肯定的，哪怕那件事很小，你也已经在建设自己的路。
+남의 가장 빛나는 순간으로 자신의 출발점을 심판하지 마라. 더 쓸모 있는 질문은 이것이다. **이번 주에 나는 지난주보다 실제로 한 가지 일을 더 끝냈는가?** 답이 ‘그렇다’라면, 그 일이 아무리 작더라도 이미 자기 길을 닦고 있는 것이다.
 
-### 写给正在低谷中的人
+### 바닥을 지나고 있는 사람에게
 
-失业、创业失败、关系结束、健康受损和长时间的迷茫，都会真实地削弱一个人的精力。低谷不是一场必须立刻赢下来的考试。你不需要在最疲惫的时候证明自己还能完成宏大逆转。
+실직, 창업 실패, 관계의 끝, 건강 악화, 오래 이어지는 막막함은 모두 실제로 사람의 에너지를 깎아 먹는다. 바닥은 당장 이겨 내야 하는 시험이 아니다. 가장 지쳐 있을 때 거창한 역전을 해낼 수 있다고 증명할 필요는 없다.
 
-先把生活缩小到能够照顾的尺度：睡一晚相对完整的觉，吃一顿饭，走到户外，回复一封重要邮件，整理一页笔记，完成一个测试，或者向一个可信的人说出“我现在需要帮助”。这些动作看起来不像传奇，却在一点点恢复你与世界的连接。
+먼저 삶을 돌볼 수 있는 크기로 줄여라. 비교적 온전하게 하룻밤을 자고, 밥 한 끼를 먹고, 밖으로 걸어 나가고, 중요한 이메일 한 통에 답하고, 노트 한 쪽을 정리하고, 테스트 하나를 끝내고, 믿을 만한 사람 한 명에게 “지금 도움이 필요해”라고 말하라. 이런 행동은 전설처럼 보이지 않지만, 세상과의 연결을 조금씩 되살려 준다.
 
-暂停不是放弃，求助不是软弱，重新校准也不是退步。真正的恢复常常很慢：先让一天重新有边界，再让一周出现节奏，最后才谈更远的计划。今天只能完成五分钟的事，就先留下五分钟的证据；等力量回来，再增加重量。
+잠시 멈추는 것은 포기가 아니고, 도움을 청하는 것은 나약함이 아니며, 다시 조정하는 것은 뒷걸음질이 아니다. 진짜 회복은 대개 느리다. 먼저 하루에 다시 경계를 세우고, 다음에 한 주에 리듬이 생기게 하고, 그 뒤에야 더 먼 계획을 이야기한다. 오늘 5분짜리 일만 할 수 있다면 5분어치의 증거부터 남겨라. 힘이 돌아오면 그때 무게를 더하면 된다.
 
-这里的个人故事不是医疗或心理治疗建议。如果低落、失眠、绝望或危险念头持续存在，优先联系可信亲友，并寻求当地具备资质的医疗或心理专业支持。先保证安全，再谈成长。
+여기 담긴 개인의 이야기는 의료나 심리 치료에 관한 조언이 아니다. 우울감, 불면, 절망, 위험한 생각이 계속된다면 믿을 만한 가족이나 친구에게 먼저 연락하고, 지역에서 자격을 갖춘 의료·심리 전문가의 도움을 구하라. 안전이 먼저고, 성장은 그다음이다.
 
-## 基础能力：英语仍然是一扇重要的门
+## 기초 능력: 영어는 여전히 중요한 문이다
 
-英语不再是这份指南的全部，却仍然是终身学习的重要基础。它帮助你阅读全球知识与技术文档，理解国际课程和研究，使用更多 AI 工具，也让跨文化合作少一层转述。
+영어는 이제 이 가이드의 전부는 아니지만, 여전히 평생학습의 중요한 기초다. 영어가 있으면 전 세계의 지식과 기술 문서를 읽고, 해외 강의와 연구를 이해하고, 더 많은 AI 도구를 쓸 수 있으며, 문화 간 협업에서 한 겹의 전달 과정을 덜 수 있다.
 
-从 [CEFR 目标与自测](threads/part-1/0-cefr.md)建立真实基线，再按需要进入 [认知](threads/part-1/1-understanding.md)、[词汇](threads/part-1/2-vocabulary.md)、[语法](threads/part-1/grammar.md)、[听力](threads/part-1/3-listening.md)、[阅读](threads/part-1/4-reading.md)、[口语](threads/part-1/5-speaking.md)、[写作](threads/part-1/6-writing.md)和[用 AI 学英语](threads/part-1/7-ai.md)。如果已经懂一些规则，却在真实表达中反复改变时间、责任、条件或确定性，先用[语法证据卡](templates/grammar-evidence.md)只追踪一项高影响结构。如果技术文档读得慢、逐词翻译、概念背景不足或读完无法交付，先用[阅读篇](threads/part-1/4-reading.md)与[阅读证据卡](templates/reading-evidence.md)把版本、障碍、主张、最小事实和真实输出放在同一条记录里。如果正在处理技术任务，可以从[技术词表](threads/word-list/Common.md)挑选词块；也可以直接使用 [英语能力诊断](templates/english-diagnostic.md)、[词汇证据卡](templates/vocabulary-audit.md)、[听力证据卡](templates/listening-audit.md)、[阅读证据卡](templates/reading-evidence.md)、[口语证据卡](templates/speaking-evidence.md)、[写作证据卡](templates/writing-evidence.md)或[作品简报与交付卡](templates/artifact-brief.md)，为下一轮学习找到起点。
+[CEFR 목표와 자가 진단](threads/part-1/0-cefr.md)으로 실제 기준선을 세운 다음, 필요에 따라 [인지](threads/part-1/1-understanding.md), [어휘](threads/part-1/2-vocabulary.md), [문법](threads/part-1/grammar.md), [듣기](threads/part-1/3-listening.md), [읽기](threads/part-1/4-reading.md), [말하기](threads/part-1/5-speaking.md), [쓰기](threads/part-1/6-writing.md), [AI로 영어 배우기](threads/part-1/7-ai.md)로 들어가라. 규칙은 어느 정도 알지만 실제로 표현할 때 시간, 책임, 조건, 확실성이 자꾸 어긋난다면, 먼저 [문법 증거 카드](templates/grammar-evidence.md)로 영향이 큰 구조 하나만 추적하라. 기술 문서를 읽는 속도가 느리거나, 단어 하나하나를 번역하거나, 개념 배경이 부족하거나, 다 읽고도 결과물을 내지 못한다면, [읽기 편](threads/part-1/4-reading.md)과 [읽기 증거 카드](templates/reading-evidence.md)로 버전, 장애물, 주장, 최소한의 사실, 실제 출력을 한 기록 안에 모아 두라. 기술 과제를 다루는 중이라면 [기술 단어 목록](threads/word-list/Common.md)에서 어휘 덩어리를 골라도 좋다. [영어 능력 진단](templates/english-diagnostic.md), [어휘 증거 카드](templates/vocabulary-audit.md), [듣기 증거 카드](templates/listening-audit.md), [읽기 증거 카드](templates/reading-evidence.md), [말하기 증거 카드](templates/speaking-evidence.md), [쓰기 증거 카드](templates/writing-evidence.md), [작업물 브리프와 전달 카드](templates/artifact-brief.md)를 바로 써서 다음 학습의 출발점을 찾을 수도 있다.
 
-英语水平不由收藏的单词量证明，而由你能否在真实场景中理解、表达和完成任务证明。它是一座桥，不是一堵用来评价自己的墙。
+영어 실력은 저장해 둔 단어 수로 증명되지 않는다. 실제 장면에서 이해하고, 표현하고, 과제를 끝낼 수 있느냐로 증명된다. 영어는 다리이지, 자신을 평가하는 벽이 아니다.
 
-如果四项能力差异很大，不要取平均分替自己下结论。先用[英语能力诊断](templates/english-diagnostic.md)保存同一主题下的听、读、说、写首版，再为每项选一个障碍和证据卡；七天后做平行任务，三十天后复测一项真实交付。这样，认知篇的总方法才会真正进入下一次练习。
+네 영역 능력의 차이가 크다면 평균 점수를 내서 자신을 규정하지 마라. 먼저 [영어 능력 진단](templates/english-diagnostic.md)으로 같은 주제에 대한 듣기, 읽기, 말하기, 쓰기의 첫 버전을 남기고, 영역마다 장애물 하나와 증거 카드 하나를 고른다. 7일 뒤에는 평행 과제를 하고, 30일 뒤에는 실제 전달 하나를 재측정한다. 그래야 인지 편에서 말한 전체 방법이 다음 연습에 제대로 녹아든다.
 
-## 人生复盘与恢复：经验也需要重新解释
+## 인생 회고와 회복: 경험도 다시 해석해야 한다
 
-[我的故事](threads/part-2/my-story.md)、[叙事与证据篇](threads/part-2/narrative-and-evidence.md)、[回声篇](threads/part-2/x-misc.md)、[恢复篇](threads/part-2/recovery.md)、[选择篇](threads/part-2/decision.md)、[关系篇](threads/part-2/relationships.md)、[创业篇](threads/part-2/entrepreneurship.md)和[旧文归档](threads/archive/README.md)保留了失败、身体失序、关系变化、离开与重返。回望不是为了把过去装饰成励志故事，而是把事实、伤害、责任和运气重新分开，辨认哪些决定有效、哪些代价不能忽略，以及下一次怎样活得更诚实。
+[나의 이야기](threads/part-2/my-story.md), [서사와 증거 편](threads/part-2/narrative-and-evidence.md), [메아리 편](threads/part-2/x-misc.md), [회복 편](threads/part-2/recovery.md), [선택 편](threads/part-2/decision.md), [관계 편](threads/part-2/relationships.md), [창업 편](threads/part-2/entrepreneurship.md), [옛글 보관함](threads/archive/README.md)에는 실패, 무너진 몸, 관계의 변화, 떠남과 돌아옴이 남아 있다. 되돌아보는 목적은 과거를 자기계발식 성공담으로 꾸미는 데 있지 않다. 사실, 상처, 책임, 운을 다시 갈라 놓고, 어떤 결정이 효과가 있었는지, 어떤 대가를 외면해서는 안 되는지, 다음에는 어떻게 더 정직하게 살지를 가려내기 위해서다.
 
-个人经历不是医疗、法律、投资或创业建议。公开内容遵循最少必要原则，不展示不必要的第三方身份信息；涉及他人的照片与故事，只在获得明确授权和尊重隐私的前提下保留。
+개인의 경험은 의료, 법률, 투자, 창업에 관한 조언이 아니다. 공개하는 내용은 최소 필요 원칙을 따르며, 불필요한 제3자의 신원 정보는 드러내지 않는다. 다른 사람이 등장하는 사진과 이야기는 명확한 동의를 받고 프라이버시를 존중한다는 전제에서만 남겨 둔다.
 
-## 现实仍在继续
+## 현실은 계속된다
 
-方法只有进入生活，才知道自己是否站得住。关系会结束，也可能重新开始；工作会改变，学习也会在与真实的人相遇时获得新的意义。
+방법은 삶 속에 들어가 봐야 제대로 서 있는지 알 수 있다. 관계는 끝나기도 하고 다시 시작되기도 한다. 일은 바뀌고, 학습은 실제 사람들과 만날 때 새로운 의미를 얻는다.
 
 <div class="latest-updates">
   <figure class="latest-update">
-    <img src="./assets/latest/single-again.webp" alt="韩先凯与伴侣的合影" width="1000" height="1402" loading="lazy" decoding="async" fetchpriority="low" />
-    <figcaption><strong>重新相信相遇</strong>经历关系结束、恢复与重新整理生活之后，韩先凯开启了一段新的恋情。重新开始不会抹去过去，但它证明生活仍然能够向前生长。</figcaption>
+    <img src="./assets/latest/single-again.webp" alt="한셴카이와 연인이 함께 찍은 사진" width="1000" height="1402" loading="lazy" decoding="async" fetchpriority="low" />
+    <figcaption><strong>다시 만남을 믿다</strong>관계의 끝과 회복, 삶을 다시 추스르는 시간을 지나 한셴카이는 새로운 연애를 시작했다. 다시 시작한다고 과거가 지워지지는 않지만, 삶이 여전히 앞으로 자랄 수 있다는 것을 보여 준다.</figcaption>
   </figure>
   <figure class="latest-update">
-    <img class="latest-update-fan-photo" src="./assets/latest/agentic-db-fans.webp" alt="韩先凯在 Agentic DB 大会与读者合影" width="1100" height="1467" loading="lazy" decoding="async" fetchpriority="low" />
-    <figcaption><strong>在现场相遇</strong>参加阿里巴巴 × NVIDIA Agentic DB 大会，与读者和同行面对面交流，让公开写作回到真实的人与问题之中。</figcaption>
+    <img class="latest-update-fan-photo" src="./assets/latest/agentic-db-fans.webp" alt="Agentic DB 콘퍼런스에서 독자들과 함께 사진을 찍은 한셴카이" width="1100" height="1467" loading="lazy" decoding="async" fetchpriority="low" />
+    <figcaption><strong>현장에서 만나다</strong>알리바바 × 엔비디아 Agentic DB 콘퍼런스에 참가해 독자, 동료들과 얼굴을 마주하고 이야기를 나누며, 공개된 글쓰기를 실제 사람과 문제 곁으로 되돌려 놓았다.</figcaption>
   </figure>
 </div>
 
-## 作者项目与透明说明
+## 저자 프로젝트와 투명성 안내
 
-韩先凯参与的产品、公司参访与现实项目统一放在 [作者项目与现实实践](projects.md)。页面明确作者关联、用途、更新时间和非赞助关系。正文不因商业关系改变推荐标准，站点默认不接入广告、分析脚本或追踪器。
+한셴카이가 참여한 제품, 기업 방문, 현실 프로젝트는 [저자 프로젝트와 현실 실천](projects.md)에 한데 모아 두었다. 이 페이지는 저자와의 관계, 용도, 업데이트 날짜, 비후원 여부를 분명히 밝힌다. 본문은 사업 관계 때문에 추천 기준을 바꾸지 않으며, 사이트에는 기본적으로 광고, 분석 스크립트, 추적기를 넣지 않는다.
 
-## 项目边界
+## 프로젝트 경계
 
-- 本项目是开放内容项目，不是 OSI 意义上的开源软件：正文与作者内容采用 **CC BY-NC 4.0**，站点配置、检查脚本和构建代码采用 **MIT**。详见 [许可证说明](https://github.com/byoungd/up/blob/master/LICENSE.md)。
-- 引用、图片和第三方素材的来源及授权状态记录在 [第三方素材与引用](https://github.com/byoungd/up/blob/master/ATTRIBUTIONS.md)。
-- 贡献前请阅读 [贡献指南](https://github.com/byoungd/up/blob/master/CONTRIBUTING.md) 和 [行为准则](https://github.com/byoungd/up/blob/master/CODE_OF_CONDUCT.md)。
-- 产品与服务条目的核验日期以各自页面和 [第三方素材与引用](https://github.com/byoungd/up/blob/master/ATTRIBUTIONS.md) 中的记录为准；产品能力、可用性与合规范围仍以官方页面、正式协议和实际验收为准，过期内容欢迎提交 issue。
+- 이 프로젝트는 개방형 콘텐츠 프로젝트이지 OSI가 말하는 오픈 소스 소프트웨어가 아니다. 본문과 저자 콘텐츠는 **CC BY-NC 4.0**을, 사이트 설정과 검사 스크립트와 빌드 코드는 **MIT**를 따른다. 자세한 내용은 [라이선스 안내](https://github.com/2lab-ai/up/blob/master/LICENSE.md)를 보라.
+- 인용, 이미지, 제3자 자료의 출처와 라이선스 상태는 [제3자 자료와 인용](https://github.com/2lab-ai/up/blob/master/ATTRIBUTIONS.md)에 기록해 두었다.
+- 기여하기 전에 [기여 가이드](https://github.com/2lab-ai/up/blob/master/CONTRIBUTING.md)와 [행동 강령](https://github.com/2lab-ai/up/blob/master/CODE_OF_CONDUCT.md)을 읽어 주기 바란다.
+- 제품과 서비스 항목의 점검 날짜는 각 페이지와 [제3자 자료와 인용](https://github.com/2lab-ai/up/blob/master/ATTRIBUTIONS.md)의 기록을 기준으로 한다. 제품의 기능, 가용성, 규정 준수 범위는 여전히 공식 페이지, 정식 협약, 실제 검수를 기준으로 삼는다. 오래된 내용이 있으면 issue로 알려 주기 바란다.
 
-## 在线阅读
+## 온라인으로 읽기
 
-- [GitHub Pages](https://byoungd.github.io/up/)
-- [GitHub 仓库](https://github.com/byoungd/up)
-- 历史文章已整理进[创业篇](threads/part-2/entrepreneurship.md)与[我的故事](threads/part-2/my-story.md)，不再保留当前无法稳定访问的外部直链。
+- 웹: [dosi.dev/up](https://dosi.dev/up/)
+- 저장소: [github.com/2lab-ai/up](https://github.com/2lab-ai/up)
+- 지난 글은 [창업 편](threads/part-2/entrepreneurship.md)과 [나의 이야기](threads/part-2/my-story.md)에 정리해 두었으며, 지금 안정적으로 접속할 수 없는 외부 직접 링크는 더 이상 남겨 두지 않는다.
 
-如果今天只做一件事：创建一份 [学习状态](templates/learning-state.md)，写下正在面对的真实问题、当前证据和下一项最小任务，然后完成它。不要等道路变得宽阔才出发；很多路，正是在脚落下之后才显现。
+오늘 한 가지만 한다면 [학습 상태](templates/learning-state.md)를 하나 만들어, 지금 마주한 실제 문제와 현재의 증거와 다음 최소 과제를 적고, 그 과제를 끝내라. 길이 넓어질 때까지 기다렸다가 출발하지 마라. 많은 길은 발을 내디딘 뒤에야 비로소 모습을 드러낸다.

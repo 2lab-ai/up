@@ -1,15 +1,15 @@
-# Support
+# 지원
 
-Use the structured GitHub issue forms for reproducible project questions:
+아래와 같이 재현할 수 있는 프로젝트 문의는 GitHub의 구조화된 이슈 양식으로 남겨라.
 
-- content errors and evidence updates;
-- broken links;
-- translation gaps;
-- learning-method proposals;
-- site and accessibility problems.
+- 내용 오류와 증거 업데이트
+- 깨진 링크
+- 번역 누락
+- 학습 방법 제안
+- 사이트와 접근성 문제
 
-Maintainers should use `ISSUE_TRIAGE.md` for the current category definitions and the 2026-08-16 open-issue review.
+메인테이너는 현재 분류 정의와 2026-08-16 미해결 이슈 검토 결과를 `ISSUE_TRIAGE.md`에서 확인해야 한다.
 
-This repository cannot provide private tutoring, emergency help, medical/legal/financial advice, account support for third-party products, or guaranteed responses to individual study plans. Use the templates in `docs/templates/` to diagnose and plan your own cycle.
+이 저장소는 개인 과외, 긴급 지원, 의료·법률·금융 조언, 서드파티 제품의 계정 지원을 제공하지 않으며, 개인 학습 계획에 대한 답변도 보장하지 않는다. 자신의 학습 주기를 진단하고 계획하려면 `docs/templates/`의 템플릿을 활용하라.
 
-For security or privacy, follow `SECURITY.md` and do not post sensitive data publicly. For product-specific problems, contact the product's official support channel.
+보안이나 프라이버시 문제는 `SECURITY.md`를 따르고, 민감한 정보는 공개된 곳에 올리지 마라. 특정 제품의 문제는 해당 제품의 공식 지원 채널에 문의하라.

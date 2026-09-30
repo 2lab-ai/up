@@ -12,9 +12,7 @@ const publicDir = join(ROOT, "docs/public/assets");
 mkdirSync(publicDir, { recursive: true });
 const coverSpecs = [
   { source: "feature.svg", target: "feature.png", width: 1200, height: 630 },
-  { source: "feature-en.svg", target: "feature-en.png", width: 1200, height: 630 },
   { source: "cover-portrait.svg", target: "cover-portrait.png", width: 1600, height: 2560 },
-  { source: "cover-portrait-en.svg", target: "cover-portrait-en.png", width: 1600, height: 2560 },
 ];
 
 let changed = false;
@@ -31,7 +29,7 @@ function syncBuffer(name, source) {
   if (source.equals(actual)) return;
   changed = true;
   if (checkOnly) {
-    console.error(`docs/public/assets/${name}: 品牌资源未同步`);
+    console.error(`docs/public/assets/${name}: 브랜드 자산이 동기화되지 않았습니다`);
   } else {
     writeFileSync(target, source);
     console.log(`updated docs/public/assets/${name}`);
@@ -87,13 +85,13 @@ for (const { source, target, width, height } of coverSpecs) {
 
   if (!existingOutput) {
     changed = true;
-    console.error(`docs/public/assets/${target}: PNG 不存在`);
+    console.error(`docs/public/assets/${target}: PNG가 없습니다`);
     continue;
   }
   outputBuffers.set(target, existingOutput);
   if (!hasExpectedDimensions) {
     changed = true;
-    console.error(`docs/public/assets/${target}: 必须是 ${width}×${height} PNG`);
+    console.error(`docs/public/assets/${target}: ${width}×${height} PNG여야 합니다`);
   }
 }
 

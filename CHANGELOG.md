@@ -1,240 +1,250 @@
-# Changelog
+# 변경 기록
 
-All notable project-level changes are documented here. Content pages retain their own `updated` date.
+프로젝트 차원의 주요 변경 사항을 모두 여기에 기록한다. 콘텐츠 페이지는 저마다의 `updated` 날짜를 따로 유지한다.
 
-## Unreleased
+## 미출시
 
-### 2026-09-07 link-audit hardening
+### 2026-09-30 한국어판
 
-#### Changed
+#### 변경
 
-- Fixed the failure pattern behind issues 193–197 by limiting Lychee to authoritative documentation sources, excluding generated README/SUMMARY noise, and adding a regression guard for the retired ScholarSpace, invalid DOI, and dead Wayback URLs that caused the historical reports.
+- 중국어 원문(`byoungd/up` 커밋 `7478ac2`)의 원고와 저장소 문서를 한국어로 옮기고, 사이트를 한국어 단일 로케일(`ko-KR`)로 바꿨다. 영어판(`docs/en/`)과 중국어·영어 EPUB·PDF는 싣지 않는다.
+- 배포 주소를 [dosi.dev/up](https://dosi.dev/up/)으로, 저장소를 [2lab-ai/up](https://github.com/2lab-ai/up)으로 바꾸고, 원작 표기(CC BY-NC 4.0)와 바꾼 점을 홈페이지와 사이트 하단에 밝혔다.
+- 홈페이지의 제3자 AI 중계 서비스 추천 카드를 뺐다.
+- 한국어판 EPUB·PDF를 새로 만들고, PDF 글꼴을 Noto Serif KR 서브셋으로 바꿨다.
+- 콘텐츠 검사에 공개 Markdown 한자 금지 규칙을 더하고, 중국어·영어 대응 규칙은 없앴다.
 
-### 2026-09-07 recovery safety refresh
+### 2026-09-07 링크 점검 강화
 
-#### Changed
+#### 변경
 
-- Rechecked the WHO suicide-prevention and mental-health-at-work boundaries, updated the Recovery sources date, and kept the chapter's capacity modes explicitly non-clinical.
+- 이슈 193–197번의 실패 패턴을 고쳤다. Lychee 검사 대상을 권위 있는 문서 출처로 한정하고, 자동 생성되는 README/SUMMARY 잡음을 제외했다. 과거 보고의 원인이었던 폐기된 ScholarSpace 주소, 잘못된 DOI, 죽은 Wayback URL이 다시 들어오지 않도록 회귀 방지 장치도 추가했다.
 
-### 2026-09-03 maintenance pass
+### 2026-09-07 회복 안전성 갱신
 
-#### Changed
+#### 변경
 
-- Added automatic cleanup for stale external-link failure issues after a successful scheduled check, so the issue list reflects current regressions instead of old resolved alerts.
-- Expanded the bilingual Relationships chapter from communication advice into a fuller account of repair, restitution, reconciliation, power asymmetry, meaningful consent, withdrawal, and safe exit; upgraded the private Relationship Conversation Card to preserve those boundaries and observable follow-through.
-- Rebuilt the bilingual Decision-Making chapter and Decision Brief around information gaps versus value conflicts, decision authority, affected people, meaningful consent, disconfirming evidence, and observable evidence, cost, safety, and responsibility gates.
-- Rebuilt the bilingual Recovery chapter and Recovery Reset around non-clinical capacity modes, bounded support agreements, minimum necessary disclosure, staged return-to-work load tests, next-day cost, and explicit safety, basic-life, task, boundary, and review gates, with current WHO source boundaries.
-- Updated the pinned PDF parser to `pypdf` 6.16.2, clearing the known denial-of-service advisories affecting the previous 6.10.0 build dependency while retaining deterministic bilingual PDF output; PDF manifests now identify the parser version that produced their semantic digest.
+- WHO의 자살 예방 지침과 일터 정신 건강 지침의 경계를 다시 확인하고 회복 편의 출처 날짜를 갱신했다. 이 장의 여력 모드가 임상 기준이 아니라는 점도 계속 분명히 밝혔다.
 
-### 2026-09-03 editorial and release hygiene
+### 2026-09-03 유지보수 작업
 
-#### Changed
+#### 변경
 
-- Corrected three English editorial details in the public homepage, project disclosure, and listening method; the English Reader Field Note now stays in the English locale instead of silently crossing to the Chinese route, with regression coverage for the published route and wording.
+- 예약 점검이 성공하면 오래된 외부 링크 실패 이슈를 자동으로 정리하게 했다. 이제 이슈 목록에는 이미 해결된 옛 경보 대신 현재의 회귀만 남는다.
+- 두 언어판 관계 편을 소통 조언에서 한 걸음 넓혔다. 복구, 배상, 화해, 권력 비대칭, 실질적 동의, 철회, 안전한 이탈까지 온전히 다룬다. 비공개용 관계 소통 카드도 이 경계와 관찰 가능한 후속 이행을 담도록 개선했다.
+- 두 언어판 선택 편과 결정 브리프를 다시 짰다. 정보 공백과 가치 충돌의 구분, 결정권, 영향받는 사람, 실질적 동의, 반증을 축으로 삼고, 관찰 가능한 증거·비용·안전·책임 관문을 둔다.
+- 두 언어판 회복 편과 회복 리셋을 다시 짰다. 비임상 여력 모드, 범위를 정한 지원 협약, 꼭 필요한 만큼만 하는 공개, 단계적인 업무 복귀 부하 시험, 다음 날의 대가를 중심에 두고, 안전·기본 생활·과제·경계·회고 관문을 명시했다. 현재 WHO 출처의 경계도 반영했다.
+- 버전을 고정한 PDF 파서를 `pypdf` 6.16.2로 올렸다. 이전 빌드 의존성인 6.10.0에 해당하던 알려진 서비스 거부 취약점 권고가 해소되고, 결정론적인 두 언어판 PDF 출력은 그대로 유지된다. 이제 PDF 매니페스트에는 의미 다이제스트를 만든 파서 버전이 적힌다.
 
-### 2026-09-02 editorial pass
+### 2026-09-03 편집·릴리스 정비
 
-#### Changed
+#### 변경
 
-- Reorganised the bilingual homepage guide paths into four purpose-led groups with responsive cards, numbered section cues, accessible landmarks, and a visually distinct but explicitly non-endorsing third-party resources group.
-- Expanded the bilingual AI Task Brief and AI Learning Log into a governed workflow covering evaluation sets, human gates, data retention, cost, model scope, source verification, failure rollback, handover, independent production, speed debt, and delayed transfer.
-- Connected the AI work papers through the glossary and regression coverage so a model response cannot masquerade as a verified deliverable or independent learning.
-- Rebuilt the bilingual Learning Principles chapter and English Diagnostic around real deliveries, first-version conditions, error diagnosis, targeted repair, feedback uptake, performance-adjusted spacing, recovery and capacity modes, cross-session state, AI boundaries, and one-condition transfer.
-- Renamed the bilingual diagnostic's vocabulary entry as an evidence card and connected the general protocol through the Reader's Guide, glossary, search index, attribution register, and regression coverage.
-- Rebuilt the bilingual Vocabulary chapter and Evidence Card around real-task baselines, five decisions for unknown items, eight dimensions of word knowledge, receptive/productive gaps, coverage-number limits, performance-adjusted spacing, error repair, AI verification, and fourteen-day transfer.
-- Connected the vocabulary path through search indexing, Reader's Guide, AI-English, glossary, attribution, technical word-list boundaries, and regression tests so card familiarity is not treated as contextual ability.
-- Added a bilingual homepage recommendation for the user-supplied `OpenHuge_ai` Telegram channel as an optional AI-resource discovery source, with explicit third-party, volatility, source, privacy, copyright, and security boundaries.
-- Rebuilt the bilingual Writing chapter around a real audience, unaided draft, fact and responsibility ledger, document skeleton, translation meaning contrast, five risk-ordered revision passes, feedback uptake, AI disclosure and limits, asynchronous handover, honest authorship, and a fourteen-day transfer experiment.
-- Expanded the bilingual Writing Evidence Card to preserve raw drafts, sources and permissions, translation changes, revision reasons, reader retelling, feedback decisions, automated-tool use, asynchronous acceptance, delayed transfer, and the decision to sign.
-- Connected the new accountable-writing path through the home pages, Reader's Guide, Toolkit, glossary, AI-English, Job-search English, search budgets, research attribution, and regression coverage while removing duplicated legacy prose from the English chapter.
-- Rebuilt the bilingual Reading chapter around real tasks, a timed first-pass baseline, six-layer barrier diagnosis, five question-specific passes, technical documentation verification, translation boundaries, intensive/extensive/narrow reading, source comparison, AI limits, real output, and a fourteen-day transfer experiment.
-- Expanded the bilingual Reading Evidence Card to capture source version, first pass, barrier map, claims and evidence, technical fact checks, unknown-word decisions, source comparison, delivery, and day-fourteen transfer.
-- Removed volatile book/community recommendation sections from the reading method and connected the new documentation-and-delivery path through the home pages, Reader's Guide, Toolkit, glossary, AI-English, search budgets, attribution, and regression tests.
-- Rebuilt the bilingual Listening chapter around a real first-pass baseline, six-layer error diagnosis, material conditions, an adjustable caption scaffold, question-specific replays, critical-segment dictation, meaning reconstruction, supported extensive listening, accent familiarity, AI boundaries, and a fourteen-day transfer experiment.
-- Replaced the old bilingual Listening Resource Audit with a Listening Evidence Card that captures main and parallel material, technical conditions, no-caption evidence, scaffold removal, generation beyond shadowing, real-task action, and day-fourteen transfer.
-- Removed the long, volatile listening channel/video directory and kept product self-promotion outside the manuscript, connecting the new non-advertorial method through navigation, Reader's Guide, Toolkit, glossary, AI-English, search budgets, attribution, and regression tests.
-- Rebuilt the bilingual Speaking chapter around unscripted baselines, reference variety without hierarchy, accentedness/intelligibility/comprehensibility distinctions, high-impact pronunciation, generation beyond shadowing, interaction repair, listener retelling, AI limits, and a fourteen-day transfer experiment.
-- Expanded the bilingual Speaking Evidence Card to capture three baseline conditions, recording consent, device and listener familiarity, actual listener recovery, comprehension effort, unfamiliar follow-ups, repair, recognition errors, and day-fourteen transfer.
-- Connected the new speaking method through the home pages, Reader's Guide, Toolkit Overview, glossary, Listening, AI-English, Job-search English, search-budget rules, research attribution, and regression coverage.
-- Added a bilingual Grammar chapter that starts from real-task baselines and form–meaning choices, prioritises errors by communicative impact, reconnects explicit explanation to output, and tests one structure through a fourteen-day delayed-transfer cycle.
-- Added a bilingual Grammar Evidence Card and connected it through Part I, the home pages, Reader's Guide, Toolkit Overview, glossary, search index, and continuous book navigation.
-- Made the existing bilingual biezou.com home-page entry an explicit third-party AI relay recommendation, while retaining current-site verification, privacy, pricing, terms, and availability boundaries.
-- Added a bilingual Job-search English chapter that turns one real global or remote role into recruiter, project, technical, behavioural, asynchronous-writing, and interaction-repair tasks, with an unscripted baseline, story bank, AI integrity boundaries, fourteen-day sprint, role gates, and post-interview close.
-- Added a bilingual private Job-search English Evidence Card for role mapping, unfamiliar follow-ups, asynchronous handover, repair, delayed retesting, transfer, confidentiality, recording, and permitted AI use.
-- Connected CEFR, speaking, writing, AI-English, the Reader's Guide, homepage, Toolkit, glossary, and Part I reading arc to role-specific evidence rather than presenting one CEFR level as a universal hiring threshold.
-- Added a bilingual Family Learning chapter for roughly middle-school-age learners, guardians, and teachers, with learner agency, role boundaries, a seven-day artifact path, a synthetic English example, five AI safety gates, capacity modes, feedback boundaries, pause conditions, and a fourteen-day decision.
-- Added a bilingual private Family Learning Agreement that makes learner and guardian write separately, protects school and children's data, limits monitoring and substituted work, and reviews both learner evidence and adult support after fourteen days.
-- Added a home-page and Reader's Guide route for families, integrated the optional branch between First Week Practice and Daily System, and documented UNESCO's human-centred educational AI guidance without substituting it for local school or platform rules.
-- Added a bilingual private-first Reader Field Note with immediate action, three-to-seven-day retest, one-condition transfer, editorial feedback, evidence boundaries, and an explicit privacy gate before optional public sharing.
-- Added a bilingual synthetic toolkit walkthrough that answers reader feedback about unclear tool use and cross-session AI state, showing a 90-day Python example from versioned Learning State through task briefing, unaided baseline, evidence, delayed retest, weekly handover, interruption recovery, and a new conversation.
-- Routed the homepage, Reader's Guide, Toolkit Overview, glossary, and book case study through the private worksheet before the public GitHub issue form, and indexed the two long new pages by descriptive headings to preserve the search budget.
-- Added a bilingual end-to-end case study that makes the book itself face its methods, covering baseline preservation, editorial architecture, AI responsibility, artifact chains, failed checks, release gates, reader evidence, unknowns, transfer, and project handover.
-- Added a privacy-aware reader field-note issue form and bilingual homepage entry so concrete attempts, delayed results, confusion, and unsuccessful transfer can inform future editions.
-- Removed fixed publication chapter counts from PDF generation and browser regression; EPUB, PDF, and tests now derive manuscript size from the shared navigation publication rules.
-- Added a pinned, reproducible Noto Serif SC subsetting utility driven by the current Chinese EPUB, with upstream SHA documentation and spacing-glyph coverage checks.
-- Made PDF title-page dates follow the EPUB publication metadata and moved running-header rendering to page end so chapter-opening headers no longer lag behind by one chapter.
-- Made future-date validation use the project's `Asia/Shanghai` calendar date and kept the client search budget intact by indexing navigation-heavy long chapters through descriptive headings.
+- 공개 홈페이지, 프로젝트 공개 페이지, 듣기 방법에서 영어 편집상의 세부 사항 세 곳을 바로잡았다. 영어판 독자 실천 회신은 더 이상 소리 없이 중국어 경로로 넘어가지 않고 영어 로케일에 머문다. 게시된 경로와 문구에 대한 회귀 테스트도 갖췄다.
 
-### 2026-09-01 editorial pass
+### 2026-09-02 편집 작업
 
-#### Changed
+#### 변경
 
-- Reworked the bilingual Entrepreneurship chapter away from stacked “not X but Y” declarations and toward scenes, physical consequences, concrete business questions, and more varied narrative rhythm.
-- Gave My Story, Narrative and Evidence, Entrepreneurship, and Learning Anything with AI distinct bilingual final movements, moving update logs, related reading, and source disclosures before the chapter's actual ending.
-- Rewrote the final movement of all eight Part I chapters in both languages so CEFR, learning methods, vocabulary, listening, reading, speaking, writing, and AI now end with a distinct literary closing rather than a rubric, source list, or training schedule.
-- Removed hand-written previous/next paragraphs from 26 bilingual book-page pairs so literary conclusions remain the true ending of each chapter, while one authoritative footer owns continuous reading across every part boundary.
-- Expanded Part V with a full bilingual chapter on closing a 90-day cycle, transferring ability, choosing continuation or closure, protecting life foundations, and planning by seasons; integrated the chapter into the book's navigation and continuous reading arc.
-- Made the Reader's Guide, Prologue, Part I introduction, and Afterword use one authoritative bilingual pager, keeping reference tools out of the continuous book arc and removing conflicting hand-written navigation.
-- Replaced dynamic repository badges and the externally fetched GitHub icon with quiet bilingual book metadata links, removing all third-party image requests from both home pages.
-- Added build-time intrinsic dimensions to local raster Markdown images so deferred media reserves its final aspect ratio before download and avoids layout shifts.
-- Added deferred asynchronous loading to every Markdown image, converted the remaining oversized story and project media to WebP, and introduced a 230KB source-raster budget.
-- Re-encoded and right-sized the two home-page update photos as deferred WebP assets, reducing their combined weight by more than 80% while adding intrinsic dimensions and low-priority asynchronous loading.
-- Reduced the lazy bilingual search indexes by excluding repeated code blocks and merging H3 plus task-specific collections into useful parent results; added raw and gzip build budgets so the oversized-chunk warning cannot silently return.
-- Added reciprocal `zh-CN`, `en-US`, and `x-default` language alternates to all 68 bilingual page pairs, mirrored them in the sitemap, and declared the dedicated navbar mark as the site icon.
-- Replaced the obsolete English-guide sharing artwork with bilingual Life Level-up Guide covers, a dedicated navbar mark, generated 1200×630 PNG social images, and Book/Chapter JSON-LD metadata.
-- Localised VitePress's hard-coded navigation, sidebar, pager, section-toggle, mobile-menu, and heading-permalink labels so Chinese screen readers no longer switch unexpectedly into English.
-- Localised the Chinese search dialog, edit and accessibility labels, appearance controls, and missing-page copy; shortened both navbar titles to the book name so the English title cannot overlap search.
-- Added a privacy-preserving reading-progress indicator, steadier long-form typography, and a clean print layout across both language editions, with desktop and mobile regression coverage.
-- Reworked the bilingual resource-layer chapter ending so disclosure and verification lead back into the book's daily-practice arc instead of leaving readers at the project boundary.
-- Added five bilingual part introductions that bridge the book's major transitions, define each part's questions and reading path, and state the evidence or decisions readers should carry forward.
-- Reordered the bilingual sidebar and generated summaries to follow the book's five-part arc, separating life review from daily practice and moving the action plan and afterword into their proper closing sections.
-- Moved the English My Story chapter from Part IV into Part II so bilingual source paths and public routes align, removed the content-check exception, and preserved the former URL with a canonical noindex redirect.
-- Rebuilt the bilingual Week 1 lesson as a full “Finish the First Week” practice chapter, connecting baseline evidence, capacity-aware action, delayed retesting, transfer, weekly review, and the transition into daily systems.
-- Rebuilt the bilingual miscellaneous chapter as “Echoes,” a coherent literary bridge from narrative review to recovery that separates injury, responsibility, luck, tools, and the next choice; reordered Part II and repaired its handover links.
-- Connected the bilingual 90-Day Cycle Map and action chapter to Evidence Chain, Rhythm Ledger, and Learning State, clarifying which record owns each part of a long-term review.
-- Clarified the bilingual Weekly Review handover protocol so Evidence Chain, Rhythm Ledger, Learning State, and 90-Day Cycle records each keep a distinct job without duplicated notes.
-- Replaced the stale homepage-wide product verification date with per-entry verification guidance, keeping the biezou reference date aligned with its attribution record.
-- Added a bounded bilingual homepage reference to biezou.com as an external AI relay service, with attribution, terms/privacy caveats, and browser coverage for the outbound link.
-- Connected the shared Evidence Chain template to all eight bilingual foundation and AI-English chapters, so every skill path can continue from practice to delayed retention and transfer.
-- Updated the bilingual Prologue contract to route readers through the current Toolkit Overview, Evidence Chain, and Rhythm Ledger before the 90-day cycle, with browser coverage for the handoffs.
-- Reworked the bilingual Afterword into a fuller literary close that echoes the opening question, names the real weight of failure, and returns readers to evidence, rhythm, and practical next steps.
-- Expanded the bilingual Reader's Guide with a four-stage reading arc and explicit outputs, connecting input, real-life practice, evidence, rhythm, and the 90-day cycle.
-- Added return-visit routes to the bilingual Reader's Guide for the Toolkit Overview, Evidence Chain, and Rhythm Ledger, with browser coverage for choosing and resuming the right worksheet.
-- Added a bilingual Evidence Chain template for baseline, immediate performance, delayed retention, transfer, evidence boundaries, and next-step decisions; linked it from the glossary, toolkit, and Evidence chapter.
-- Corrected twelve bilingual pages that carried a future `updated` date and added a guard preventing publication metadata from moving ahead of the current day.
-- Added a bilingual Toolkit Overview that routes readers to one appropriate worksheet by problem, connects the templates into a complete loop, and documents evidence and privacy boundaries.
-- Added a standalone bilingual Rhythm Ledger template, linked it from the chapter and glossary, and protected the copy-ready handoff with browser coverage.
-- Added Rhythm, Variation, Compounding, Minimum Contract, and Rhythm Ledger to the bilingual glossary, with browser coverage for the new chapter's handoffs.
-- Added the bilingual Rhythm chapter as a bridge between the daily system and the 90-day plan, covering repetition, feedback, interruption recovery, and sustainable compounding.
-- Switched the Hu & Nation citation from the intermittently timing-out Wellington repository page to its verified Crossref metadata record, keeping the source link stable for scheduled audits without implying full-text redistribution.
-- Switched the Hu & Nation citation from the slow ScholarSpace resolver to the verified Wellington Open Access record after the scheduled runner exposed repeated repository timeouts.
-- Marked two dead Wayback snapshots as unavailable and removed their 404 links while preserving the local historical text and attribution boundary.
-- Replaced the slow Hu & Nation DOI resolver with its verified ScholarSpace record so the vocabulary citation remains open and the scheduled link audit avoids a false timeout.
-- Limited the dedicated catalog probes to source Markdown under `docs/threads` so generated VitePress HTML cannot append quotes or tags to URLs and create false 404 reports.
-- Tuned the scheduled link audit for VitePress clean URLs and anti-bot catalog/project sites: local links are excluded from Lychee, critical Douban and project entry points use dedicated curl probes, and 404/5xx failures remain strict.
-- Enabled cancellation of superseded Pages deployments so a rapid sequence of commits cannot let an older build publish after a newer one.
-- Added a `build-revision` meta marker to every VitePress page and made Pages health checks verify that public content belongs to the current commit, with local and CI regression coverage.
-- Restored the bilingual reading handoff from Evidence to AI Development and Resource-layer Business before the 90-Day Action Plan, with browser coverage for both links.
-- Replaced mixed-language `Source (中文)` labels across the English reading, listening, speaking, writing, and archive pages, synchronized their edition dates, and added a stale-text guard.
-- Upgraded the official GitHub Actions used by CI, Pages, artifact upload, issue reporting, and scheduled link checks to their current Node.js 24-compatible major releases.
-- Synchronized the Prologue edition dates after the English copy-edit pass so both language editions report the same manuscript version.
-- Localised residual Chinese prose in the English Prologue and Reading chapter while retaining original WeChat account names as explicitly marked proper names.
-- Strengthened the Pages health check from “any title” to path-specific expected titles for both locales and the Evidence chapter.
-- Aligned the Pages health-check article URLs with VitePress clean URLs after the first online probe correctly exposed a trailing-slash 404.
-- Fixed the Pages health check's `pipefail` false negative by using a here-string for title validation after successful HTTP responses.
-- Added post-deployment HTTP checks for the bilingual home pages and Evidence chapter, and documented the required GitHub Actions Pages source so a successful build cannot silently publish a 404 site.
-- Completed the Part III chapter-end handoff by connecting the resource-layer business chapter from Evidence to Author Projects and Practice, so the methods-to-reality path no longer stops at the final technical chapter.
-- Closed the evidence handoff across CEFR self-checks, narrative review, AI learning, attention, and artifact delivery; chapter-end links now follow the reading path from assisted practice to delayed retest and transfer.
-- Corrected two vocabulary-research DOI citations after Crossref verification, updated the attribution register, and added stale guards for the superseded identifiers.
-- Added stale-string guards for the removed Zhihu URLs and documented the rule that access-restricted or one-time-signed pages cannot serve as primary evidence.
-- Removed three unstable Zhihu direct links returning access-restricted responses; retained the relevant personal context in the manuscript and routed readers to stable local chapters instead.
-- Added the bilingual Evidence chapter as the methodological bridge from AI-assisted learning and artifacts to delayed retention, transfer, human gates, and honest life evidence.
-- Reordered the bilingual book navigation so the Reader's Guide and Prologue form the first continuous reading path before templates and topical chapters, with a regression test protecting that editorial order.
-- Synchronized the bilingual home-page edition dates with the 2026-09-01 reader-guide pass, extended `updated` parity checks to both home pages, and added a smoke test for the new reading entry point.
-- Added the bilingual Reader's Guide as an operational preface, separating the prologue's literary contract from practical entry routes, evidence traces, and interruption recovery.
-- Added reverse navigation coverage for the Reader's Guide and a content gate requiring matching `updated` dates across Chinese and English counterparts.
-- Added Daily System terms to the bilingual glossary and aligned a listening resource introduction with the guide's task-first recommendation policy.
-- Reworked legacy listening recommendations so resource fit, personal preference, and learning effect are stated as separate, testable claims.
-- Added matching bilingual overviews to the CEFR and Vocabulary foundation pages so readers can see the baseline-to-retest path before entering the detail.
-- Connected all ten technical word lists to the bilingual Vocabulary chapter and home reading path with task-fit, version, source, and delayed-transfer boundaries.
-- Localised the English VitePress reading chrome, footer, update labels, and author metadata, with desktop/mobile regression coverage.
-- Hardened navigation checks to validate bilingual entry fields, duplicate links, and source-file existence before generating summaries.
-- Rechecked the resource-layer chapter's official and external links on 2026-09-01, refreshed its product-positioning language, and separated homepage facts from contract and acceptance claims.
-- Removed the unused `黑人问号.jpg` asset after removing its legacy reference, so the public asset directory no longer carries that outdated stereotype.
-- Added a private-session asset guard across `.gitignore`, VitePress, maintenance guidance, and Playwright so local credentials cannot be published accidentally.
-- Replaced a generic English image alt with a contextual description and taught content checks to reject common placeholder alt text.
-- Corrected the CEFR attribution entry and added a check that explicit local paths in `ATTRIBUTIONS.md` still exist.
-- Removed 21 unreferenced legacy illustrations and screenshots, refreshed the current asset register, and added orphan-asset detection to content checks.
-- Added runtime image-load coverage for representative Chinese and English pages, checking descriptive alt text, completion, and non-zero natural dimensions.
-- Translated the remaining English-page image alt text and added a check for Chinese characters in English image descriptions.
-- Added the bilingual Narrative and Evidence chapter to connect personal stories, hindsight, responsibility, and transferable principles to the existing case-review and writing tools.
-- Made route smoke coverage derive directly from navigation sources and real H1 headings, removing duplicated manual route lists and reducing future coverage drift.
-- Aligned the remaining bilingual subsection structures and enabled heading-shape parity checks that ignore fenced examples.
-- Clarified stale AI source-date wording as “last checked” and “verify before use” without claiming a new external verification.
-- Aligned the three AI product attribution dates with the existing 2026-08-24 chapter source records.
-- Added a tracked-system-file guard that rejects `.DS_Store`, `Thumbs.db`, and `desktop.ini` without touching local ignored files.
-- Replaced the unstable Douban cover hotlink with a text-only reference-book link and updated the attribution register.
-- Standardised the remaining English personal-story pen-name variant as “Li Pu” and added a stale-string guard.
-- Added reverse navigation coverage checks so every public Markdown page must be discoverable from the bilingual navigation source.
-- Linked the Narrative and Evidence chapter back from My Story and Decision-Making so reflection can return to a concrete choice.
+- 두 언어판 홈페이지의 안내 경로를 목적에 따라 네 그룹으로 재편했다. 반응형 카드, 번호 붙은 섹션 표시, 접근 가능한 랜드마크를 적용했고, 제3자 자료 그룹은 시각적으로 구분하되 추천이 아님을 명시했다.
+- 두 언어판 AI 과제 브리프와 AI 학습 기록을 관리되는 작업 흐름으로 확장했다. 평가 세트, 사람 관문, 데이터 보존, 비용, 모델 범위, 출처 검증, 실패 시 롤백, 인계, 독립 산출, 속도 부채, 지연 전이를 다룬다.
+- 용어 색인과 회귀 테스트로 AI 작업 문서를 서로 연결했다. 모델의 응답이 검증된 전달물이나 독립적인 학습으로 둔갑하지 못하게 하기 위해서다.
+- 두 언어판 인지 편과 영어 능력 진단을 다시 짰다. 실제 전달, 첫 버전 조건, 오류 진단, 표적 복구, 피드백 흡수, 수행에 맞춘 간격 조정, 회복과 여력 모드, 세션을 넘어 이어지는 상태, AI 경계, 조건 하나만 바꾼 전이가 중심이다.
+- 두 언어판 진단의 어휘 항목 이름을 증거 카드로 바꾸고, 읽기 가이드, 용어 색인, 검색 색인, 출처 등록부, 회귀 테스트를 통해 공통 프로토콜과 연결했다.
+- 두 언어판 어휘 편과 증거 카드를 다시 짰다. 실제 과제 기준선, 모르는 항목에 대한 다섯 가지 결정, 단어 지식의 여덟 차원, 수용·산출 격차, 커버리지 수치의 한계, 수행에 맞춘 간격 조정, 오류 복구, AI 검증, 14일 전이가 중심이다.
+- 검색 색인, 읽기 가이드, AI 영어, 용어 색인, 출처 표기, 기술 단어 목록의 경계, 회귀 테스트로 어휘 경로를 연결했다. 카드가 눈에 익었다고 해서 문맥 속에서 쓸 줄 안다고 여기지 않게 하려는 것이다.
+- 사용자가 제공한 `OpenHuge_ai` 텔레그램 채널을 두 언어판 홈페이지에서 추천했다. 필요할 때 참고하는 AI 자료 탐색 출처로 소개하되, 제3자·변동성·출처·프라이버시·저작권·보안 경계를 명시했다.
+- 두 언어판 쓰기 편을 다시 짰다. 실제 독자, 도움 없이 쓴 초고, 사실과 책임 장부, 문서 골격, 번역의 의미 대조, 위험 순서에 따른 다섯 차례 퇴고, 피드백 흡수, AI 사용 공개와 한계, 비동기 인계, 정직한 저자 표시, 14일 전이 실험이 중심이다.
+- 두 언어판 쓰기 증거 카드를 확장했다. 원본 초고, 출처와 허락, 번역에서 바꾼 부분, 퇴고 이유, 독자 재진술, 피드백에 대한 결정, 자동화 도구 사용, 비동기 검수, 지연 전이, 서명 결정을 남긴다.
+- 책임지는 글쓰기의 새 경로를 홈페이지, 읽기 가이드, 도구 상자, 용어 색인, AI 영어, 취업 영어, 검색 예산, 연구 출처 표기, 회귀 테스트로 연결했다. 영어판 장에서 중복된 옛 산문은 걷어냈다.
+- 두 언어판 읽기 편을 다시 짰다. 실제 과제, 시간을 잰 첫 읽기 기준선, 6층 장벽 진단, 질문별 다섯 차례 읽기, 기술 문서 검증, 번역의 경계, 정독·다독·좁은 읽기, 출처 비교, AI의 한계, 실제 출력, 14일 전이 실험이 중심이다.
+- 두 언어판 읽기 증거 카드를 확장했다. 출처 버전, 첫 읽기, 장벽 지도, 주장과 증거, 기술적 사실 점검, 모르는 단어에 대한 결정, 출처 비교, 전달, 14일째 전이를 담는다.
+- 읽기 방법에서 변동이 잦은 책·커뮤니티 추천 섹션을 없앴다. 문서와 전달을 중심으로 한 새 경로는 홈페이지, 읽기 가이드, 도구 상자, 용어 색인, AI 영어, 검색 예산, 출처 표기, 회귀 테스트로 연결했다.
+- 두 언어판 듣기 편을 다시 짰다. 실제 첫 듣기 기준선, 6층 오류 진단, 자료 조건, 조절 가능한 자막 비계, 질문별 다시 듣기, 핵심 구간 받아쓰기, 의미 재구성, 지원을 받는 폭넓은 듣기, 악센트 익숙도, AI 경계, 14일 전이 실험이 중심이다.
+- 옛 두 언어판 듣기 자료 점검표를 듣기 증거 카드로 바꿨다. 주 자료와 평행 자료, 기술적 조건, 자막 없이 들은 증거, 비계 걷어 내기, 섀도잉을 넘어선 생성, 실제 과제에서의 행동, 14일째 전이를 담는다.
+- 길고 변동이 잦은 듣기 채널·영상 목록을 없애고 제품 자기 홍보는 원고 밖으로 뺐다. 광고성 없는 새 방법은 내비게이션, 읽기 가이드, 도구 상자, 용어 색인, AI 영어, 검색 예산, 출처 표기, 회귀 테스트로 연결했다.
+- 두 언어판 말하기 편을 다시 짰다. 대본 없는 기준선, 위계를 두지 않는 참고 변이형, 악센트 두드러짐·명료도·이해 용이도의 구분, 영향이 큰 발음, 섀도잉을 넘어선 생성, 상호작용 복구, 청자 재진술, AI의 한계, 14일 전이 실험이 중심이다.
+- 두 언어판 말하기 증거 카드를 확장했다. 세 가지 기준선 조건, 녹음 동의, 기기와 청자의 익숙도, 청자가 실제로 되살린 내용, 이해에 드는 노력, 낯선 후속 질문, 복구, 인식 오류, 14일째 전이를 담는다.
+- 새 말하기 방법을 홈페이지, 읽기 가이드, 도구 상자 둘러보기, 용어 색인, 듣기 편, AI 영어, 취업 영어, 검색 예산 규칙, 연구 출처 표기, 회귀 테스트로 연결했다.
+- 두 언어판 문법 편을 추가했다. 실제 과제 기준선과 형태—의미 선택에서 출발해, 소통에 미치는 영향에 따라 오류의 우선순위를 정하고, 명시적 설명을 다시 출력으로 잇고, 구조 하나를 14일 지연 전이 주기로 시험한다.
+- 두 언어판 문법 증거 카드를 추가하고 제1부, 홈페이지, 읽기 가이드, 도구 상자 둘러보기, 용어 색인, 검색 색인, 연속 읽기 내비게이션으로 연결했다.
+- 두 언어판 홈페이지의 기존 biezou.com 항목을 제3자 AI 중계 추천이라고 분명히 밝힌 항목으로 바꿨다. 현재 사이트 확인, 프라이버시, 가격, 약관, 이용 가능성에 관한 경계는 그대로 두었다.
+- 두 언어판 취업 영어 편을 추가했다. 실제 글로벌 직무나 원격 직무 하나를 골라 채용 담당자, 프로젝트, 기술, 행동, 비동기 글쓰기, 상호작용 복구 과제로 바꾼다. 대본 없는 기준선, 이야기 모음, AI 정직성 경계, 14일 집중 훈련, 직무 관문, 면접 후 마무리를 담았다.
+- 비공개용 두 언어판 취업 영어 증거 카드를 추가했다. 직무 지도, 낯선 후속 질문, 비동기 인계, 복구, 지연 재측정, 전이, 기밀, 녹음, 허용된 AI 사용을 다룬다.
+- CEFR, 말하기, 쓰기, AI 영어, 읽기 가이드, 홈페이지, 도구 상자, 용어 색인, 제1부 읽기 흐름을 직무별 증거와 연결했다. CEFR 등급 하나를 모든 채용에 통하는 문턱처럼 내세우지 않기 위해서다.
+- 대략 중학생 나이의 학습자와 보호자, 교사를 위한 두 언어판 가정 학습 편을 추가했다. 학습 주체권, 역할 경계, 7일 작업물 경로, 가상의 영어 사례, 다섯 가지 AI 안전 관문, 여력 모드, 피드백 경계, 일시 중지 조건, 14일째의 결정을 담았다.
+- 비공개용 두 언어판 가정 학습 공동 협약을 추가했다. 학습자와 보호자가 따로 쓰고, 학교와 아동의 데이터를 보호하며, 감시와 대신 해 주기를 제한하고, 14일 뒤 학습자의 증거와 어른의 지원을 함께 회고한다.
+- 홈페이지와 읽기 가이드에 가정용 경로를 추가하고, 이 선택적 갈래를 첫 주 실천과 생활 시스템 편 사이에 넣었다. 유네스코의 인간 중심 교육 AI 지침도 기록했지만, 이 지침이 지역 학교나 플랫폼 규칙을 대신하지는 않는다고 밝혔다.
+- 비공개를 우선하는 두 언어판 독자 실천 회신을 추가했다. 즉시 행동, 3~7일 뒤 재측정, 조건 하나만 바꾼 전이, 편집 피드백, 증거의 경계를 담고, 원할 때 공개로 공유하기 전에 거치는 명시적인 프라이버시 관문을 두었다.
+- 도구 사용법이 모호하다는 의견과 세션을 넘는 AI 상태에 관한 독자 피드백에 답하기 위해, 가상의 사례로 된 두 언어판 도구 상자 실전을 추가했다. 90일 Python 사례를 따라 버전을 매긴 학습 상태에서 과제 브리핑, 도움 없는 기준선, 증거, 지연 재측정, 주간 인계, 중단 후 회복, 새 대화까지 이어지는 과정을 보여 준다.
+- 홈페이지, 읽기 가이드, 도구 상자 둘러보기, 용어 색인, 책 사례 연구가 공개 GitHub 이슈 양식보다 비공개 워크시트를 먼저 안내하게 했다. 새로 추가한 긴 페이지 두 개는 설명적인 제목 단위로 색인해 검색 예산을 지켰다.
+- 두 언어판 전 과정 사례 연구를 추가해 책 스스로가 자신이 내세운 방법을 마주하게 했다. 기준선 보존, 편집 구조, AI 책임, 작업물 사슬, 실패한 점검, 릴리스 관문, 독자 증거, 아직 모르는 것, 전이, 프로젝트 인계를 다룬다.
+- 프라이버시를 고려한 독자 실천 회신 이슈 양식과 두 언어판 홈페이지 항목을 추가했다. 구체적인 시도, 시간이 지난 뒤의 결과, 혼란, 실패한 전이가 다음 판에 반영될 수 있게 하려는 것이다.
+- PDF 생성과 브라우저 회귀 테스트에서 고정된 출판 장 수를 없앴다. 이제 EPUB, PDF, 테스트는 공유 내비게이션의 출판 규칙에서 원고 규모를 도출한다.
+- 현재 중국어판 EPUB을 기준으로 동작하는, 버전이 고정되고 재현 가능한 Noto Serif SC 서브셋 도구를 추가했다. 업스트림 SHA를 문서로 남기고 공백 글리프 커버리지도 점검한다.
+- PDF 표제지 날짜가 EPUB 출판 메타데이터를 따르게 했다. 머리글 렌더링을 페이지 끝으로 옮겨, 장이 시작되는 페이지의 머리글이 한 장씩 늦게 바뀌던 문제도 없앴다.
+- 미래 날짜 검증이 프로젝트의 `Asia/Shanghai` 달력 날짜를 기준으로 하게 했다. 내비게이션 요소가 많은 긴 장은 설명적인 제목 단위로 색인해 클라이언트 검색 예산을 그대로 지켰다.
 
-### 2026-08-31 manuscript pass
+### 2026-09-01 편집 작업
 
-#### Added
+#### 변경
 
-- Added reproducible, print-ready Chinese and English PDF 1.7 editions with embedded OFL font subsets, portrait covers, running headers, page numbers, bookmarks, page-numbered contents, offline images, exact published-file hashes, cross-platform semantic fingerprints, and homepage download links.
-- Added deterministic Chinese and English EPUB 3.3 editions containing the main manuscript, glossary, and complete toolkit, with offline images, internal navigation, 1600×2560 portrait covers, integrity metadata, and homepage download links.
-- Added the bilingual Recovery, Decision-Making, Relationships, and Attention chapters.
-- Added the bilingual Life Practice Toolkit with reusable worksheets for decisions, attention, relationships, and recovery.
-- Added the bilingual Listening Resource Audit card for choosing, testing, and retiring volatile listening materials.
-- Added the bilingual Reading Evidence Card for source checks, claim maps, inference boundaries, and delayed transfer.
-- Added the bilingual Speaking Evidence Card for recordings, listener feedback, interaction repair, and safe transfer.
-- Added the bilingual Writing Evidence Card for drafts, layered revision, AI disclosure, reader feedback, and delivery.
-- Added the bilingual 90-Day Cycle Map to connect skill evidence, weekly questions, phase gates, recovery, and final delivery.
-- Added the bilingual Glossary of Terms and Methods to make the book's evidence vocabulary and chapter paths easier to navigate.
-- Extended the README mirror rule to include the new `reference/` section in repository links.
-- Strengthened the AI learning chapter with unaided/assisted/delayed comparisons, failure handover checks, and an explicit “speed debt” warning.
-- Clarified the project-disclosure page with status labels, item-level dates, and a reader verification order.
-- Expanded the AI Project Scorecard and resource-layer chapter with independent-performance evidence, test conditions, ownership, and release gates.
-- Connected the English-with-AI entry page to all four skill evidence cards, delayed retesting, and the 90-day cycle.
-- Added a confidence-and-reversibility check to the decision chapter so uncertainty changes action size rather than producing false precision.
-- Updated the AI Learning Log Template to capture three comparison conditions, confidence, rework, and handover ownership.
-- Connected attention, recovery, and relationship chapters directly to their corresponding Life Practice Toolkit sheets and the 90-Day Cycle Map.
-- Added the bilingual Artifact Brief and Delivery Card so learning outputs can be scoped, reviewed, handed over, and rolled back.
-- Upgraded the bilingual English Diagnostic Template with condition tracking, raw/delayed samples, evidence-card links, and a 90-day next-variable handoff.
-- Upgraded the bilingual Weekly Review Template into a weekly evidence dashboard with constraints, error causes, recovery, and state handoff.
-- Upgraded the bilingual Learning State Template into a versioned cross-session source of truth with evidence inventory, boundaries, handover, and review dates.
+- 두 언어판 창업 편에서 겹겹이 쌓인 “X가 아니라 Y다” 식 선언을 덜어 냈다. 대신 장면, 물리적인 결과, 구체적인 사업 질문, 더 다양한 서술 리듬으로 다시 썼다.
+- 나의 이야기, 서사와 증거 편, 창업 편, AI로 무엇이든 배우기에 두 언어판 모두 저마다 다른 마지막 흐름을 주었다. 업데이트 기록, 관련 읽을거리, 출처 공개는 장의 실제 결말 앞으로 옮겼다.
+- 제1부 여덟 장의 마지막 부분을 두 언어로 모두 다시 썼다. 이제 CEFR, 학습 방법, 어휘, 듣기, 읽기, 말하기, 쓰기, AI 장은 채점 기준표나 출처 목록, 훈련 일정이 아니라 저마다 다른 문학적 맺음으로 끝난다.
+- 두 언어판 책 페이지 26쌍에서 손으로 쓴 이전/다음 문단을 없앴다. 문학적 결말이 각 장의 진짜 끝으로 남고, 부의 경계를 넘나드는 연속 읽기는 권위 있는 바닥글 하나가 맡는다.
+- 제5부에 두 언어판으로 온전한 장 하나를 더했다. 90일 주기를 마무리하고, 능력을 전이하고, 계속할지 끝낼지 고르고, 생활의 기반을 지키고, 계절 단위로 계획하는 법을 다룬다. 이 장은 책의 내비게이션과 연속 읽기 흐름에 통합했다.
+- 읽기 가이드, 서장, 제1부 들어가며, 후기가 권위 있는 두 언어판 페이지 이동기 하나를 쓰게 했다. 참고용 도구는 연속된 책 흐름 밖에 두고, 서로 어긋나던 손 내비게이션은 없앴다.
+- 동적인 저장소 배지와 외부에서 불러오던 GitHub 아이콘을 차분한 두 언어판 책 메타데이터 링크로 바꿨다. 이로써 두 홈페이지 모두에서 제3자 이미지 요청이 사라졌다.
+- 로컬 래스터 Markdown 이미지에 빌드 시점의 고유 크기를 넣었다. 지연 로드되는 미디어가 내려받기 전에 최종 가로세로 비율만큼 자리를 잡아 레이아웃이 흔들리지 않는다.
+- 모든 Markdown 이미지에 지연·비동기 로딩을 적용하고, 남아 있던 지나치게 큰 이야기·프로젝트 미디어를 WebP로 바꿨다. 원본 래스터에는 230KB 예산을 도입했다.
+- 홈페이지 업데이트 사진 두 장을 지연 로드되는 WebP로 다시 인코딩하고 크기를 맞췄다. 두 장을 합친 용량이 80% 넘게 줄었고, 고유 크기와 낮은 우선순위의 비동기 로딩도 더했다.
+- 반복되는 코드 블록을 제외하고 H3와 과제별 모음을 쓸모 있는 상위 결과로 합쳐, 지연 로드되는 두 언어판 검색 색인을 줄였다. 원본·gzip 빌드 예산을 두어 청크 과대 경고가 소리 없이 되살아나지 못하게 했다.
+- 두 언어판 페이지 68쌍 모두에 서로를 가리키는 `zh-CN`, `en-US`, `x-default` 언어 대체 링크를 넣고 사이트맵에도 반영했다. 전용 내비게이션 바 로고는 사이트 아이콘으로 선언했다.
+- 낡은 영어 가이드 공유 이미지를 교체했다. 두 언어판 인생 레벨업 가이드 표지, 전용 내비게이션 바 로고, 자동 생성한 1200×630 PNG 소셜 이미지, Book/Chapter JSON-LD 메타데이터를 넣었다.
+- VitePress에 하드코딩된 내비게이션, 사이드바, 페이지 이동기, 섹션 접기, 모바일 메뉴, 제목 고유 링크 라벨을 현지화했다. 중국어 화면 낭독기가 뜻밖에 영어로 바뀌는 일이 더는 없다.
+- 중국어판 검색 대화상자, 편집·접근성 라벨, 화면 모양 설정, 없는 페이지 안내 문구를 현지화했다. 두 내비게이션 바 제목도 책 이름만 남기고 줄여, 영어 제목이 검색창과 겹치지 않게 했다.
+- 두 언어판 모두에 프라이버시를 지키는 읽기 진행 표시, 더 안정된 장문 타이포그래피, 깔끔한 인쇄 레이아웃을 더하고, 데스크톱·모바일 회귀 테스트를 갖췄다.
+- 두 언어판 리소스 계층 장의 결말을 다시 짰다. 공개와 검증 이야기가 독자를 프로젝트 경계에 남겨 두지 않고 책의 일상 실천 흐름으로 되돌려 보낸다.
+- 책의 큰 전환점을 잇는 두 언어판 부 들어가며 다섯 편을 추가했다. 각 부가 던지는 질문과 읽기 경로를 밝히고, 독자가 다음으로 가져가야 할 증거나 결정을 적었다.
+- 두 언어판 사이드바와 자동 생성 요약을 책의 5부 흐름에 맞게 다시 배열했다. 삶의 회고와 일상 실천을 나누고, 행동 계획과 후기는 제자리인 마무리 섹션으로 옮겼다.
+- 영어판 나의 이야기 장을 제4부에서 제2부로 옮겨 두 언어판의 원본 경로와 공개 경로를 맞췄다. 콘텐츠 점검 예외를 없애고, 이전 URL은 canonical noindex 리디렉션으로 보존했다.
+- 두 언어판 1주차 수업을 온전한 「첫 주를 끝내기」 실천 장으로 다시 지었다. 기준선 증거, 여력을 고려한 행동, 지연 재측정, 전이, 주간 회고, 그리고 생활 시스템으로 넘어가는 과정을 하나로 이었다.
+- 두 언어판 잡문 장을 ‘메아리 편’으로 다시 지었다. 서사 회고에서 회복으로 넘어가는 일관된 문학적 다리로, 상처·책임·운·도구·다음 선택을 서로 구분한다. 제2부 순서를 다시 정하고 인계 링크도 고쳤다.
+- 두 언어판 90일 행동 총괄표와 행동 장을 증거 사슬, 리듬 장부, 학습 상태와 연결했다. 장기 회고의 각 부분을 어느 기록이 맡는지도 분명히 했다.
+- 두 언어판 주간 회고의 인계 프로토콜을 명확히 했다. 증거 사슬, 리듬 장부, 학습 상태, 90일 주기 기록이 메모를 중복하지 않고 저마다 다른 역할을 맡는다.
+- 홈페이지 전체에 걸려 있던 낡은 제품 검증 날짜를 항목별 검증 안내로 바꾸고, biezou 참고 날짜를 출처 기록과 맞췄다.
+- 외부 AI 중계 서비스인 biezou.com을 가리키는 두 언어판 홈페이지 참고 항목을 범위를 정해 추가했다. 출처 표기, 약관·프라이버시 주의 사항, 외부 링크에 대한 브라우저 테스트를 갖췄다.
+- 공용 증거 사슬 템플릿을 두 언어판 기초 장과 AI 영어 장 여덟 개 모두에 연결했다. 이제 어느 기술 경로에서든 연습에서 지연 유지와 전이로 이어 갈 수 있다.
+- 두 언어판 서장의 약속을 갱신했다. 독자는 90일 주기에 앞서 지금의 도구 상자 둘러보기, 증거 사슬, 리듬 장부를 거친다. 이 인계 과정은 브라우저 테스트로 확인했다.
+- 두 언어판 후기를 더 풍성한 문학적 맺음으로 다시 썼다. 첫머리의 질문에 다시 답하고, 실패가 남긴 실제 무게를 이름 붙여 부르며, 독자를 증거와 리듬, 실행할 수 있는 다음 단계로 돌려보낸다.
+- 두 언어판 읽기 가이드를 4단계 읽기 흐름과 단계마다 분명한 산출물로 확장했다. 입력, 실제 삶 속 실천, 증거, 리듬, 90일 주기를 하나로 잇는다.
+- 두 언어판 읽기 가이드에 도구 상자 둘러보기, 증거 사슬, 리듬 장부로 다시 돌아오는 경로를 더했다. 알맞은 워크시트를 고르고 이어서 쓰는 과정은 브라우저 테스트로 확인했다.
+- 두 언어판 증거 사슬 템플릿을 추가했다. 기준선, 즉시 수행, 지연 유지, 전이, 증거의 경계, 다음 단계 결정을 담으며, 용어 색인·도구 상자·증거 편에서 연결된다.
+- 미래의 `updated` 날짜가 적혀 있던 두 언어판 페이지 열두 개를 바로잡았다. 출판 메타데이터가 오늘 날짜를 앞지르지 못하게 막는 장치도 더했다.
+- 두 언어판 도구 상자 둘러보기를 추가했다. 문제에 따라 알맞은 워크시트 하나로 안내하고, 템플릿들을 하나의 완결된 순환으로 이으며, 증거와 프라이버시의 경계를 기록한다.
+- 독립된 두 언어판 리듬 장부 템플릿을 추가해 장과 용어 색인에서 연결했다. 바로 복사해 쓰는 인계 부분은 브라우저 테스트로 보호했다.
+- 리듬, 변형, 복리, 최소 계약, 리듬 장부를 두 언어판 용어 색인에 추가하고, 새 장에서 이어지는 인계를 브라우저 테스트로 확인했다.
+- 생활 시스템과 90일 계획을 잇는 두 언어판 리듬 편을 추가했다. 반복, 피드백, 중단 후 회복, 지속 가능한 복리를 다룬다.
+- Hu & Nation 인용의 링크를 간헐적으로 시간 초과되는 웰링턴 저장소 페이지에서 검증된 Crossref 메타데이터 기록으로 바꿨다. 전문을 재배포한다는 인상을 주지 않으면서 예약 점검에서 출처 링크가 안정적으로 유지된다.
+- 예약 실행기에서 저장소 시간 초과가 반복되자, Hu & Nation 인용의 링크를 느린 ScholarSpace 리졸버에서 검증된 웰링턴 오픈 액세스 기록으로 바꿨다.
+- 죽은 Wayback 스냅숏 두 개를 이용 불가로 표시하고 404 링크를 없앴다. 로컬에 보관한 옛 글과 출처 표기의 경계는 그대로 두었다.
+- 느린 Hu & Nation DOI 리졸버를 검증된 ScholarSpace 기록으로 바꿨다. 어휘 인용은 계속 공개 자료로 남고, 예약 링크 점검이 잘못된 시간 초과를 내지 않는다.
+- 전용 목록 탐침을 `docs/threads` 아래 원본 Markdown으로 한정했다. 자동 생성된 VitePress HTML이 URL에 따옴표나 태그를 덧붙여 거짓 404 보고를 만들 수 없다.
+- 예약 링크 점검을 VitePress의 깔끔한 URL과 봇 차단을 쓰는 목록·프로젝트 사이트에 맞게 조정했다. 로컬 링크는 Lychee에서 제외하고, 핵심 더우반·프로젝트 진입점은 전용 curl 탐침으로 확인하며, 404/5xx 실패는 여전히 엄격하게 다룬다.
+- 새 배포가 이전 Pages 배포를 대체하면 이전 배포가 취소되게 했다. 커밋이 빠르게 잇따라도 오래된 빌드가 새 빌드보다 나중에 게시되는 일이 없다.
+- 모든 VitePress 페이지에 `build-revision` 메타 표시를 넣고, Pages 상태 점검이 공개 콘텐츠가 현재 커밋에서 나온 것인지 확인하게 했다. 로컬·CI 회귀 테스트도 갖췄다.
+- 90일 행동 편에 앞서 증거 편에서 AI 개발과 리소스 계층 창업으로 넘어가는 두 언어판 읽기 인계를 복원하고, 두 링크 모두 브라우저 테스트로 확인했다.
+- 영어판 읽기, 듣기, 말하기, 쓰기, 옛글 보관 페이지에 쓰이던 `Source (중국어)`처럼 두 언어가 섞인 라벨을 교체했다. 판 날짜도 맞추고 낡은 문구가 되살아나지 않게 막는 장치를 더했다.
+- CI, Pages, 산출물 업로드, 이슈 보고, 예약 링크 점검에 쓰는 공식 GitHub Actions를 Node.js 24와 호환되는 현재 메이저 버전으로 올렸다.
+- 영어판 교정 작업을 마친 뒤 서장의 판 날짜를 맞춰, 두 언어판이 같은 원고 버전을 가리키게 했다.
+- 영어판 서장과 읽기 편에 남아 있던 중국어 산문을 현지화했다. 위챗 계정의 원래 이름은 고유명사임을 명시하고 그대로 두었다.
+- Pages 상태 점검의 기준을 “제목이 있기만 하면 통과”에서 두 로케일과 증거 편의 경로별 기대 제목으로 강화했다.
+- 첫 온라인 탐침이 끝 슬래시 때문에 생긴 404를 정확히 잡아낸 뒤, Pages 상태 점검의 글 URL을 VitePress의 깔끔한 URL에 맞췄다.
+- HTTP 응답이 성공한 뒤 제목을 검증할 때 here-string을 쓰도록 바꿔, Pages 상태 점검에서 `pipefail` 때문에 생기던 거짓 음성을 고쳤다.
+- 두 언어판 홈페이지와 증거 편에 대한 배포 후 HTTP 점검을 추가하고, 필요한 GitHub Actions Pages 소스 설정을 문서로 남겼다. 빌드가 성공했는데 404 사이트가 소리 없이 게시되는 일을 막기 위해서다.
+- 제3부의 장 끝 인계를 마무리했다. 증거 편에서 이어지는 리소스 계층 창업 장을 저자 프로젝트와 실천으로 연결해, 방법에서 현실로 가는 경로가 마지막 기술 장에서 끊기지 않게 했다.
+- CEFR 자가 점검, 서사 회고, AI 학습, 주의력, 작업물 전달 전반의 증거 인계를 매듭지었다. 이제 장 끝 링크는 도움받은 연습에서 지연 재측정과 전이로 가는 읽기 경로를 따른다.
+- Crossref로 확인한 뒤 어휘 연구 DOI 인용 두 건을 바로잡고 출처 등록부를 갱신했다. 대체된 식별자가 다시 들어오지 않도록 막는 장치도 더했다.
+- 제거한 즈후 URL이 다시 들어오지 않도록 막는 장치를 더했다. 접근이 제한되거나 일회용 서명이 필요한 페이지는 1차 증거가 될 수 없다는 규칙도 문서로 남겼다.
+- 접근 제한 응답을 돌려주던 불안정한 즈후 직접 링크 세 개를 없앴다. 관련된 개인적 맥락은 원고에 남기고, 독자는 안정적인 로컬 장으로 안내했다.
+- 두 언어판 증거 편을 추가했다. AI의 도움을 받은 학습과 작업물에서 지연 유지, 전이, 사람 관문, 정직한 삶의 증거로 넘어가는 방법론적 다리 역할을 한다.
+- 두 언어판 책 내비게이션을 다시 배열해, 읽기 가이드와 서장이 템플릿이나 주제별 장보다 앞선 첫 연속 읽기 경로가 되게 했다. 이 편집 순서를 지키는 회귀 테스트도 더했다.
+- 두 언어판 홈페이지의 판 날짜를 2026-09-01 읽기 가이드 작업에 맞췄다. `updated` 일치 점검을 두 홈페이지까지 넓히고, 새 읽기 진입점에 대한 스모크 테스트를 더했다.
+- 두 언어판 읽기 가이드를 실무형 서문으로 추가했다. 서장이 맺는 문학적 약속과 실제 진입 경로, 증거 흔적, 중단 후 회복 방법을 분리했다.
+- 읽기 가이드에 대한 역방향 내비게이션 테스트와, 중국어·영어 대응 페이지의 `updated` 날짜가 같아야 통과하는 콘텐츠 관문을 추가했다.
+- 생활 시스템 용어를 두 언어판 용어 색인에 추가하고, 듣기 자료 소개 한 곳을 과제를 먼저 보는 이 가이드의 추천 원칙에 맞췄다.
+- 옛 듣기 추천을 다시 손봐, 자료가 과제에 맞는지, 개인 취향인지, 학습 효과가 있는지를 각각 시험할 수 있는 별개의 주장으로 적었다.
+- CEFR와 어휘 기초 페이지에 서로 짝을 이루는 두 언어판 개요를 더했다. 세부로 들어가기 전에 기준선에서 재측정까지 이어지는 경로를 먼저 볼 수 있다.
+- 기술 단어 목록 열 개를 모두 두 언어판 어휘 편과 홈페이지 읽기 경로에 연결하고, 과제 적합성·버전·출처·지연 전이에 관한 경계를 붙였다.
+- 영어판 VitePress 읽기 화면 요소, 바닥글, 업데이트 라벨, 저자 메타데이터를 현지화하고 데스크톱·모바일 회귀 테스트를 갖췄다.
+- 요약을 생성하기 전에 두 언어판 항목 필드, 중복 링크, 원본 파일 존재 여부를 검증하도록 내비게이션 점검을 강화했다.
+- 2026-09-01에 리소스 계층 장의 공식·외부 링크를 다시 확인하고 제품 포지셔닝 문구를 새로 다듬었다. 홈페이지에 적힌 사실과 계약·검수에 관한 주장도 분리했다.
+- 옛 참조를 없앤 뒤 쓰이지 않게 된 `흑인 물음표.jpg` 에셋을 삭제했다. 공개 에셋 디렉터리에 그 낡은 고정관념은 더 이상 남아 있지 않다.
+- `.gitignore`, VitePress, 유지보수 안내, Playwright 전반에 비공개 세션 에셋 방지 장치를 두어, 로컬 자격 증명이 실수로 공개되지 않게 했다.
+- 두루뭉술한 영어 이미지 alt를 맥락에 맞는 설명으로 바꾸고, 흔한 자리표시자 alt 텍스트를 콘텐츠 점검이 거부하게 했다.
+- CEFR 출처 표기 항목을 바로잡고, `ATTRIBUTIONS.md`에 적힌 로컬 경로가 실제로 존재하는지 확인하는 점검을 더했다.
+- 어디에서도 참조하지 않는 옛 삽화와 스크린숏 21개를 없애고, 현재 에셋 등록부를 갱신했으며, 콘텐츠 점검에 고아 에셋 탐지를 더했다.
+- 대표적인 중국어·영어 페이지에 런타임 이미지 로드 테스트를 추가했다. 설명적인 alt 텍스트, 로드 완료 여부, 0이 아닌 원본 크기를 확인한다.
+- 영어 페이지에 남아 있던 이미지 alt 텍스트를 번역하고, 영어 이미지 설명에 중국어 문자가 섞였는지 확인하는 점검을 더했다.
+- 두 언어판 서사와 증거 편을 추가했다. 개인의 이야기, 사후 판단, 책임, 다른 곳에 옮겨 쓸 수 있는 원칙을 기존의 사례 회고·글쓰기 도구와 잇는다.
+- 경로 스모크 테스트가 내비게이션 원본과 실제 H1 제목에서 직접 대상을 도출하게 했다. 손으로 따로 관리하던 중복 경로 목록을 없애 앞으로 테스트 범위가 어긋날 여지를 줄였다.
+- 남아 있던 두 언어판 하위 섹션 구조를 맞추고, 펜스로 감싼 예시는 제외하고 제목 구조를 비교하는 일치 점검을 켰다.
+- 오래된 AI 출처 날짜 문구를 “마지막 확인”과 “사용 전 확인”으로 분명히 했다. 새로 외부 검증을 했다고 주장하지는 않았다.
+- 세 AI 제품의 출처 표기 날짜를 장에 이미 있는 2026-08-24 출처 기록에 맞췄다.
+- `.DS_Store`, `Thumbs.db`, `desktop.ini`가 저장소에 추적되면 거부하는 방지 장치를 더했다. 로컬에서 무시되는 파일은 건드리지 않는다.
+- 불안정한 더우반 표지 핫링크를 텍스트로만 된 참고 도서 링크로 바꾸고 출처 등록부를 갱신했다.
+- 영어판 개인 이야기에 남아 있던 다른 필명 표기를 “Li Pu”로 통일하고, 옛 표기가 다시 들어오지 않게 막는 장치를 더했다.
+- 공개된 모든 Markdown 페이지를 두 언어판 내비게이션 원본에서 찾아갈 수 있어야 통과하는 역방향 내비게이션 테스트 점검을 더했다.
+- 나의 이야기와 선택 편에서 서사와 증거 편으로 돌아오는 링크를 더해, 성찰이 다시 구체적인 선택으로 이어질 수 있게 했다.
 
-#### Changed
+### 2026-08-31 원고 작업
 
-- Made `人生进阶指南` / `Life Level-up Guide` the primary book identity while retaining the lifelong-learning subtitle.
-- Refined the personal story in both languages for accuracy, privacy, health boundaries, and a calmer literary voice.
-- Reframed the listening resource catalogue around task fit, evidence, access, copyright, and a seven-day review cycle.
-- Reframed reading resources around task fit, source versions, evidence boundaries, and parallel-text transfer.
-- Reframed speaking practice around intelligibility, repair strategies, listener evidence, and safer real-world interaction.
-- Reframed writing practice around task fit, four revision passes, source checks, and auditable delivery.
-- Connected the 90-day action chapter to one cross-skill evidence chain and explicit phase gates.
-- Added chapter-release gates and external-link/date guidance to the maintenance guide and pull-request template.
-- Excluded Playwright-generated reports from Markdown lint so failure diagnostics cannot be mistaken for book content.
-- Reworked the Week 1 sleep-and-stress lesson as an evidence-bounded language exercise, removing unsupported medical claims and adding safer source boundaries.
-- Refined the entrepreneurship chapter with explicit evidence levels, personal-estimate disclosure, five reality gates, and links to the decision and project scorecards.
-- Clarified the book's reading arc in the prologue, homepage map, and afterword so readers can move from a real problem to evidence cards, a 90-day cycle, and recovery when plans break.
-- Reworked the historical miscellaneous notes to shorten an external quotation, remove a stereotyped image, reduce graphic school-violence detail, and label training and personal outcomes as non-general evidence.
-- Refined the personal story with a narrative-boundary note, less third-party mind-reading, safer content guidance, and a more conditional statement about AI in real life.
-- Added book-structure navigation and browser smoke coverage for the new pages.
-- Added page-level historical, privacy, health, and safety notes to all four archived posts and their English translations, with browser coverage for each route.
-- Added the bilingual Daily System chapter to bridge the book's methods and templates with minimum viable days, capacity budgets, boundaries, interruption recovery, and a seven-day practice.
-- Rechecked the official `token.love` and `ku0.com` homepages, clarified current capability wording and contract boundaries, and aligned project-page attribution dates.
-- Connected the AI Case Review Template to the AI chapters, project disclosure pages, and bilingual glossary so public narratives have a visible evidence path.
-- Repaired the main reading arc so Miscellaneous Notes lead to Week 1, Daily System, and the 90-Day Plan, while the Afterword returns readers to the beginning.
-- Standardised the English pen-name spelling as “Li Pu” across the homepage and prologue.
+#### 추가
 
-### Added
+- 재현할 수 있고 곧바로 인쇄할 수 있는 중국어판·영어판 PDF 1.7을 추가했다. OFL 글꼴 서브셋 임베드, 세로형 표지, 머리글, 쪽 번호, 책갈피, 쪽 번호가 달린 목차, 오프라인 이미지, 게시 파일의 정확한 해시, 플랫폼과 무관한 의미 지문, 홈페이지 내려받기 링크를 갖췄다.
+- 결정론적 중국어판·영어판 EPUB 3.3을 추가했다. 본 원고와 용어 색인, 도구 상자 전체를 담고, 오프라인 이미지, 내부 내비게이션, 1600×2560 세로형 표지, 무결성 메타데이터, 홈페이지 내려받기 링크를 갖췄다.
+- 두 언어판 회복 편, 선택 편, 관계 편, 주의력 편을 추가했다.
+- 결정, 주의력, 관계, 회복에 거듭 쓸 수 있는 워크시트를 모은 두 언어판 생활 레벨업 워크시트를 추가했다.
+- 변동이 잦은 듣기 자료를 고르고, 시험하고, 떠나보내는 데 쓰는 두 언어판 듣기 자료 점검표 카드를 추가했다.
+- 출처 점검, 주장 지도, 추론의 경계, 지연 전이를 위한 두 언어판 읽기 증거 카드를 추가했다.
+- 녹음, 청자 피드백, 상호작용 복구, 안전한 전이를 위한 두 언어판 말하기 증거 카드를 추가했다.
+- 초고, 층위별 퇴고, AI 사용 공개, 독자 피드백, 전달을 위한 두 언어판 쓰기 증거 카드를 추가했다.
+- 기술별 증거, 주간 질문, 단계 관문, 회복, 최종 전달을 하나로 잇는 두 언어판 90일 행동 총괄표를 추가했다.
+- 책에 나오는 증거 관련 용어와 장 경로를 더 쉽게 찾아볼 수 있도록 두 언어판 용어와 방법 색인을 추가했다.
+- README 미러 규칙을 넓혀 저장소 링크에 새 `reference/` 섹션을 포함했다.
+- AI 학습 장을 보강했다. 도움 없음·도움 있음·시간이 지난 뒤의 비교, 실패 시 인계 점검, 그리고 명시적인 “속도 부채” 경고를 넣었다.
+- 프로젝트 공개 페이지에 상태 라벨, 항목별 날짜, 독자가 확인할 순서를 넣어 내용을 명확히 했다.
+- AI 프로젝트 점수표와 리소스 계층 장을 확장해 독립 수행 증거, 시험 조건, 소유권, 릴리스 관문을 넣었다.
+- AI로 영어를 배우는 입구 페이지를 네 가지 기술 증거 카드, 지연 재측정, 90일 주기와 연결했다.
+- 선택 장에 확신도와 가역성 점검을 더했다. 불확실성이 있으면 거짓 정밀함을 만들어 내는 대신 행동의 크기를 조절한다.
+- AI 학습 기록 템플릿을 갱신해 세 가지 비교 조건, 확신도, 재작업, 인계 소유권을 적게 했다.
+- 주의력·회복·관계 장을 각각에 대응하는 생활 레벨업 워크시트와 90일 행동 총괄표에 직접 연결했다.
+- 두 언어판 작업물 브리프와 전달 카드를 추가했다. 학습 산출물의 범위를 정하고, 검토하고, 인계하고, 롤백할 수 있게 한다.
+- 두 언어판 영어 능력 진단 템플릿을 개선했다. 조건 추적, 원본·지연 샘플, 증거 카드 링크, 90일 주기에서 다음에 바꿀 변수의 인계를 넣었다.
+- 두 언어판 주간 회고 템플릿을 주간 증거 대시보드로 개선했다. 제약, 오류 원인, 회복, 상태 인계를 담는다.
+- 두 언어판 학습 상태 템플릿을 세션을 넘나드는 단일 기준 문서로 개선했다. 버전을 매기고, 증거 목록, 경계, 인계, 재점검 날짜를 갖췄다.
 
-- VitePress static site with bilingual navigation, local search, page metadata, sitemap, and legacy hash-route migration.
-- Learning-state, weekly-review, and English-diagnostic templates.
-- CEFR can-do goals and 7-day, 30-day, and 12-week plans.
-- Full English counterparts for entrepreneurship, archives, and word lists.
-- Dual licensing, attribution register, contribution, conduct, security, and support policies.
-- CI checks, scheduled link validation, image-metadata checks, and Playwright smoke tests.
+#### 변경
 
-### Changed
+- `인생 레벨업 가이드` / `Life Level-up Guide`를 책의 주된 정체성으로 삼고, 평생학습 부제는 유지했다.
+- 두 언어판 개인 이야기를 다듬었다. 정확성과 프라이버시, 건강에 관한 경계를 살피고, 더 차분한 문학적 목소리로 바꿨다.
+- 듣기 자료 목록을 과제 적합성, 증거, 접근성, 저작권, 7일 회고 주기를 중심으로 다시 짰다.
+- 읽기 자료를 과제 적합성, 출처 버전, 증거의 경계, 평행 텍스트를 통한 전이를 중심으로 다시 짰다.
+- 말하기 연습을 명료도, 복구 전략, 청자 증거, 더 안전한 실제 상호작용을 중심으로 다시 짰다.
+- 쓰기 연습을 과제 적합성, 네 차례 퇴고, 출처 점검, 추적 가능한 전달을 중심으로 다시 짰다.
+- 90일 행동 장을 기술을 가로지르는 하나의 증거 사슬과 명시적인 단계 관문에 연결했다.
+- 유지보수 안내와 풀 리퀘스트 템플릿에 장 릴리스 관문과 외부 링크·날짜 지침을 더했다.
+- Playwright가 생성한 보고서를 Markdown lint 대상에서 제외했다. 실패 진단 결과가 책 내용으로 오인되지 않게 하기 위해서다.
+- 1주차 수면·스트레스 수업을 증거의 범위를 지키는 언어 연습으로 다시 짰다. 근거 없는 의학적 주장을 없애고 더 안전한 출처 경계를 더했다.
+- 창업 장을 다듬었다. 증거 수준을 명시하고, 개인적 추정임을 밝히고, 다섯 가지 현실 관문을 두고, 결정 점수표와 프로젝트 점수표로 가는 링크를 넣었다.
+- 서장, 홈페이지 지도, 후기에서 책의 읽기 흐름을 명확히 했다. 독자는 실제 문제에서 출발해 증거 카드와 90일 주기로 넘어가고, 계획이 깨지면 회복으로 갈 수 있다.
+- 옛 잡문 노트를 다시 손봤다. 외부 인용을 줄이고, 고정관념이 담긴 이미지를 없애고, 학교 폭력의 적나라한 묘사를 덜어 내고, 훈련과 개인적 결과는 일반화할 수 없는 증거로 표시했다.
+- 개인 이야기를 다듬었다. 서사의 경계를 밝히는 메모를 넣고, 제3자의 속마음을 짐작하는 서술을 줄이고, 더 안전한 콘텐츠 안내를 붙이고, 현실 속 AI에 관한 서술을 더 조건부로 바꿨다.
+- 새 페이지에 대한 책 구조 내비게이션과 브라우저 스모크 테스트를 추가했다.
+- 보관된 옛글 네 편과 그 영어 번역 모두에 페이지 단위의 역사·프라이버시·건강·안전 안내를 넣고, 각 경로를 브라우저 테스트로 확인했다.
+- 두 언어판 생활 시스템 편을 추가했다. 최소 실행 가능한 하루, 에너지 예산, 경계, 중단 후 회복, 7일 실천을 통해 책의 방법과 템플릿을 잇는다.
+- 공식 `token.love`와 `ku0.com` 홈페이지를 다시 확인하고, 현재 기능에 관한 문구와 계약의 경계를 명확히 했으며, 프로젝트 페이지의 출처 표기 날짜를 맞췄다.
+- AI 경험 사례 회고 템플릿을 AI 장, 프로젝트 공개 페이지, 두 언어판 용어 색인과 연결했다. 공개된 서사마다 눈에 보이는 증거 경로가 생긴다.
+- 주된 읽기 흐름을 고쳤다. 잡문 노트는 1주차, 생활 시스템, 90일 계획으로 이어지고, 후기는 독자를 다시 처음으로 돌려보낸다.
+- 홈페이지와 서장 전반에서 영어 필명 표기를 “Li Pu”로 통일했다.
 
-- Replaced learning-pyramid percentages, learning-style matching, fixed vocabulary-coverage claims, and fixed review intervals with evidence-aware guidance.
-- Reframed AI chapters around tasks and portable state instead of a preferred provider.
-- Moved affiliated products to a disclosure page and removed unnecessary public contact details.
+### 추가
 
-### Removed
+- 두 언어 내비게이션, 로컬 검색, 페이지 메타데이터, 사이트맵, 옛 해시 경로 이전을 갖춘 VitePress 정적 사이트
+- 학습 상태, 주간 회고, 영어 능력 진단 템플릿
+- CEFR can-do 목표와 7일·30일·12주 계획
+- 창업, 옛글 보관함, 단어 목록의 완전한 영어판 대응 페이지
+- 이중 라이선스, 출처 등록부, 기여·행동 강령·보안·지원 정책
+- CI 점검, 예약 링크 검증, 이미지 메타데이터 점검, Playwright 스모크 테스트
 
-- Docsify runtime and unpinned CDN dependencies.
-- Public references to unverified third-party and child photographs, private messages, medical records, and QR-code contact images.
+### 변경
+
+- 학습 피라미드 비율, 학습 유형 맞춤, 고정된 어휘 커버리지 주장, 고정된 복습 간격을 증거를 고려한 안내로 바꿨다.
+- AI 장을 특정 제공자를 앞세우는 대신 과제와 옮겨 쓸 수 있는 상태를 중심으로 다시 짰다.
+- 제휴 제품은 공개 페이지로 옮기고, 불필요하게 공개된 연락처를 없앴다.
+
+### 제거
+
+- Docsify 런타임과 버전이 고정되지 않은 CDN 의존성
+- 검증되지 않은 제3자 사진과 아동 사진, 사적인 메시지, 의료 기록, QR 코드 연락처 이미지에 대한 공개 참조

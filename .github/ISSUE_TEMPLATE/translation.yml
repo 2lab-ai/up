@@ -1,21 +1,22 @@
-name: Translation issue
-description: Report missing meaning, divergence, or unnatural language between editions.
-title: "[Translation]: "
+name: 번역 문제
+description: 중국어 원문과 한국어 번역 사이의 의미 누락, 어긋남, 어색한 문장을 알려 주세요.
+title: "[번역]: "
 labels: [translation]
 body:
   - type: input
     id: pages
     attributes:
-      label: Chinese and English page paths
+      label: 한국어 페이지 경로와 원문 경로
+      description: 원문은 https://github.com/byoungd/up 의 같은 경로입니다.
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: Meaning or language problem
+      label: 의미 또는 문장 문제
     validations:
       required: true
   - type: textarea
     id: revision
     attributes:
-      label: Suggested revision
+      label: 고친 문장 제안

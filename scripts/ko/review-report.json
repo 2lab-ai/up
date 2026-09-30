@@ -1,0 +1,4510 @@
+{
+  "summary": {
+    "translator": "claude-opus-5-5",
+    "reviewer": "claude-fable-5-1",
+    "reviewer_served_by": [
+      "claude-fable-5-1"
+    ],
+    "files_reviewed": 91,
+    "files_with_must_before": 3,
+    "must_before": 3,
+    "should_before": 120,
+    "files_revised": 58,
+    "must_after": 1,
+    "should_after": 72,
+    "files_with_must_after": [
+      "docs/threads/part-3/3-attention-and-judgment.md"
+    ],
+    "errors": [],
+    "files_polished_should": 55,
+    "polish_reverted": [],
+    "audit": {
+      "model": "claude-fable-5-1",
+      "files_audited": 91,
+      "files_with_findings": 16,
+      "findings_before": 21,
+      "files_patched": 13,
+      "edits_applied": 16,
+      "findings_after": 5,
+      "reverted": [],
+      "errors": []
+    },
+    "adjudication": {
+      "by": "pipeline operator (Claude Opus 5.5 agent), after the automatic passes",
+      "fixed_by_hand": [
+        {
+          "file": "LICENSE.md",
+          "finding": "audit: 'indicate changes' rendered as 변경 여부",
+          "change": "변경 여부를 표시 → 변경 사항을 표시"
+        },
+        {
+          "file": "docs/templates/toolkit-walkthrough.md",
+          "finding": "audit: '45 \u5206\u949f\u4efb\u52a1' dropped from the list",
+          "change": "이번 45분 과제의 입력… → 이번 45분 과제, 입력…"
+        },
+        {
+          "file": "docs/threads/part-3/5-evidence-and-transfer.md",
+          "finding": "audit: \u9ad8\u98ce\u9669 rendered as plain 위험한",
+          "change": "위험한 결정 → 위험이 큰 결정"
+        },
+        {
+          "file": "docs/threads/part-0/prologue.md",
+          "finding": "audit: \u7b2c\u4e00\u53e5 not rendered",
+          "change": "서툰 영어 한 문장 → 서툰 영어 첫 문장"
+        },
+        {
+          "file": "docs/templates/reading-evidence.md",
+          "finding": "polish changed a recurring heading (\u8bc4\u5206\u4e0e\u53bb\u7559) away from the other templates",
+          "change": "## 11. 점수 매기기와 유지·교체 결정 → ## 11. 점수 매기고 계속할지 정하기"
+        },
+        {
+          "file": "docs/threads/part-0/prologue.md",
+          "finding": "review SHOULD + audit: \u5979 (female friend W.) rendered as 그; translator declined 그녀 twice",
+          "change": "그가 → 그 친구가 (×2), no gendered pronoun needed"
+        }
+      ],
+      "kept_as_is": [
+        {
+          "file": "docs/threads/part-3/3-attention-and-judgment.md",
+          "finding": "review MUST: \u5982\u679c\u4e00\u4e2a\u5185\u5bb9\u540c\u65f6\u8fc7\u4e0d\u4e86\u4e09\u9053\u95e8 → reviewer wants '동시에 통과하지 못하는'",
+          "reason": "false positive — the author's own English (docs/en/threads/part-3/3-attention-and-judgment.md:43) reads 'If a piece fails all three gates', which is what 세 문을 하나도 통과하지 못하는 says"
+        },
+        {
+          "file": "docs/templates/ai-task-brief.md",
+          "finding": "audit glossary: \u5141\u8bb8\u7684\u53ef\u63a5\u53d7\u53d8\u4f53 → 허용되는 변이형 (glossary \u53ef\u63a5\u53d7\u53d8\u4f53 = 수용 가능한 변이형)",
+          "reason": "soft glossary row (반복 개념); meaning kept, '허용되는 수용 가능한 변이형' would be redundant"
+        }
+      ],
+      "verification_audit": [
+        {
+          "file": "LICENSE.md",
+          "findings": 0,
+          "model": "claude-fable-5-1"
+        },
+        {
+          "file": "docs/templates/toolkit-walkthrough.md",
+          "findings": 0,
+          "model": "claude-fable-5-1"
+        },
+        {
+          "file": "docs/threads/part-3/5-evidence-and-transfer.md",
+          "findings": 0,
+          "model": "claude-fable-5-1"
+        },
+        {
+          "file": "docs/threads/part-0/prologue.md",
+          "findings": 0,
+          "model": "claude-fable-5-1"
+        },
+        {
+          "file": "docs/templates/reading-evidence.md",
+          "findings": 0,
+          "model": "claude-fable-5-1"
+        }
+      ]
+    },
+    "final": {
+      "review_must_after_revision": 1,
+      "review_must_open_after_adjudication": 0,
+      "audit_findings_after_auto_patch": 5,
+      "audit_findings_fixed_by_hand_and_reaudited_clean": 4,
+      "audit_findings_kept_after_adjudication": 1,
+      "reaudited_clean_files": [
+        "LICENSE.md",
+        "docs/templates/toolkit-walkthrough.md",
+        "docs/threads/part-3/5-evidence-and-transfer.md",
+        "docs/threads/part-0/prologue.md",
+        "docs/templates/reading-evidence.md"
+      ]
+    }
+  },
+  "files": {
+    "docs/threads/word-list/Go.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/2-ai-development-and-resource-layer.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6d4b\u8bd5\u662f\u5426\u8986\u76d6\u771f\u5b9e\u98ce\u9669",
+          "ko_excerpt": "테스트가 실제 위험을 덮는지",
+          "suggested_fix": "테스트가 실제 위험을 다루는지"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u660e\u786e\u4e0d\u63d0\u4f9b\u7684\u6750\u6599：",
+          "ko_excerpt": "일부러 제공하지 않는 자료:",
+          "suggested_fix": "제공하지 않는다고 명시한 자료:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "“\u4f53\u9a8c\u597d”“\u67b6\u6784\u5148\u8fdb”",
+          "ko_excerpt": "“경험이 좋다”, “아키텍처가 앞서 있다”",
+          "suggested_fix": "“사용 경험이 좋다”, “아키텍처가 앞서 있다”"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u591a\u4e45\u5220\u9664、\u5982\u4f55\u8bc1\u660e\u5220\u9664",
+          "ko_excerpt": "언제 삭제하는가, 삭제를 어떻게 증명하는가",
+          "suggested_fix": "얼마나 지나 삭제하는가, 삭제를 어떻게 증명하는가"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 4,
+        "edits_applied": 4,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5e76\u5217\u51fa\u6a21\u578b\u63a5\u5165、\u8def\u7531\u5bb9\u707e、\u7528\u91cf\u8ba1\u91cf、\u5ba1\u8ba1\u7559\u75d5\u548c\u79c1\u6709\u5316/\u79bb\u7ebf\u90e8\u7f72\u80fd\u529b",
+          "ko_excerpt": "모델 연결, 라우팅 장애 대응, 사용량 계량, 감사 추적, 프라이빗/오프라인 배포 기능을 내세운다",
+          "suggested_fix": "모델 연결, 라우팅 장애 대응, 사용량 계량, 감사 추적, 프라이빗/오프라인 배포 기능을 나열한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6574\u7406\u6210\u56e2\u961f\u53ef\u4ee5\u7406\u89e3、\u4f7f\u7528\u548c\u6cbb\u7406\u7684\u670d\u52a1",
+          "ko_excerpt": "팀이 이해하고, 쓰고, 통제할 수 있는 서비스로 정리하는 일이다",
+          "suggested_fix": "팀이 이해하고, 쓰고, 거버넌스할 수 있는 서비스로 정리하는 일이다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/README.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u7f3a\u5931\u6570\u636e\u96c6、\u8001\u65e7\u67b6\u6784\u548c\u9884\u8bbe\u7ed3\u679c",
+          "ko_excerpt": "데이터셋이 비어 있고, 아키텍처가 낡고, 결과가 미리 정해져 있어도",
+          "suggested_fix": "데이터셋이 없고, 아키텍처가 낡고, 결과가 미리 정해져 있어도"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5f88\u591a\u65b9\u5411\u5e76\u4e0d\u662f\u60f3\u6e05\u695a\u4e4b\u540e\u624d\u51fa\u73b0",
+          "ko_excerpt": "많은 방향은 다 생각해 둔 뒤에 나타나지 않는다.",
+          "suggested_fix": "많은 방향은 생각을 다 정리한 뒤에야 나타나는 것이 아니다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u628a\u8fc7\u53bb\u88c5\u9970\u6210\u52b1\u5fd7\u6545\u4e8b",
+          "ko_excerpt": "과거를 감동적인 이야기로 꾸미는 데",
+          "suggested_fix": "과거를 자기계발식 성공담으로 꾸미는 데"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u53ef\u4ee5\u88ab UI \u548c“AI”\u53d9\u4e8b\u6682\u65f6\u906e\u4f4f",
+          "ko_excerpt": "UI와 ‘AI’라는 서사로 잠시 가릴 수는 있지만",
+          "suggested_fix": "UI와 “AI”라는 서사로 잠시 가릴 수는 있지만"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u6bd4“\u9009\u4e2d\u5b8c\u7f8e\u8d5b\u9053”\u66f4\u53ef\u9760\u7684",
+          "ko_excerpt": "‘완벽한 트랙을 고르는 것’보다 믿을 만한 것은",
+          "suggested_fix": "“완벽한 트랙을 고르는 것”보다 믿을 만한 것은"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "README.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6bcf\u4e2a\u5173\u952e\u51b3\u5b9a\u90fd\u5e94\u5f53\u53ef\u4ee5\u88ab\u89e3\u91ca、\u6d4b\u8bd5\u6216\u56de\u6eda",
+          "ko_excerpt": "핵심 결정은 하나하나 설명하고, 테스트하고, 롤백할 수 있어야 한다",
+          "suggested_fix": "핵심 결정은 하나하나 설명하거나 테스트하거나 롤백할 수 있어야 한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u628a\u8fc7\u53bb\u88c5\u9970\u6210\u52b1\u5fd7\u6545\u4e8b",
+          "ko_excerpt": "과거를 감동적인 이야기로 꾸미기 위해서가 아니다",
+          "suggested_fix": "과거를 자기계발식 성공담으로 꾸미기 위해서가 아니다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4e0e\u8bfb\u8005\u548c\u540c\u884c\u9762\u5bf9\u9762\u4ea4\u6d41",
+          "ko_excerpt": "독자, 동료들과 얼굴을 맞대고 이야기를 나누며",
+          "suggested_fix": "독자와 같은 분야 사람들을 얼굴을 맞대고 만나 이야기를 나누며"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/2-vocabulary.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8ba9\u771f\u5b9e\u8bfb\u8005\u6216\u542c\u4f17\u5148\u590d\u8ff0\u6536\u5230\u7684\u610f\u601d",
+          "ko_excerpt": "실제 독자나 청자에게 전달받은 뜻을 먼저 재진술하게 한 뒤에",
+          "suggested_fix": "실제 독자나 청자가 받아들인 뜻을 먼저 재진술하게 한 뒤에"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u540c\u4e00\u610f\u56fe\u5199\u4e24\u79cd\u53d7\u4f17\u7248\u672c",
+          "ko_excerpt": "같은 의도를 두 대상용 버전으로 쓰기",
+          "suggested_fix": "같은 의도를 서로 다른 두 대상에 맞춰 두 버전으로 쓰기"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5b83\u4eec\u4e0d\u8d1f\u8d23\u8bc1\u660e\u4f60\u806a\u660e",
+          "ko_excerpt": "그 단어들은 내가 똑똑하다는 것을 증명할 책임이 없다",
+          "suggested_fix": "그 단어들은 똑똑함을 증명할 책임이 없다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "“\u82f1\u6587 = \u4e2d\u6587”\u53ea\u8bb0\u5f55\u4e86\u4e00\u4e2a\u5019\u9009\u5bf9\u5e94",
+          "ko_excerpt": "“영어 = 한국어”는 후보 대응 하나를 기록했을 뿐이다",
+          "suggested_fix": "“영어 = 모국어”는 후보 대응 하나를 기록했을 뿐이다 (원문은 중국어 학습자 맥락이므로 ‘모국어’로 중립화하거나 원문대로 옮기는 편이 안전함; 5절의 ‘사전 첫머리의 한국어 뜻풀이’도 동일하게 처리)"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6709\u4e9b\u8bcd\u4f1a\u56e0\u4e3a\u4f60\u53cd\u590d\u4f7f\u7528，\u6162\u6162\u957f\u8fdb\u81ea\u5df1\u7684\u8bed\u6c14\u91cc",
+          "ko_excerpt": "어떤 단어는 거듭 쓰는 사이에 천천히 자기 어조 속으로 자라 들어온다",
+          "suggested_fix": "어떤 단어는 거듭 쓰는 사이에 천천히 내 말투 속으로 자라 들어온다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5173\u95ed\u65e7\u5361\u548c\u63d0\u793a\u5b8c\u6210\u5e73\u884c\u4efb\u52a1",
+          "ko_excerpt": "옛 카드와 단서를 끄고 평행 과제 완성",
+          "suggested_fix": "옛 카드와 단서를 치우고 평행 과제 완성"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 3,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/reference/glossary.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u80fd\u88ab\u522b\u4eba\u9605\u8bfb、\u4f7f\u7528、\u8d28\u7591\u6216\u6539\u8fdb\u7684\u8f93\u51fa",
+          "ko_excerpt": "다른 사람이 읽고, 쓰고, 문제를 제기하고, 개선할 수 있는 출력",
+          "suggested_fix": "다른 사람이 읽고, 사용하고, 문제를 제기하고, 개선할 수 있는 출력"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u9009\u62e9\u5b89\u5168、\u964d\u6863\u6216\u91cd\u5efa\u8d1f\u8377",
+          "ko_excerpt": "안전, 한 단계 낮춘, 재건 가운데 부하를 고르기",
+          "suggested_fix": "안전 부하, 한 단계 낮춘 부하, 재건 부하 가운데 하나를 고르기"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/8-job-search-english.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u80fd\u5426\u5728\u6ca1\u6709\u5373\u65f6\u4f1a\u8bae\u7684\u60c5\u51b5\u4e0b\u5199\u4e0b\u8fdb\u5c55、\u98ce\u9669\u548c\u4e0b\u4e00\u6b65",
+          "ko_excerpt": "즉석 회의 없이도 진행 상황, 위험, 다음 단계를 글로 남길 수 있는가",
+          "suggested_fix": "실시간 회의 없이도 진행 상황, 위험, 다음 단계를 글로 남길 수 있는가"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u9009\u62e9\u56db\u5230\u516d\u4e2a\u771f\u5b9e\u4e8b\u4ef6",
+          "ko_excerpt": "실제 사건 네다섯 개에서 여섯 개를 골라",
+          "suggested_fix": "실제 사건 네 개에서 여섯 개를 골라"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "B1 \u65b9\u5411\u53ef\u80fd\u652f\u6301\u8fde\u8d2f\u8bf4\u660e\u7ecf\u5386\u548c\u7406\u7531",
+          "ko_excerpt": "B1 방향으로도 경력과 이유를 조리 있게 설명할 수 있다",
+          "suggested_fix": "B1 방향으로도 경력과 이유를 조리 있게 설명할 수 있을지 모른다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u8bbe\u5907\u548c\u62db\u8058\u8005\u8868\u8fbe\u65b9\u5f0f\u5f71\u54cd",
+          "ko_excerpt": "장비, 면접관의 말하는 방식에도 영향을 받는다",
+          "suggested_fix": "장비, 채용 담당자의 말하는 방식에도 영향을 받는다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u66f4\u6362\u9762\u8bd5\u8005\u6216\u95ee\u9898\u987a\u5e8f",
+          "ko_excerpt": "면접자나 질문 순서 바꾸기",
+          "suggested_fix": "면접관이나 질문 순서 바꾸기"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "omission",
+            "source_excerpt": "\u5bf9\u5f88\u591a\u719f\u6089\u9886\u57df\u7684\u9762\u8bd5\u4efb\u52a1\u800c\u8a00，B1 \u65b9\u5411\u53ef\u80fd\u652f\u6301\u8fde\u8d2f\u8bf4\u660e\u7ecf\u5386\u548c\u7406\u7531",
+            "ko_excerpt": "익숙한 분야의 면접 과제라면 B1 방향으로도 경력과 이유를 조리 있게 설명할 수 있다",
+            "suggested_fix": "익숙한 분야의 많은 면접 과제라면 B1 방향으로도 경력과 이유를 조리 있게 설명할 수 있을지 모른다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 3,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "CHANGELOG.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "repair, recognition errors, and day-fourteen transfer",
+          "ko_excerpt": "복구, 음성 인식 오류, 14일째 전이",
+          "suggested_fix": "복구, 인식 오류, 14일째 전이"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "toward scenes, physical consequences, concrete business questions",
+          "ko_excerpt": "장면, 몸으로 겪은 결과, 구체적인 사업 질문",
+          "suggested_fix": "장면, 실제로 겪는 물리적 결과, 구체적인 사업 질문"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "retaining original WeChat account names as explicitly marked proper names",
+          "ko_excerpt": "위챗 공식 계정의 원래 이름은 고유명사임을 명시하고 그대로 두었다",
+          "suggested_fix": "위챗 계정의 원래 이름은 고유명사임을 명시하고 그대로 두었다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "links to the decision and project scorecards",
+          "ko_excerpt": "결정 브리프와 프로젝트 점수표로 가는 링크를 넣었다",
+          "suggested_fix": "결정 점수표와 프로젝트 점수표로 가는 링크를 넣었다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 4,
+        "edits_applied": 4,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "names the real weight of failure",
+          "ko_excerpt": "실패가 남긴 실제 무게를 이름 붙여 부르며",
+          "suggested_fix": "실패의 진짜 무게를 있는 그대로 말하며"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/my-story.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8fd9\u7bc7\u6545\u4e8b\u5199\u5230\u8fd9\u91cc，\u6ca1\u6709\u51ef\u65cb，\u4e5f\u6ca1\u6709\u5f7b\u5e95\u548c\u89e3。",
+          "ko_excerpt": "이 이야기는 여기까지 와서도 승리의 귀환도, 완전한 화해도 없다.",
+          "suggested_fix": "이 이야기를 여기까지 썼지만, 승리의 귀환도 완전한 화해도 없다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8eab\u4f53\u4f1a\u8bb0\u8d26",
+          "ko_excerpt": "몸은 장부를 적어 두며",
+          "suggested_fix": "몸은 그 대가를 하나하나 기록해 두며"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u77e5\u9053\u8fd9\u4e9b\u4ee5\u540e，\u4ecd\u7136\u613f\u610f\u505a\u4e8b，\u4f46\u4e0d\u518d\u628a\u6240\u6709\u4eba\u7684\u660e\u5929\u62bc\u5728\u81ea\u5df1\u7684\u786e\u4fe1\u4e0a。",
+          "ko_excerpt": "이것을 알고 나서도 여전히 일을 하고 싶지만, 더는 모든 사람의 내일을 나 혼자의 확신에 걸지 않는다.",
+          "suggested_fix": "이것을 알고 나서도 여전히 기꺼이 일을 하되, 더는 모든 사람의 내일을 나 혼자의 확신에 걸지 않는다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5bb6\u4eba\u751a\u81f3\u5e26\u6211\u5bfb\u6c42\u6c11\u95f4\u5e2e\u52a9",
+          "ko_excerpt": "가족들은 나를 데리고 민간요법에까지 도움을 구했다",
+          "suggested_fix": "가족들은 나를 데리고 민간의 도움까지 찾아 나섰다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-5/book-as-proof.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5b8c\u6210\u6807\u51c6\u4e00\u65e6\u5177\u4f53，\u5f88\u591a\u770b\u4f3c\u91cd\u8981\u7684\u5de5\u4f5c\u4fbf\u5931\u53bb\u4f18\u5148\u7ea7。",
+          "ko_excerpt": "완료 기준이 구체해지자 중요해 보이던 많은 일이 우선순위에서 밀려났다.",
+          "suggested_fix": "완료 기준이 구체적으로 정해지자 중요해 보이던 많은 일이 우선순위에서 밀려났다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6700\u5bb9\u6613\u505a\u7684\u4e8b\u662f\u7acb\u5373\u91cd\u5199\u9996\u9875",
+          "ko_excerpt": "곧바로 첫 페이지를 다시 쓰는 것이다",
+          "suggested_fix": "곧바로 홈페이지를 다시 쓰는 것이다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4e0d\u7528\u9996\u9875\u6587\u6848\u63a9\u76d6",
+          "ko_excerpt": "첫 페이지 문구로 덮지 않음",
+          "suggested_fix": "홈페이지 문구로 덮지 않음"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u8fd9\u4e9b\u53e5\u5b50\u90fd\u6ca1\u6709\u9519。",
+            "ko_excerpt": "모두 틀린 말은 아니다.",
+            "suggested_fix": "어느 하나 틀린 말이 없다."
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/5-speaking.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/3-listening.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u53ef\u4ee5\u6bd4\u53ea\u589e\u52a0\u76f8\u540c\u64ad\u653e\u6b21\u6570\u66f4\u6709\u6548\u5730\u6539\u53d8\u5b66\u4e60\u8fc7\u7a0b",
+          "ko_excerpt": "같은 재생 횟수를 늘리는 것보다 학습 과정을 더 효과적으로 바꿀 수 있다",
+          "suggested_fix": "같은 자료의 재생 횟수만 늘리는 것보다 학습 과정을 더 효과적으로 바꿀 수 있다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "| \u8bed\u8a00\u672a\u77e5 | \u8bcd\u6c47、\u8bcd\u5f62、\u8bed\u6cd5\u6216\u8868\u8fbe\u4ece\u672a\u5b66\u8fc7 |",
+          "ko_excerpt": "| 모르는 언어 |",
+          "suggested_fix": "| 언어를 모름 |"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4e2d\u6587\u7ffb\u8bd1\u53ef\u4ee5\u5feb\u901f\u786e\u8ba4\u5927\u610f",
+          "ko_excerpt": "모국어 번역은 대강의 뜻을 빨리 확인해 주지만",
+          "suggested_fix": "중국어 번역은 대강의 뜻을 빨리 확인해 주지만"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "| \u5929\u6570 | \u52a8\u4f5c | \u7559\u4e0b\u7684\u8bc1\u636e |",
+          "ko_excerpt": "| 날짜 | 행동 | 남길 증거 |",
+          "suggested_fix": "| 일차 | 행동 | 남길 증거 |"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/4-reading.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0b\u4e00\u6b65\u548c\u9000\u51fa\u6761\u4ef6",
+          "ko_excerpt": "다음 단계, 철수 조건을 적음",
+          "suggested_fix": "다음 단계, 종료 조건을 적음 (같은 절 10에서도 '철수 조건'을 '종료 조건'으로 통일)"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6280\u672f\u6587\u6863\u8bfb\u5f97\u6162，\u5e38\u5e38\u4e0d\u662f\u82f1\u8bed\u5355\u8bcd\u5355\u72ec\u9020\u6210\u7684。",
+          "ko_excerpt": "기술 문서를 느리게 읽는 이유가 영어 단어 하나뿐인 경우는 드물다.",
+          "suggested_fix": "기술 문서를 느리게 읽게 되는 원인이 영어 단어만인 경우는 드물다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u6280\u672f\u6587\u6863\u8bfb\u5f97\u6162，\u5e38\u5e38\u4e0d\u662f\u82f1\u8bed\u5355\u8bcd\u5355\u72ec\u9020\u6210\u7684。",
+            "ko_excerpt": "기술 문서를 느리게 읽는 이유가 영어 단어 하나뿐인 경우는 드물다.",
+            "suggested_fix": "기술 문서를 느리게 읽는 이유가 영어 단어만으로 생기는 경우는 드물다."
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/grammar.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e00\u6b21\u53cd\u9988\u6700\u591a\u5904\u7406\u4e00\u5230\u4e09\u4e2a\u95ee\u9898",
+          "ko_excerpt": "문제를 많아야 한두 개, 최대 세 개까지만 다루며",
+          "suggested_fix": "한 번의 피드백에서는 문제를 한 개에서 세 개까지만 다루며"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/6-writing.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u7ec4\u7ec7\u6210\u53ef\u4ee5\u79bb\u5f00\u4f5c\u8005\u4ecd\u7136\u5de5\u4f5c\u7684\u5f62\u72b6",
+          "ko_excerpt": "작가가 곁에 없어도 제 역할을 하는 형태로 짜는 일이다",
+          "suggested_fix": "글쓴이가 곁에 없어도 제 역할을 하는 형태로 짜는 일이다 (본문 전반의 ‘작가’를 ‘글쓴이’로 통일 검토 — 여기서 \u4f5c\u8005는 메일·상태 업데이트를 쓰는 사람까지 포함하므로 ‘작가’는 직업적 뉘앙스가 강함)"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 11,
+        "edits_applied": 11,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/1-ai-learning.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6211\u66fe\u56e0\u4e3a\u5b9e\u4e60\u548c\u6bd5\u4e1a\u624b\u7eed\u53d7\u632b\u56de\u5230\u8001\u5bb6",
+          "ko_excerpt": "실습과 졸업 절차에서 좌절을 겪고",
+          "suggested_fix": "인턴십과 졸업 절차에서 좌절을 겪고"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u7ecf\u5386\u516c\u53f8\u5931\u8d25、\u8eab\u4f53\u5931\u5e8f",
+            "ko_excerpt": "회사를 잃고, 몸과 생활이 무너졌다가",
+            "suggested_fix": "회사를 잃고, 몸이 무너졌다가"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/1-understanding.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u672c\u7ae0\u662f\u5168\u4e66\u7684\u603b\u534f\u8bae。",
+          "ko_excerpt": "이 장은 책 전체의 총협약이다.",
+          "suggested_fix": "이 장은 책 전체를 아우르는 협약이다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u90fd\u53ef\u80fd\u8ba9\u4eba\u611f\u89c9“\u6211\u4f1a\u4e86”",
+          "ko_excerpt": "“이제 알겠다”는 느낌이 든다",
+          "suggested_fix": "“이제 알겠다”는 느낌이 들 수 있다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-4/family-learning.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u4e0d\u628a\u53e3\u97f3\u76f8\u4f3c\u5ea6\u5f53\u6210\u76ee\u6807",
+          "ko_excerpt": "악센트가 원어민과 얼마나 비슷한지를 목표로 삼지는 않음",
+          "suggested_fix": "악센트의 유사도를 목표로 삼지는 않음"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u5bb6\u957f\u53ea\u63d0\u4f9b\u7684\u4e24\u9879\u652f\u6301：",
+          "ko_excerpt": "보호자가 제공할 지원 두 가지(그 이상은 하지 않음):",
+          "suggested_fix": "보호자가 오직 제공할 지원 두 가지:"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6700\u7ec8\u8bfe\u5802\u5185\u5bb9、\u4e8b\u5b9e\u4e0e\u8868\u8fbe\u7531\u5b66\u4e60\u8005\u786e\u8ba4",
+          "ko_excerpt": "최종 발표 내용, 사실, 표현은 학습자가 확인한다",
+          "suggested_fix": "최종 수업 내용, 사실, 표현은 학습자가 확인한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0b\u4e00\u5468\u4e0d\u589e\u52a0\u66f4\u957f\u8bcd\u8868",
+          "ko_excerpt": "다음 주에 더 긴 단어 목록을 늘리지 않는다",
+          "suggested_fix": "다음 주에 더 긴 단어 목록을 추가하지 않는다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u613f\u5bb6\u5ead\u91cc\u7684\u5b66\u4e60，\u4e0d\u518d\u662f\u4e00\u573a\u8c01\u66f4\u7126\u8651\u8c01\u5c31\u66f4\u6709\u6743\u53d1\u8a00\u7684\u6bd4\u8d5b",
+          "ko_excerpt": "집 안의 배움이 더는 더 불안한 사람이 더 많이 말할 권리를 갖는 경쟁이 되지 않기를 바란다",
+          "suggested_fix": "집 안의 배움이 더 불안한 쪽이 더 큰 발언권을 갖는 경쟁으로 더는 남지 않기를 바란다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 3,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/recovery.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0d\u7acb\u5373\u6062\u590d\u5168\u90e8\u8d1f\u8377",
+          "ko_excerpt": "전체 부하를 곧바로 되돌리지 않기",
+          "suggested_fix": "전체 부하로 곧바로 돌아가지 않기"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/entrepreneurship.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 5
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "AI \u8981\u79bb\u5f00\u6982\u5ff5\u548c\u5c11\u6570\u4eba\u7684\u5de5\u5177\u7bb1",
+          "ko_excerpt": "AI가 개념과 소수의 도구 상자를 떠나",
+          "suggested_fix": "AI가 개념과 소수만 쓰는 도구 상자를 떠나"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6f02\u4eae\u8bdd\u5e2e\u4e0d\u4e86\u8fd9\u4e9b\u5177\u4f53\u7684\u52a8\u4f5c。",
+          "ko_excerpt": "그럴듯한 말은 이런 구체적인 행동을 대신해 주지 못한다.",
+          "suggested_fix": "그럴듯한 말은 이런 구체적인 행동에 아무 도움이 되지 않는다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "## \u521b\u4e1a\u4e0d\u80fd\u9760\u71c3\u5c3d\u81ea\u5df1",
+          "ko_excerpt": "## 창업은 자신을 태워 없애는 것으로 버틸 수 없다",
+          "suggested_fix": "## 창업은 자신을 태워 없애는 데 기댈 수 없다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5b8f\u5927\u53d9\u4e8b\u548c\u521b\u59cb\u4eba\u7684\u82e6\u96be\u611f\u90fd\u65e0\u6cd5\u66ff\u5b83\u63d0\u4f9b\u5408\u6cd5\u6027",
+          "ko_excerpt": "거대한 서사도, 창업자의 고난 서사도 창업에 정당성을 대신 부여해 주지 못한다",
+          "suggested_fix": "거대한 서사도, 창업자가 느끼는 고난도 창업에 정당성을 대신 부여해 주지 못한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5373\u4f7f\u6700\u540e\u6ca1\u6709\u6210\u4e3a\u5b8f\u5927\u7684\u4e8b\u4e1a，\u4e5f\u6ca1\u6709\u8981\u6c42\u7231\u6211\u7684\u4eba\u7ee7\u7eed\u66ff\u6211\u7684\u786e\u4fe1\u4ed8\u6b3e。",
+          "ko_excerpt": "끝내 거대한 사업이 되지 못하더라도, 나를 사랑하는 사람들에게 내 확신의 값을 계속 대신 치르라고 요구해서는 안 된다.",
+          "suggested_fix": "끝내 거대한 사업이 되지 못하더라도, 나를 사랑하는 사람들에게 내 확신의 값을 계속 대신 치르라고 요구하지는 않는 일이어야 한다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 5,
+        "edits_applied": 5,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u672a\u5fc5\u6bd4\u4e00\u4e2a\u542c\u8d77\u6765\u5b8f\u5927\u7684\u4e92\u8054\u7f51\u9879\u76ee\u4f4e\u7ea7",
+          "ko_excerpt": "거창하게 들리는 인터넷 프로젝트보다 결코 하찮지 않다는 것도",
+          "suggested_fix": "거창하게 들리는 인터넷 프로젝트보다 꼭 하찮은 것은 아니라는 것도"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u53ef\u968f\u7740“\u53e3\u7f69”\u65f6\u671f\u5230\u6765",
+          "ko_excerpt": "하지만 ‘마스크’ 시기가 닥치면서",
+          "suggested_fix": "하지만 ‘마스크를 쓰던’ 시기가 닥치면서"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8ffd\u95ee\u8fd9\u4e2a\u9879\u76ee\u5230\u5e95\u8fd8\u80fd\u4e0d\u80fd\u505a",
+          "ko_excerpt": "이 프로젝트를 도대체 계속할 수 있기는 하냐고 몰아붙였다",
+          "suggested_fix": "이 프로젝트를 도대체 계속할 수 있기는 하냐고 거듭 물었다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u4e00\u4e2a\u80fd\u6d3b\u4e0b\u6765\u7684\u5c0f\u751f\u610f，\u672a\u5fc5\u6bd4\u4e00\u4e2a\u542c\u8d77\u6765\u5b8f\u5927\u7684\u4e92\u8054\u7f51\u9879\u76ee\u4f4e\u7ea7",
+            "ko_excerpt": "살아남을 수 있는 작은 장사가 거창하게 들리는 인터넷 프로젝트보다 결코 하찮지 않다는 것도 알게 되었다",
+            "suggested_fix": "살아남을 수 있는 작은 장사가 거창하게 들리는 인터넷 프로젝트보다 반드시 못하지는 않다는 것도 알게 되었다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 3,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/7-ai.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "omission",
+            "source_excerpt": "\u6bd4\u8f83\u539f\u59cb\u6837\u672c，\u800c\u4e0d\u662f\u53ea\u6bd4\u8f83 AI \u6539\u8fc7\u7684\u6210\u54c1。",
+            "ko_excerpt": "AI가 손본 결과물끼리가 아니라 원본 표본끼리 비교한다.",
+            "suggested_fix": "AI가 손본 결과물만 비교하지 말고 원본 표본을 비교한다."
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-5/after-90-days.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6211\u4f1a\u5220\u6389\u54ea\u4e00\u534a\u6d3b\u52a8？",
+          "ko_excerpt": "어떤 활동의 절반을 지우겠는가?",
+          "suggested_fix": "활동 가운데 어느 절반을 지우겠는가?"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u65b9\u5411\u4ecd\u91cd\u8981，\u4f46\u7cfb\u7edf\u6216\u8fb9\u754c\u5931\u8861",
+            "ko_excerpt": "방향은 여전히 중요하지만 시스템이나 경계가 무너짐",
+            "suggested_fix": "방향은 여전히 중요하지만 시스템이나 경계가 균형을 잃음"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/decision.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u589e\u52a0\u51b7\u9759\u671f、\u7b2c\u4e8c\u610f\u89c1、\u4e66\u9762\u8fb9\u754c\u548c\u9000\u51fa\u65b9\u6848",
+          "ko_excerpt": "숙려 기간, 다른 사람의 의견, 문서로 정한 경계, 빠져나올 방안을 더해야 한다",
+          "suggested_fix": "숙려 기간, 제2의 의견(세컨드 오피니언), 문서로 정한 경계, 빠져나올 방안을 더해야 한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u627f\u8ba4\u6709\u4e9b\u4fe1\u606f\u8fd8\u6ca1\u6709\u503c\u5f97\u652f\u4ed8\u7684\u4ef7\u683c",
+          "ko_excerpt": "어떤 정보는 아직 값을 치를 만한 때가 아니라는 사실을 인정하는 것이다",
+          "suggested_fix": "어떤 정보는 아직 그만한 값을 치르고 얻을 만하지 않다는 사실을 인정하는 것이다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0d\u8981\u7b49\u95e8\u69db\u88ab\u89e6\u53d1\u4e4b\u540e\u624d\u628a\u5b83\u6539\u540d\u4e3a",
+          "ko_excerpt": "문턱이 건드려진 다음에야 그것을",
+          "suggested_fix": "문턱이 이미 넘어간 뒤에야 그것을"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4ecd\u7136\u4f1a\u5728\u538b\u529b\u91cc\u9ad8\u4f30\u81ea\u5df1\u7684\u6e05\u9192",
+          "ko_excerpt": "압박 속에서 여전히 내가 얼마나 맑은 정신인지 과대평가한다",
+          "suggested_fix": "압박 속에서는 여전히 내 정신이 얼마나 맑은지 과대평가한다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 4,
+        "edits_applied": 4,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u773c\u524d\u66f4\u53ef\u80fd\u662f\u4ef7\u503c\u6392\u5e8f，\u800c\u4e0d\u662f\u8d44\u6599\u4e0d\u8db3",
+          "ko_excerpt": "지금 눈앞의 문제는 자료 부족보다 가치의 순서 매기기일 가능성이 크다",
+          "suggested_fix": "지금 눈앞의 문제는 자료 부족이 아니라 가치의 우선순위를 정하는 일일 가능성이 크다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-4/rhythm-and-compounding.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 2,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u800c\u5728\u4e8e\u66ff\u4f60\u51cf\u5c11\u4e34\u573a\u4e89\u8bba",
+            "ko_excerpt": "그 자리에서 벌어질 자기와의 논쟁을 줄여 주는 데 있다",
+            "suggested_fix": "그 자리에서 벌어질 논쟁을 줄여 주는 데 있다"
+          },
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u4e0b\u4e00\u6b21\u53ea\u6539\u53d8\u54ea\u4e00\u4e2a\u6700\u91cd\u8981\u7684\u53d8\u91cf",
+            "ko_excerpt": "다음번에 가장 중요한 변수 하나만 무엇으로 바꿀 것인가",
+            "suggested_fix": "다음번에는 가장 중요한 변수 어느 하나만 바꿀 것인가"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/relationships.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5728\u573a\u6bd4\u53ca\u65f6\u7ed9\u5efa\u8bae\u66f4\u91cd\u8981",
+          "ko_excerpt": "곁에 있어 주는 일이 서둘러 조언하는 일보다 중요하다",
+          "suggested_fix": "곁에 있어 주는 일이 제때 조언을 건네는 일보다 중요하다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u65f6\u95f4、\u94b1、\u9009\u62e9\u6743、\u7f72\u540d、\u9690\u79c1、\u52b3\u52a8\u6216\u4e00\u4efd\u8fdf\u5230\u7684\u8bf4\u660e；",
+          "ko_excerpt": "시간, 돈, 선택권, 크레디트, 프라이버시, 노동, 혹은 늦어진 설명 한마디",
+          "suggested_fix": "시간, 돈, 선택권, 크레디트, 프라이버시, 노동, 혹은 늦어진 설명 한마디를 돌려준다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4ecd\u6709\u77e5\u60c5、\u6682\u505c\u548c\u64a4\u56de\u540c\u610f\u7684\u7a7a\u95f4",
+          "ko_excerpt": "알고 선택하고, 일시 중지하고, 동의를 철회할 공간이 있다",
+          "suggested_fix": "알 권리를 갖고, 일시 중지하고, 동의를 철회할 공간이 있다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 3,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u6709\u9650\u7684\u5728\u573a，\u6bd4\u6577\u884d\u7684\u5168\u5929\u5019\u627f\u8bfa\u66f4\u53ef\u9760。",
+            "ko_excerpt": "한계가 있더라도 온전히 곁에 있는 편이, 건성으로 하루 종일 곁에 있겠다고 약속하는 것보다 믿음직하다.",
+            "suggested_fix": "한정된 시간이라도 곁에 있는 편이, 건성으로 하루 종일 곁에 있겠다고 약속하는 것보다 믿음직하다."
+          },
+          {
+            "severity": "MUST",
+            "type": "omission",
+            "source_excerpt": "\u81ea\u5df1\u7684\u7ecf\u5386\u6ca1\u6709\u88ab\u4f60\u8f7b\u8f7b\u63a8\u5f00",
+            "ko_excerpt": "때로는 자기 경험이 가볍게 밀려나지 않았다는 사실만 알면 된다.",
+            "suggested_fix": "때로는 자기 경험이 나에게 가볍게 밀려나지 않았다는 사실만 알면 된다."
+          },
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u4ecd\u6709\u77e5\u60c5、\u6682\u505c\u548c\u64a4\u56de\u540c\u610f\u7684\u7a7a\u95f4",
+            "ko_excerpt": "알고 선택하고, 일시 중지하고, 동의를 철회할 공간이 있다.",
+            "suggested_fix": "제대로 알고, 일시 중지하고, 동의를 철회할 공간이 있다."
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/toolkit-walkthrough.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u5374\u6bd4“\u575a\u6301\u4e86\u4e00\u5468”\u66f4\u6709\u4fe1\u606f",
+            "ko_excerpt": "“한 주를 버텼다”보다 훨씬 많은 정보를 준다",
+            "suggested_fix": "“한 주를 버텼다”보다 더 많은 정보를 준다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 1,
+        "issues_after": [
+          {
+            "severity": "MUST",
+            "type": "omission",
+            "source_excerpt": "\u7ea6\u675f\u672c\u6b21 45 \u5206\u949f\u4efb\u52a1、\u8f93\u5165、\u5e2e\u52a9\u65b9\u5f0f\u548c\u9a8c\u6536",
+            "ko_excerpt": "이번 45분 과제의 입력, 도움 방식, 검수 기준 제한",
+            "suggested_fix": "이번 45분 과제, 입력, 도움 방식, 검수를 제한"
+          }
+        ]
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/5-evidence-and-transfer.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u800c\u662f\u4e00\u79cd\u6e29\u548c\u7684\u53ef\u4fe1\u5ea6",
+          "ko_excerpt": "온화한 신뢰이기를 바란다",
+          "suggested_fix": "온화한 신뢰성(믿을 만함)이기를 바란다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u6211\u662f\u5426\u56e0\u4e3a\u4fdd\u7559\u4f11\u606f\u800c\u51cf\u5c11\u4e86\u4e00\u6b21\u9ad8\u98ce\u9669\u51b3\u5b9a？",
+            "ko_excerpt": "휴식을 지킨 덕분에 위험한 결정을 한 번 덜 내렸는가?",
+            "suggested_fix": "휴식을 지킨 덕분에 고위험 결정을 한 번 덜 내렸는가?"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-4/week-1.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u539f\u8bdd、\u53ef\u9a8c\u8bc1\u95ee\u9898\u548c\u4e0d\u91c7\u7eb3\u7684\u5efa\u8bae",
+          "ko_excerpt": "원래 한 말, 검증 가능한 문제, 받아들이지 않은 조언",
+          "suggested_fix": "피드백 원문, 검증 가능한 문제, 받아들이지 않은 조언"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u53ea\u51ed\u611f\u89c9\u56de\u5fc6“\u4ee5\u524d\u597d\u50cf\u66f4\u5dee”",
+          "ko_excerpt": "‘예전엔 더 못했던 것 같다’고 떠올리지",
+          "suggested_fix": "“예전엔 더 못했던 것 같다”고 떠올리지 (직접 인용은 큰따옴표 “ ”를 쓰고, ‘삶을 관찰하기’ 등 다른 인용 표현도 스타일 가이드에 맞춰 통일)"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-0/reader-guide.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "[\u8bc1\u636e\u5361](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)\u4fdd\u5b58\u9996\u7248、\u53cd\u9988\u548c\u590d\u6d4b",
+          "ko_excerpt": "[증거 카드](../../reference/glossary.md#%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%E1%84%8B%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AF)에 첫 버전",
+          "suggested_fix": "[증거 카드](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)에 첫 버전, 피드백, 재측정을 남겨 두라. (링크 조각은 원문 그대로 두어야 한다 — 자모 분해된 퍼센트 인코딩은 앵커가 깨질 수 있음)"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u4e00\u5f20\u5bf9\u5e94\u7684[\u8bc1\u636e\u5361](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)",
+          "ko_excerpt": "그에 맞는 [증거 카드](../../reference/glossary.md#%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%E1%84%8B%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AF) 한 장",
+          "suggested_fix": "그에 맞는 [증거 카드](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8) 한 장"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u4e0d\u8981\u53ea\u6807\u8bb0“\u5df2\u8bfb”",
+          "ko_excerpt": "‘읽음’ 표시만 하고 넘어가지 마라",
+          "suggested_fix": "“읽음” 표시만 하고 넘어가지 마라"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u53ea\u7559\u4e0b\u4e86“\u5f88\u6709\u9053\u7406”",
+          "ko_excerpt": "‘참 맞는 말이다’라는 느낌만 남았다면",
+          "suggested_fix": "“참 맞는 말이다”라는 느낌만 남았다면"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "[\u8bc1\u636e\u5361](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)\u4fdd\u5b58\u9996\u7248、\u53cd\u9988\u548c\u590d\u6d4b",
+          "ko_excerpt": "[증거 카드](../../reference/glossary.md#%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%E1%84%8B%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AF)에 첫 버전",
+          "suggested_fix": "[증거 카드](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)에 첫 버전 — 링크 조각은 원문 그대로 두고(퍼센트 인코딩된 분해형 자모로 바꾸지 않음) 이후 단계가 한국어 앵커로 바꾸게 한다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u4e00\u5f20\u5bf9\u5e94\u7684[\u8bc1\u636e\u5361](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8)",
+          "ko_excerpt": "그에 맞는 [증거 카드](../../reference/glossary.md#%E1%84%83%E1%85%A9%E1%84%80%E1%85%AE%E1%84%8B%E1%85%AA-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AF) 한 장",
+          "suggested_fix": "그에 맞는 [증거 카드](../../reference/glossary.md#\u5de5\u5177\u4e0e\u4ea4\u4ed8) 한 장 — 링크 조각은 원문 그대로 유지"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "MAINTENANCE.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "AI \u4ea7\u54c1、\u6a21\u578b\u80fd\u529b、\u653f\u7b56、\u4ef7\u683c\u548c\u8003\u8bd5\u89c4\u5219",
+          "ko_excerpt": "AI 제품, 모델 성능, 정책, 가격, 시험 규정",
+          "suggested_fix": "AI 제품, 모델 기능, 정책, 가격, 시험 규정"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u7b2c\u4e00\u90e8\u5df2\u7ecf\u6309\u6280\u80fd\u62c6\u6210\u72ec\u7acb\u9875\u9762",
+          "ko_excerpt": "제1부는 이미 기술별로 독립 페이지로 나뉘어 있고",
+          "suggested_fix": "제1부는 이미 스킬(듣기·말하기·읽기·쓰기 등)별로 독립 페이지로 나뉘어 있고"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u4e0d\u8981\u53ea\u628a\u65b0\u6587\u7ae0\u5806\u8fdb“\u6742\u8c08”\u6216“\u6269\u5c55”\u680f\u76ee",
+          "ko_excerpt": "새 글을 ‘잡담’이나 ‘확장’ 칸에 그냥 쌓아 두지 않는다",
+          "suggested_fix": "새 글을 “잡담”이나 “확장” 칸에 그냥 쌓아 두지 않는다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/toolkit.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u5236\u9020“\u6211\u5df2\u7ecf\u4f1a\u4e86”\u7684\u611f\u89c9",
+          "ko_excerpt": "‘이제 할 줄 안다’는 느낌",
+          "suggested_fix": "“이제 할 줄 안다”는 느낌"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "omission",
+          "source_excerpt": "\u7b2c\u4e00\u7248\u5fc5\u987b\u5c3d\u91cf\u7531\u4eba\u5b8c\u6210",
+          "ko_excerpt": "첫 버전은 되도록 사람이 완성하기",
+          "suggested_fix": "첫 버전은 반드시 되도록 사람이 완성하기"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-5/90-day-plan.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/narrative-and-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5b83\u8ba9\u6df7\u4e71\u83b7\u5f97\u5f62\u72b6，\u5374\u53ef\u80fd\u628a\u5076\u7136\u5199\u6210\u5fc5\u7136",
+          "ko_excerpt": "혼란에 형태를 부여하는 대신 우연을 필연으로 바꿔 쓰고",
+          "suggested_fix": "혼란에 형태를 부여해 주지만, 우연을 필연으로 바꿔 쓰고"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4f60\u4e0d\u5fc5\u5f97\u5230\u4e00\u7bc7\u66f4\u717d\u60c5\u7684\u6587\u7ae0",
+          "ko_excerpt": "더 감동적인 글을 얻을 필요는 없다",
+          "suggested_fix": "감정을 더 자극하는 글을 얻을 필요는 없다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4e2a\u4eba\u6545\u4e8b\u91cc\u7ecf\u5e38\u6709\u7f3a\u5e2d\u7684\u4eba",
+          "ko_excerpt": "개인 이야기에는 늘 자리에 없는 사람들이 있다",
+          "suggested_fix": "개인 이야기에는 자리에 없는 사람들이 자주 등장한다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u4e2a\u4eba\u6545\u4e8b\u91cc\u7ecf\u5e38\u6709\u7f3a\u5e2d\u7684\u4eba",
+            "ko_excerpt": "개인 이야기에는 늘 자리에 없는 사람들이 있다",
+            "suggested_fix": "개인 이야기에는 자리에 없는 사람들이 자주 등장한다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-4/daily-system.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e3a\u5173\u7cfb\u548c\u5de5\u4f5c\u63d0\u524d\u8bf4\u6e05\u695a\u8fb9\u754c，\u8ba9\u4e13\u6ce8\u4e0d\u4ee5\u5931\u8054\u4e3a\u4ee3\u4ef7",
+          "ko_excerpt": "관계와 일에 대한 경계를 미리 분명히 말해, 연락 두절을 대가로 집중하지 않는다.",
+          "suggested_fix": "관계와 일의 경계를 미리 분명히 말해, 집중이 연락 두절을 대가로 삼지 않게 한다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u4e3a\u4e00\u4e2a\u6b63\u5728\u7b49\u5f85\u4f60\u7684\u4eba\u5199\u6e05\u695a\u56de\u590d\u65f6\u95f4",
+          "ko_excerpt": "언제 답할지 분명히 적어 보낸다",
+          "suggested_fix": "내 답을 기다리는 사람 한 명에게 언제 답할지 분명히 적는다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/4-artifacts-and-delivery.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "addition",
+            "source_excerpt": "\u6bd4\u4e24\u4e2a\u6708\u540e\u624d\u53d1\u73b0\u7684\u65b9\u5411\u9519\u8bef\u66f4\u4fbf\u5b9c",
+            "ko_excerpt": "두 달 뒤에야 발견하는 방향 착오보다 훨씬 싸게 먹힌다",
+            "suggested_fix": "두 달 뒤에야 발견하는 방향 착오보다 싸게 먹힌다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 0,
+        "issues_after": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "ISSUE_TRIAGE.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u65e7\u9996\u9875\u76f8\u5173\u6587\u5b57\u5df2\u79fb\u9664",
+          "ko_excerpt": "옛 첫 페이지의 관련 문구는 이미 삭제됨",
+          "suggested_fix": "옛 홈페이지의 관련 문구는 이미 삭제됨"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u7528 VitePress \u5e72\u51c0\u8def\u5f84\u548c\u65e7 hash \u6865\u63a5\u590d\u6d4b",
+          "ko_excerpt": "VitePress의 깔끔한 경로와 옛 해시 연결 장치로 재측정하고",
+          "suggested_fix": "VitePress의 깔끔한 경로와 옛 해시 브리지로 재측정하고"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/x-misc.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 5
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6211\u628a\u8fd9\u79cd\u5173\u6ce8\u7406\u89e3\u6210\u9488\u5bf9",
+          "ko_excerpt": "나는 그 관심을 표적 삼기로 받아들였고",
+          "suggested_fix": "나는 그 관심을 나를 겨냥한 것으로 받아들였고"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u771f\u6b63\u56f0\u96be\u7684\u5199\u6cd5，\u662f\u5141\u8bb8\u4e24\u4e2a\u5224\u65ad\u5e76\u5b58",
+          "ko_excerpt": "정말 어려운 쓰기는 두 판단을 나란히 두는 것이다",
+          "suggested_fix": "정말 어려운 것은 두 판단을 나란히 두는 쓰기 방식이다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u50b2\u6162\u548c\u7f9e\u8fb1\u522b\u4eba\u4e5f\u4e0d\u662f\u72ec\u7acb",
+          "ko_excerpt": "오만하게 남을 모욕하는 것도 독립이 아니며",
+          "suggested_fix": "오만함과 남을 모욕하는 일도 독립이 아니며"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6700\u7ec8\u4f1a\u6210\u4e3a\u53e6\u4e00\u79cd\u88ab\u52a8",
+          "ko_excerpt": "결국 또 다른 수동이 된다",
+          "suggested_fix": "결국 또 다른 수동성이 된다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "## 7. \u7ed9\u65e7\u6545\u4e8b\u4e00\u5f20\u65b0\u7684\u8bfb\u6cd5",
+          "ko_excerpt": "## 7. 옛 이야기에 새로운 읽기를 주기",
+          "suggested_fix": "## 7. 옛이야기를 새로 읽는 법"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 5,
+        "edits_applied": 5,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6211\u53ea\u662f\u60f3\u91cd\u65b0\u6253\u5f00\u51e0\u6bb5\u65e9\u5e74\u7684\u8bb0\u5fc6",
+          "ko_excerpt": "어린 시절의 기억 몇 조각을 다시 열어",
+          "suggested_fix": "젊은 날의 기억 몇 조각을 다시 열어"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u53e6\u4e00\u4f4d\u8001\u5e08\u4e5f\u5728\u5931\u63a7\u4e4b\u540e\u5411\u6211\u9053\u6b49",
+          "ko_excerpt": "다른 선생님 한 분도 감정을 주체하지 못했던 일에 대해 내게 사과했다",
+          "suggested_fix": "다른 선생님 한 분도 이성을 잃었던 뒤에 내게 사과했다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5b83\u4eec\u4e0d\u80fd\u4e92\u76f8\u62b5\u6d88。",
+          "ko_excerpt": "둘은 서로를 상쇄하지 않는다.",
+          "suggested_fix": "둘은 서로를 상쇄할 수 없다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5e2e\u52a9\u4e0d\u662f\u66ff\u4ee3\u540e\u679c。",
+          "ko_excerpt": "도움은 결과를 대신 없애 주지 않는다.",
+          "suggested_fix": "도움은 뒷감당을 대신해 주는 것이 아니다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 4,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/writing-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u5148\u8bf7\u8bfb\u8005\u590d\u8ff0，\u518d\u770b\u6279\u6ce8：",
+          "ko_excerpt": "먼저 독자에게 재진술을 청하고, 그다음 코멘트를 본다.",
+          "suggested_fix": "먼저 독자에게 재진술을 청하고, 그다음 코멘트를 본다:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u9700\u8981\u8c01\u4f55\u65f6\u51b3\u5b9a\u4ec0\u4e48",
+          "ko_excerpt": "누가 언제까지 무엇을 결정해야 하는가",
+          "suggested_fix": "누가 언제 무엇을 결정해야 하는가"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/english-diagnostic.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "omission",
+          "source_excerpt": "\u5b83\u53ea\u505a\u4e86\u4ec0\u4e48：\u8bca\u65ad / \u8ffd\u95ee / \u53cd\u4f8b / \u8f6c\u5199 / \u53cd\u9988 / \u5176\u4ed6",
+          "ko_excerpt": "도구가 한 일: 진단 / 추가 질문 / 반례 / 전사 / 피드백 / 기타",
+          "suggested_fix": "도구가 한 일(그것뿐): 진단 / 추가 질문 / 반례 / 전사 / 피드백 / 기타"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u4e0d\u8981\u4e3a\u4e86\u8ba9\u56db\u9879“\u516c\u5e73”\u800c\u524a\u6389\u771f\u5b9e\u4efb\u52a1\u7684\u5dee\u5f02",
+          "ko_excerpt": "네 영역을 ‘공평하게’ 맞추려고",
+          "suggested_fix": "네 영역을 “공평하게” 맞추려고"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/vocabulary-audit.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u4e0d\u80fd\u53ea\u9760\u4f7f\u7528\u9891\u7387\u6216\u6a21\u578b\u8bed\u6c14\u88c1\u51b3",
+          "ko_excerpt": "사용 빈도나 모델의 확신에 찬 말투만으로 판정할 수 없다",
+          "suggested_fix": "사용 빈도나 모델의 말투만으로 판정할 수 없다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u58f0\u97f3\u5207\u5206、\u53e5\u6cd5、\u80cc\u666f、\u7248\u9762\u548c\u6ce8\u610f\u529b",
+          "ko_excerpt": "소리 분절, 구문, 배경지식, 지면 구성, 주의력",
+          "suggested_fix": "소리 분절, 구문, 배경, 지면 구성, 주의력"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u58f0\u97f3\u5207\u5206、\u53e5\u6cd5、\u80cc\u666f、\u7248\u9762\u548c\u6ce8\u610f\u529b",
+          "ko_excerpt": "소리 분절, 구문, 배경지식, 지면 구성, 주의력",
+          "suggested_fix": "소리 분절, 구문, 배경, 지면 구성, 주의력"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/reading-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u7248\u9762\u4e0e\u6280\u672f",
+          "ko_excerpt": "판면과 기술",
+          "suggested_fix": "레이아웃과 기술"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u54ea\u4e00\u4e2a\u8bfb\u540e\u52a8\u4f5c\u4ecd\u7136\u4e0d\u7a33\u5b9a：",
+          "ko_excerpt": "아직 불안정한 읽은 뒤 행동은 무엇인가:",
+          "suggested_fix": "읽은 뒤 행동 가운데 아직 불안정한 것은 무엇인가:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "## 11. \u8bc4\u5206\u4e0e\u53bb\u7559",
+          "ko_excerpt": "## 11. 점수 매기기와 존폐 결정",
+          "suggested_fix": "## 11. 점수 매기기와 계속·중단 결정"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6211\u91c7\u7eb3 / \u62d2\u7edd\u4ec0\u4e48，\u4e3a\u4ec0\u4e48：",
+          "ko_excerpt": "무엇을 받아들이고 / 거절했는가, 그 이유:",
+          "suggested_fix": "내가 받아들인 것 / 거절한 것과 그 이유:"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "CONTRIBUTING.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "especially children, former partners, patients",
+          "ko_excerpt": "특히 아동, 전 파트너, 환자",
+          "suggested_fix": "특히 아동, 전 연인, 환자"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-6/afterword.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6536\u675f《\u4eba\u751f\u8fdb\u9636\u6307\u5357》\u5173\u4e8e\u8bda\u5b9e、\u8d23\u4efb、\u8bc1\u636e\u548c\u91cd\u65b0\u5f00\u59cb\u7684\u56de\u7b54",
+          "ko_excerpt": "정직·책임·증거·다시 시작하기에 대한 『인생 레벨업 가이드』의 답을 갈무리한다",
+          "suggested_fix": "정직·책임·증거·다시 시작하기를 둘러싼 『인생 레벨업 가이드』의 답을 갈무리한다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5c31\u53ef\u4ee5\u8bc1\u660e\u8fc7\u53bb\u7684\u575a\u6301\u6ca1\u6709\u9519",
+          "ko_excerpt": "지난날의 버팀이 틀리지 않았음을 증명할 수 있다고",
+          "suggested_fix": "그동안 버텨 온 것이 틀리지 않았음을 증명할 수 있다고"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6211\u7684\u8eab\u4efd、\u516c\u53f8\u7684\u5173\u8054\u548c\u8ba1\u5212\u4f1a\u5199\u5728\u660e\u5904",
+          "ko_excerpt": "내 신분, 회사와의 관계, 계획은 드러난 곳에 적어 둔다",
+          "suggested_fix": "내가 누구인지, 회사와 어떤 관계인지, 어떤 계획인지는 드러난 곳에 적어 둔다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/0-cefr.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u542c\u4f17\u65e0\u9700\u5207\u6362\u4e2d\u6587\u4e5f\u80fd\u590d\u8ff0\u8981\u70b9",
+          "ko_excerpt": "청자는 모국어로 바꾸지 않고도 요점을 재진술할 수 있다",
+          "suggested_fix": "청자는 중국어로 바꾸지 않고도 요점을 재진술할 수 있다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u7528 A1-C2 \u7684“\u80fd\u505a\u4ec0\u4e48”\u63cf\u8ff0",
+          "ko_excerpt": "A1-C2의 ‘할 수 있는 일’ 기술로",
+          "suggested_fix": "A1-C2의 “할 수 있는 일” 기술로"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u542c\u4f17\u65e0\u9700\u5207\u6362\u4e2d\u6587\u4e5f\u80fd\u590d\u8ff0\u8981\u70b9",
+          "ko_excerpt": "청자는 모국어로 바꾸지 않고도 요점을 재진술할 수 있다",
+          "suggested_fix": "청자는 중국어로 바꾸지 않고도 요점을 재진술할 수 있다"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/listening-audit.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8bed\u8a00\u672a\u77e5 / \u5df2\u77e5\u672a\u542c\u51fa / \u7ed3\u6784\u6307\u5411",
+          "ko_excerpt": "모르는 언어 / 알지만 못 알아들음 / 구조·지시",
+          "suggested_fix": "모르는 언어 요소 / 알지만 못 알아들음 / 구조와 지시 관계"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "omission",
+          "source_excerpt": "\u4e2d\u6587\u7ffb\u8bd1\u5e2e\u52a9\u4e86\u4ec0\u4e48：",
+          "ko_excerpt": "번역이 도움을 준 부분:",
+          "suggested_fix": "한국어 번역이 도움을 준 부분:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u73b0\u5b9e\u4e2d\u5141\u8bb8\u7684\u786e\u8ba4、\u5b57\u5e55\u4e0e\u4e66\u9762\u8f85\u52a9：",
+          "ko_excerpt": "현실에서 허용되는 확인·자막·글 보조:",
+          "suggested_fix": "현실에서 허용되는 확인·자막·문서 보조:"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/projects.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5408\u89c4\u5ba1\u6279",
+          "ko_excerpt": "규제 승인",
+          "suggested_fix": "규정 준수 심사·승인"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/speaking-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u5141\u8bb8\u63d0\u7eb2 / \u91cd\u5f55 / \u5b57\u5e55 / \u8bcd\u5178 / AI：",
+          "ko_excerpt": "허용: 개요 / 재녹음 / 자막 / 사전 / AI",
+          "suggested_fix": "허용하는 개요 / 재녹음 / 자막 / 사전 / AI:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u82e5\u4fee\u590d\u5931\u8d25，\u4e0b\u4e00\u6b21\u53ea\u6539\u4ec0\u4e48：",
+          "ko_excerpt": "복구에 실패했다면 다음에 바꿀 한 가지:",
+          "suggested_fix": "복구에 실패했다면 다음에는 무엇만 바꿀지:"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/reader-field-note.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u7b2c\u4e00\u6b21\u5728\u9605\u8bfb\u540e\u5341\u5206\u949f\u586b\u5199",
+          "ko_excerpt": "첫 번째 기록은 읽고 나서 10분 안에",
+          "suggested_fix": "첫 번째 기록은 읽고 나서 10분 뒤에"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/interview-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5b83\u63d0\u51fa\u7684\u4e09\u4e2a\u95ee\u9898：",
+          "ko_excerpt": "AI가 제기한 문제 세 가지:",
+          "suggested_fix": "AI가 던진 질문 세 가지:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u80fd\u5b8c\u6210\u62db\u8058\u7b5b\u9009、\u9879\u76ee\u8bf4\u660e\u548c\u964c\u751f\u8ffd\u95ee；",
+          "ko_excerpt": "채용 선별 통화, 프로젝트 설명, 낯선 추가 질문을 해낼 수 있다.",
+          "suggested_fix": "채용 선별 단계, 프로젝트 설명, 낯선 추가 질문을 해낼 수 있다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0b\u4e00\u6b21\u53ea\u6d4b\u8bd5\u4ec0\u4e48",
+          "ko_excerpt": "다음에 이것만 시험함",
+          "suggested_fix": "다음에는 무엇만 시험할지"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u62db\u8058\u6c9f\u901a / \u9879\u76ee\u8bf4\u660e",
+          "ko_excerpt": "채용 담당자 소통 / 프로젝트 설명",
+          "suggested_fix": "채용 소통 / 프로젝트 설명"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-0/prologue.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5979\u95ee\u6211：“\u600e\u6837\u624d\u80fd\u9ad8\u6548\u5730\u5b66\u597d\u82f1\u8bed？”",
+          "ko_excerpt": "그가 내게 물었다.",
+          "suggested_fix": "그녀가 내게 물었다."
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 3,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u5979\u95ee\u6211：“\u600e\u6837\u624d\u80fd\u9ad8\u6548\u5730\u5b66\u597d\u82f1\u8bed？”",
+            "ko_excerpt": "그가 내게 물었다.",
+            "suggested_fix": "그녀가 내게 물었다."
+          },
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u5979\u771f\u6b63\u95ee\u7684\u6216\u8bb8\u662f\u53e6\u4e00\u4ef6\u4e8b",
+            "ko_excerpt": "그가 정말 물은 것은 다른 문제였을지도 모른다.",
+            "suggested_fix": "그녀가 정말 물은 것은 다른 문제였을지도 모른다."
+          },
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "\u4f60\u53ef\u4ee5\u7528\u5b83\u8bfb\u4e00\u7bc7\u6ca1\u6709\u7ffb\u8bd1\u7684\u6587\u7ae0",
+            "ko_excerpt": "영어로 번역되지 않은 글을 읽고",
+            "suggested_fix": "영어를 써서 번역이 없는 글을 읽고"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": [],
+        "after": 1,
+        "issues_after": [
+          {
+            "severity": "MUST",
+            "type": "omission",
+            "source_excerpt": "\u600e\u6837\u5728\u4e0d\u6562\u5f00\u53e3\u7684\u65f6\u5019\u5148\u8bf4\u51fa\u7b2c\u4e00\u53e5\u4e0d\u5b8c\u7f8e\u7684\u82f1\u8bed",
+            "ko_excerpt": "입을 떼기 두려울 때 서툰 영어 한 문장을 어떻게 먼저 내뱉는지",
+            "suggested_fix": "입을 떼기 두려울 때 서툰 영어 첫 한 문장을 어떻게 먼저 내뱉는지"
+          }
+        ]
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/ai-task-brief.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5efa\u7acb\u4e00\u4efd\u5c0f\u800c\u771f\u5b9e\u7684\u8bc4\u4f30\u96c6",
+          "ko_excerpt": "작지만 실제에 가까운 평가 세트를 만든다",
+          "suggested_fix": "작지만 실제 데이터로 이루어진 평가 세트를 만든다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "glossary",
+            "source_excerpt": "\u5141\u8bb8\u7684\u53ef\u63a5\u53d7\u53d8\u4f53：",
+            "ko_excerpt": "허용되는 변이형:",
+            "suggested_fix": "허용되는 수용 가능한 변이형:"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 1,
+        "adjudicated_kept": true
+      }
+    },
+    "docs/templates/90-day-cycle.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/life-practice-toolkit.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 4
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0d\u6025\u7740\u89e3\u91ca\u81ea\u5df1",
+          "ko_excerpt": "서둘러 자신을 해석하지 않는다",
+          "suggested_fix": "서둘러 자신을 설명하거나 변명하지 않는다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6211\u771f\u6b63\u9700\u8981\u7684\u662f\u4ec0\u4e48：",
+          "ko_excerpt": "내가 정말 필요한 것:",
+          "suggested_fix": "내게 정말 필요한 것:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "omission",
+          "source_excerpt": "\u57fa\u672c\u751f\u6d3b\u5e95\u7ebf：\u996e\u98df / \u7761\u7720\u51c6\u5907",
+          "ko_excerpt": "생활 최저선: 식사 / 잠들 준비",
+          "suggested_fix": "기본 생활 최저선: 식사 / 잠들 준비"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "| \u533a\u57df | \u672c\u5468\u4e8b\u5b9e | \u5e26\u6765\u7684\u7ed3\u679c | \u4e0b\u5468\u8c03\u6574 |",
+          "ko_excerpt": "| 영역 | 이번 주 사실 | 가져온 결과 | 다음 주 조정 |",
+          "suggested_fix": "| 영역 | 이번 주 사실 | 그로 인한 결과 | 다음 주 조정 |"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 4,
+        "edits_applied": 4,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/evidence-chain.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6211\u53ea\u6539\u53d8\u7684\u4e00\u4e2a\u6761\u4ef6：",
+          "ko_excerpt": "바꿀 조건 하나:",
+          "suggested_fix": "이번에 바꿀 단 하나의 조건:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u5236\u9020\u4e00\u4e2a\u7cbe\u786e\u5206\u6570",
+          "ko_excerpt": "그럴듯한 숫자를 만들어 내기보다",
+          "suggested_fix": "정확해 보이는 점수를 만들어 내기보다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u624d\u8bf4\u660e\u6539\u52a8\u53ef\u80fd\u6709\u6548",
+          "ko_excerpt": "이 변화가 효과 있다고 볼 수 있다",
+          "suggested_fix": "이 변화가 효과 있을 가능성이 있다고 볼 수 있다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "“\u4e0b\u5468\u6362\u4e00\u4e2a\u964c\u751f\u542c\u4f17\u4ecd\u80fd\u5b8c\u6210，\u624d\u8bf4\u660e\u6539\u52a8\u53ef\u80fd\u6709\u6548”\u662f\u5f85\u9a8c\u8bc1\u5047\u8bbe",
+          "ko_excerpt": "“다음 주에 낯선 청자 앞에서도 해낼 수 있어야 이 변화가 효과가 있을지도 모른다고 말할 수 있다”는 검증할 가설이다",
+          "suggested_fix": "“다음 주에 낯선 청자를 바꿔 넣어도 해낼 수 있어야 비로소 이 변화가 효과가 있을 수 있다고 말할 수 있다”는 검증할 가설이다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u9700\u8981\u7684\u652f\u6301、\u6388\u6743\u6216\u4e13\u4e1a\u5224\u65ad：",
+          "ko_excerpt": "필요한 도움, 권한, 전문가의 판단:",
+          "suggested_fix": "필요한 도움, 승인, 전문가의 판단:"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/grammar-evidence.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 3
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6211\u7684\u539f\u53e5/\u7247\u6bb5：",
+          "ko_excerpt": "내 원래 문장/단락:",
+          "suggested_fix": "내 원래 문장/발췌:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5bf9\u65b9\u6700\u53ef\u80fd\u7406\u89e3\u6210：",
+          "ko_excerpt": "상대가 가장 이해할 법한 뜻:",
+          "suggested_fix": "상대가 가장 그렇게 받아들이기 쉬운 뜻:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "| \u539f\u53e5 | | | |",
+          "ko_excerpt": "| 원문 | | | |",
+          "suggested_fix": "| 원래 문장 | | | |"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 3,
+        "edits_applied": 3,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "LICENSE.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 1,
+        "issues_before": [
+          {
+            "severity": "MUST",
+            "type": "mistranslation",
+            "source_excerpt": "and indicate changes",
+            "ko_excerpt": "변경 여부를 표시해야 한다",
+            "suggested_fix": "변경한 내용을 표시해야 한다"
+          }
+        ],
+        "fix_model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/ai-learning-log.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "CODE_OF_CONDUCT.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-5/long-term-action.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e00\u4e2a\u6545\u4e8b\u7684\u65b0\u89e3\u91ca",
+          "ko_excerpt": "어떤 이야기에 대한 새로운 해석 하나",
+          "suggested_fix": "어떤 이야기를 새로 읽어 낸 해석 하나"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u957f\u671f\u6539\u53d8\u4e0d\u662f\u628a\u70ed\u60c5\u5ef6\u957f。",
+          "ko_excerpt": "장기적 변화는 열정을 늘여 놓는 일이 아니다.",
+          "suggested_fix": "장기적 변화는 열정을 오래 끌고 가는 일이 아니다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/archive/a-place-to-write.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/rhythm-ledger.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-1/open-input.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u95e8\u4e0d\u4f1a\u5728\u51c6\u5907\u5145\u5206\u4e4b\u540e\u624d\u6253\u5f00。",
+          "ko_excerpt": "문은 준비가 충분히 끝나야만 열리지 않는다.",
+          "suggested_fix": "문은 준비가 충분해진 뒤에야 열리는 것이 아니다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-2/return-to-life.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u54ea\u4e9b\u90e8\u5206\u4ecd\u7136\u4e0d\u80fd\u786e\u5b9a",
+          "ko_excerpt": "어떤 부분은 아직도 확인할 수 없는가",
+          "suggested_fix": "어떤 부분은 아직도 확실하지 않은가"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8054\u7cfb\u53ef\u4fe1\u4efb\u7684\u4eba\u548c\u5f53\u5730\u5408\u683c\u4e13\u4e1a\u652f\u6301",
+          "ko_excerpt": "지역의 자격을 갖춘 전문 지원 기관에 연락하라",
+          "suggested_fix": "지역의 자격을 갖춘 전문 지원에 연락하라"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5f53\u65f6\u7684\u7248\u672c、\u56de\u671b\u7684\u89e3\u91ca\u548c\u4e0b\u4e00\u6b21\u53ef\u68c0\u9a8c\u7684\u52a8\u4f5c",
+          "ko_excerpt": "그때의 판본, 돌아보며 내린 해석, 다음에 검증할 수 있는 행동",
+          "suggested_fix": "그때의 이야기, 돌아보며 내린 해석, 다음에 검증할 수 있는 행동"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/archive/help-the-elderly.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u8fd8\u6709\u4e00\u4e9b\u8da3\u4e8b...\u8fd9\u5bfc\u81f4\u6211\u540e\u6765",
+          "ko_excerpt": "재미있는 일화들을 들려주었다... 그 덕분에",
+          "suggested_fix": "재미있는 일화들을 들려주었다… 그 덕분에"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u638f\u51fa\u4e86\u4e00\u4e2a\u76ae\u5939，\u9cc4\u9c7c\u724c",
+          "ko_excerpt": "지갑 하나를 꺼냈다. 악어 브랜드였다.",
+          "suggested_fix": "지갑 하나를 꺼냈다. 악어 로고가 박힌 브랜드 제품이었다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5e76\u4ece\u6000\u4e86\u638f\u51fa\u4e86\u4e00\u4e2a\u76ae\u5939，\u9cc4\u9c7c\u724c",
+          "ko_excerpt": "품에서 지갑 하나를 꺼냈다. 악어 브랜드였다.",
+          "suggested_fix": "품에서 지갑 하나를 꺼냈다. 크로커다일(악어표) 브랜드였다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "omission",
+          "source_excerpt": "\u6211\u5199\u8fd9\u7bc7\u535a\u5ba2\u5e76\u4e0d\u662f\u60f3\u8868\u8fbe\u9053\u5fb7\u4f18\u8d8a\u611f",
+          "ko_excerpt": "이 글을 쓰는 것도 도덕적 우월감을 드러내려는 게 아니다.",
+          "suggested_fix": "이 블로그 글을 쓰는 것도 도덕적 우월감을 드러내려는 게 아니다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/amplify-ability.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u8bf7\u5b8c\u6210\u4e00\u6b21\u771f\u5b9e\u4ea4\u4ed8，\u800c\u4e0d\u662f\u518d\u4fdd\u5b58\u4e00\u6bb5\u7cbe\u5f69\u5bf9\u8bdd：",
+          "ko_excerpt": "실제 전달을 한 번 해내라.",
+          "suggested_fix": "실제 전달을 한 번 해내라:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u9879\u76ee\u8fd8\u6ca1\u6709\u771f\u6b63\u5c5e\u4e8e\u4f60",
+          "ko_excerpt": "그 프로젝트는 아직 온전히 내 것이 아니다",
+          "suggested_fix": "그 프로젝트는 아직 진정으로 자기 것이 아니다"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-4/practice-and-recovery.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5b89\u653e\u4e00\u5929",
+          "ko_excerpt": "하루 안에 자리 잡기",
+          "suggested_fix": "하루를 안정되게 놓기"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Java.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/learning-state.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u4e3b\u6587\u4ef6\u4f4d\u7f6e：",
+          "ko_excerpt": "원본 파일 위치:",
+          "suggested_fix": "주 파일 위치:"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/weekly-review.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "SECURITY.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "precise location",
+          "ko_excerpt": "정확한 위치",
+          "suggested_fix": "정확한 위치 정보"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/artifact-brief.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "mistranslation",
+          "source_excerpt": "\u6682\u505c/\u964d\u7ea7/\u56de\u6eda\u89e6\u53d1\u6761\u4ef6：",
+          "ko_excerpt": "일시 중지/축소/롤백 발동 조건:",
+          "suggested_fix": "일시 중지/다운그레이드/롤백 발동 조건:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6700\u9700\u8981\u4fee\u6b63\u7684\u4e00\u5904：",
+          "ko_excerpt": "가장 먼저 고칠 한 곳:",
+          "suggested_fix": "가장 고쳐야 할 한 곳:"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u7b2c\u4e00\u7248\u622a\u6b62\u65f6\u95f4：",
+          "ko_excerpt": "첫 버전 마감 시각:",
+          "suggested_fix": "첫 버전 마감 기한:"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5141\u8bb8\u5b83\u505a\u7684\u5de5\u4f5c：",
+          "ko_excerpt": "맡긴 작업:",
+          "suggested_fix": "AI에게 허용한 작업:"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 2,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Common.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "book-assets/fonts/README.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "fails before publication if any required manuscript character is missing",
+          "ko_excerpt": "게시 전에 빌드를 실패시킨다",
+          "suggested_fix": "게시 전에 빌드가 실패한다"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "LICENSE-CONTENT.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/ai-project-scorecard.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "addition",
+          "source_excerpt": "\u5ef6\u8fdf\u72ec\u7acb\u8868\u73b0",
+          "ko_excerpt": "지연 독립 재측정 성과",
+          "suggested_fix": "지연 독립 성과"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5b89\u5168/\u9690\u79c1\u95ee\u9898",
+          "ko_excerpt": "보안/프라이버시 문제",
+          "suggested_fix": "안전/프라이버시 문제 (description의 ‘안전’과 용어 통일)"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 2,
+        "edits_applied": 2,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u5ef6\u8fdf\u72ec\u7acb\u8868\u73b0",
+          "ko_excerpt": "지연 독립 성과",
+          "suggested_fix": "시간을 두고 혼자 다시 한 결과 (같은 표 안의 '지연 시간'과 혼동되지 않도록 '지연 후 독립 수행' 뜻이 드러나게)"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "SUPPORT.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Python.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/VibeCoding.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Rust.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/archive/last-year-and-now.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "format",
+          "source_excerpt": "\u7136\u540e\u4e00\u76f4\u5728\u9762\u8bd5...\u4e24\u4e2a\u6708",
+          "ko_excerpt": "그 뒤로 계속 면접만 봤다... 두 달 중",
+          "suggested_fix": "그 뒤로 계속 면접만 봤다… 두 달 중"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u53ea\u80fd\u8bf4\u539a\u79ef\u8584\u53d1，\u4f4e\u8c03\u884c\u4e8b。",
+          "ko_excerpt": "오래 쌓아 온 것이 이제야 드러났고, 그동안 조용히 일해 왔다고밖에 말할 수 없다.",
+          "suggested_fix": "오래 쌓아 온 것이 이제야 드러난 것일 뿐이고, 앞으로도 조용히 해 나가겠다고밖에 말할 수 없다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u53ea\u80fd\u8bf4\u539a\u79ef\u8584\u53d1，\u4f4e\u8c03\u884c\u4e8b。",
+          "ko_excerpt": "오래 쌓아 온 것이 이제야 드러났고, 그동안 조용히 일해 왔다고밖에 말할 수 없다.",
+          "suggested_fix": "오래 쌓아 온 것이 이제야 빛을 본 것이니, 앞으로도 조용히 묵묵히 해 나갈 뿐이다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/JavaScript.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Prompt.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0d\u662f\u5b66\u4e60\u6570\u91cf\u76ee\u6807",
+          "ko_excerpt": "외워야 할 분량이 아니다",
+          "suggested_fix": "학습 분량 목표가 아니다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/archive/README.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6709\u5199\u4f5c\u68a6\u88ab\u6253\u65ad\u540e\u7684\u5014\u5f3a",
+          "ko_excerpt": "글쓰기의 꿈이 꺾인 뒤에도 놓지 않은 고집이 있고",
+          "suggested_fix": "글쓰기의 꿈이 중단된 뒤에도 놓지 않은 고집이 있고"
+        }
+      ],
+      "fixed": false,
+      "after": null,
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 0,
+        "edits_applied": 0,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/PHP.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/word-list/Swift.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/archive/blog-renaming-notice.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 2
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "glossary",
+          "source_excerpt": "\u6309\u53ef\u6062\u590d\u7684 Wayback \u5feb\u7167\u6807\u6ce8",
+          "ko_excerpt": "복구 가능한 Wayback 스냅숏 기준으로 표기",
+          "suggested_fix": "회복 가능한 Wayback 스냅숏 기준으로 표기"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u6309\u5386\u53f2\u5feb\u7167\u5b8c\u6574\u4fdd\u5b58",
+          "ko_excerpt": "역사 스냅숏 그대로 온전히 보존했다",
+          "suggested_fix": "과거 스냅숏 그대로 온전히 보존했다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "legacy/docsify-snapshot.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "SHOULD",
+          "type": "glossary",
+          "source_excerpt": "\u6062\u590d\u65f6\u4ece\u8be5\u63d0\u4ea4\u521b\u5efa\u72ec\u7acb\u7684\u4e34\u65f6\u5206\u652f\u5e76\u90e8\u7f72",
+          "ko_excerpt": "복구할 때는 이 커밋에서 별도의 임시 브랜치를 만들어 배포한다.",
+          "suggested_fix": "회복할 때는 이 커밋에서 별도의 임시 브랜치를 만들어 배포한다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "polish": {
+        "model": "claude-opus-5-5",
+        "edits_proposed": 1,
+        "edits_applied": 1,
+        "edits_skipped": 0,
+        "skipped": []
+      },
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u4e0d\u8981\u8986\u76d6\u5f53\u524d `master` \u6216\u7528\u6237\u5de5\u4f5c\u533a\u4e2d\u7684\u672a\u63d0\u4ea4\u6539\u52a8",
+          "ko_excerpt": "현재 `master`나 사용자 작업 공간의 커밋하지 않은 변경 사항을 덮어쓰지 않는다.",
+          "suggested_fix": "회복할 때는 이 커밋에서 별도의 임시 브랜치를 만들어 배포하고, 현재 `master`나 사용자 작업 공간의 커밋하지 않은 변경 사항을 덮어쓰지 마라."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "revision_reason": "SHOULD",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/templates/ai-case-review.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "issues_before": [],
+      "fixed": false,
+      "after": null,
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "docs/threads/part-3/3-attention-and-judgment.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 1,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "MUST",
+          "type": "mistranslation",
+          "source_excerpt": "\u800c\u662f“\u6211\u6ca1\u6709\u88ab\u771f\u6b63\u653e\u5728\u8fd9\u91cc”",
+          "ko_excerpt": "‘나는 지금 이 자리에 제대로 있지 않구나’다",
+          "suggested_fix": "‘저 사람에게 나는 지금 여기 있는 사람이 아니구나’다"
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u8bf7\u628a\u624b\u673a\u653e\u5728\u4e00\u8fb9",
+          "ko_excerpt": "휴대폰은 옆에 내려놓자",
+          "suggested_fix": "휴대폰은 옆에 내려놓아 주면 좋겠다"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 1,
+        "SHOULD": 0
+      },
+      "fix_model": "claude-opus-5-5",
+      "fix_gate_defects": [],
+      "issues_after": [
+        {
+          "severity": "MUST",
+          "type": "mistranslation",
+          "source_excerpt": "\u5982\u679c\u4e00\u4e2a\u5185\u5bb9\u540c\u65f6\u8fc7\u4e0d\u4e86\u4e09\u9053\u95e8，\u5c31\u5148\u4e0d\u4fdd\u5b58。",
+          "ko_excerpt": "세 문을 하나도 통과하지 못하는 콘텐츠라면 일단 저장하지 않는다.",
+          "suggested_fix": "세 문을 동시에 통과하지 못하는 콘텐츠라면 일단 저장하지 않는다."
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 1,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": true
+      }
+    },
+    "docs/templates/family-learning-agreement.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 1,
+        "SHOULD": 1
+      },
+      "issues_before": [
+        {
+          "severity": "MUST",
+          "type": "mistranslation",
+          "source_excerpt": "\u597d\u7684\u652f\u6301\u4e0d\u4e00\u5b9a\u8ba9\u5b69\u5b50\u7acb\u523b\u505a\u5f97\u66f4\u591a",
+          "ko_excerpt": "좋은 지원이 아이를 당장 더 많이 하게 만들지는 않는다.",
+          "suggested_fix": "좋은 지원이 아이를 당장 더 많이 하게 만든다고는 할 수 없다."
+        },
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "\u9664\u975e\u5b66\u4e60\u8005\u7406\u89e3\u516c\u5f00\u8303\u56f4、\u76f8\u5173\u4eba\u5458\u5df2\u7ecf\u6388\u6743，\u5e76\u4e14\u5185\u5bb9\u5df2\u7ecf\u6700\u5c0f\u5316\u5904\u7406",
+          "ko_excerpt": "학습자가 공개 범위를 이해하고, 관련된 사람이 허락했으며, 내용을 최소한으로 줄여 두지 않았다면 협약, 기준선, 실패 사례를 공개하지 않는다.",
+          "suggested_fix": "학습자가 공개 범위를 이해하고, 관련된 사람이 허락했으며, 내용을 최소한으로 줄여 둔 경우가 아니라면 협약, 기준선, 실패 사례를 공개하지 않는다."
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 0
+      },
+      "fix_model": "claude-opus-5-5",
+      "fix_gate_defects": [],
+      "issues_after": [],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 0,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    },
+    "ATTRIBUTIONS.md": {
+      "reviewer_served_by": "claude-fable-5-1",
+      "before": {
+        "MUST": 1,
+        "SHOULD": 0
+      },
+      "issues_before": [
+        {
+          "severity": "MUST",
+          "type": "mistranslation",
+          "source_excerpt": "pricing, privacy, security, compliance, or returns",
+          "ko_excerpt": "가격·프라이버시·보안·규정 준수·수익을",
+          "suggested_fix": "가격·프라이버시·보안·규정 준수·환불을"
+        }
+      ],
+      "fixed": true,
+      "after": {
+        "MUST": 0,
+        "SHOULD": 1
+      },
+      "fix_model": "claude-opus-5-5",
+      "fix_gate_defects": [],
+      "issues_after": [
+        {
+          "severity": "SHOULD",
+          "type": "tone",
+          "source_excerpt": "Links and nominative references only; no endorsement implied",
+          "ko_excerpt": "링크와 지시적 언급만 함. 보증을 뜻하지 않음",
+          "suggested_fix": "링크와 명칭 언급만 함. 보증을 뜻하지 않음"
+        }
+      ],
+      "reviewer_served_by_after": "claude-fable-5-1",
+      "audit": {
+        "model": "claude-fable-5-1",
+        "before": 0,
+        "issues_before": []
+      },
+      "final": {
+        "review_MUST": 0,
+        "review_SHOULD": 1,
+        "audit_findings": 0,
+        "adjudicated_kept": false
+      }
+    }
+  }
+}

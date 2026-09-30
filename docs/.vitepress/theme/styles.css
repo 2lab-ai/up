@@ -9,6 +9,37 @@
   --reading-progress-color: #c0523a;
 }
 
+/* Korean edition: prefer Korean UI fonts; no web font is fetched, so installed fonts are used. */
+:root:where(:lang(ko)) {
+  --vp-font-family-base: "Pretendard Variable", "Pretendard", "Inter", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Break Korean lines between words instead of inside them; long URLs and code may still wrap. */
+:lang(ko) body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* VitePress hides the footer next to a sidebar; the license attribution must stay visible on every page. */
+:root .Layout > .VPFooter.has-sidebar {
+  display: block;
+}
+
+@media (min-width: 960px) {
+  :root .Layout > .VPFooter.has-sidebar {
+    padding-left: calc(var(--vp-sidebar-width) + 32px);
+  }
+}
+
+@media (min-width: 1440px) {
+  :root .Layout > .VPFooter.has-sidebar {
+    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px);
+    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) + 32px);
+  }
+}
+
 .VPDoc .content-container {
   max-width: 780px;
 }

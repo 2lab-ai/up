@@ -1,4 +1,4 @@
-name: Scheduled External Link Check
+name: 정기 외부 링크 검사
 
 on:
   schedule:
@@ -32,7 +32,7 @@ jobs:
           set -euo pipefail
           if grep -REni 'scholarspace\.manoa\.hawaii\.edu|doi\.org/10\.64152/10125/66973|10\.1076/edre\.7\.1\.403\.3989|web\.archive\.org/web/20160424221725' \
             ATTRIBUTIONS.md docs README.md; then
-            echo 'A retired URL from the 193-197 failure series has returned.' >&2
+            echo '193-197 실패 계열에서 폐기한 URL이 다시 나타났습니다.' >&2
             exit 1
           fi
       - uses: lycheeverse/lychee-action@v2.9.0
@@ -52,15 +52,10 @@ jobs:
             --exclude "https://localhost"
             "ATTRIBUTIONS.md"
             "docs/README.md"
-            "docs/en/README.md"
             "docs/projects.md"
-            "docs/en/projects.md"
             "docs/reference/**/*.md"
-            "docs/en/reference/**/*.md"
             "docs/templates/**/*.md"
-            "docs/en/templates/**/*.md"
             "docs/threads/**/*.md"
-            "docs/en/threads/**/*.md"
           fail: true
       - name: Close stale external-link failure issues
         if: success()
@@ -70,15 +65,15 @@ jobs:
         run: |
           set -euo pipefail
           gh issue list --repo "${{ github.repository }}" --state open --label automation --limit 100 --json number,title \
-            --jq '.[] | select(.title == "Scheduled external-link check failed") | .number' \
+            --jq '.[] | select(.title == "정기 외부 링크 검사 실패") | .number' \
             | while IFS= read -r issue; do
                 [ -n "$issue" ] || continue
                 gh issue close "$issue" --repo "${{ github.repository }}" \
-                  --comment "The latest scheduled link check passed, so this stale automation issue is now closed."
+                  --comment "최근 정기 링크 검사가 통과해 이 자동 이슈를 닫습니다."
               done
       - uses: peter-evans/create-issue-from-file@v6
         if: failure()
         with:
-          title: "Scheduled external-link check failed"
+          title: "정기 외부 링크 검사 실패"
           content-filepath: ./lychee/out.md
           labels: broken-link,automation

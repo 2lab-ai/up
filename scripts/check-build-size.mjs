@@ -14,8 +14,10 @@ const budgets = [
     label: "local search index",
     directory: chunksDir,
     pattern: /^@localSearchIndex.*\.js$/,
-    expected: 2,
-    raw: 610_000,
+    // One index for the single Korean locale. Korean prose and NFKD-decomposed Korean anchor ids make the
+    // raw index larger than the old Chinese one (725.5 KiB raw / 152.7 KiB gzip on 2026-09-30).
+    expected: 1,
+    raw: 800_000,
     gzip: 185_000,
   },
   {
