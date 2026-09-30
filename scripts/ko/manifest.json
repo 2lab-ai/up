@@ -5,7 +5,7 @@
     "content_license": "CC BY-NC 4.0",
     "code_license": "MIT"
   },
-  "generated_at": "2026-09-30T10:58:34.260Z",
+  "generated_at": "2026-09-30T11:53:08.603Z",
   "prompt_version": "ko-v1",
   "prompt_sha256": "92f02caf86c82a809c332a5517027c00f972f873a559ae3116d45f3b1cb7396d",
   "glossary_sha256": "c94f5052bafce23d9eddb5425ee8694dded6d01efc82e7b68eebef5662e1f8da",
@@ -526,7 +526,7 @@
     "docs/threads/part-1/2-vocabulary.md": {
       "source_lang": "zh-CN",
       "source_sha256": "2292b827622db67d7abbf1ecd8fbffe27e44b8179a60b1c0071abcebf91a9d61",
-      "output_sha256": "eadd59bc86422b36d645e4a8edd40d317c42bef9b3ce3b1dce93a763bb4a6482",
+      "output_sha256": "9d659830788bbb6f2e828ffe5759f1c11d7d078f3d7893d5f496556d1952bd30",
       "english_reference": "docs/en/threads/part-1/2-vocabulary.md",
       "translate_attempts": 1,
       "gate_defects": 0,
@@ -596,7 +596,7 @@
     "docs/threads/part-1/7-ai.md": {
       "source_lang": "zh-CN",
       "source_sha256": "156263cb65310f6220a6836522c911ad02d0002aa47194fd42f906e93a6e5d12",
-      "output_sha256": "70411dff1ddf3f1060314dfc79197ec99d2beb1713fa736e7f501974608cb2a0",
+      "output_sha256": "d1fcfee1880c03f5dc9983b3037b8e5f71b20a21c80dae6f2137c405bf19c93f",
       "english_reference": "docs/en/threads/part-1/7-ai.md",
       "translate_attempts": 2,
       "gate_defects": 0,
@@ -988,7 +988,7 @@
     "docs/threads/word-list/Common.md": {
       "source_lang": "zh-CN",
       "source_sha256": "69f5d5718fa5672a42c28155f6b6b76abb80be46198553f326934d2baa4ed276",
-      "output_sha256": "4253299e1245f74361a618da2ebced08ff677d900591ea7257eef0c71c01abb5",
+      "output_sha256": "27b4cd59d96501e9a3027629c396a90e04f4e4d905473302f4debff3e5864dc1",
       "english_reference": "docs/en/threads/word-list/Common.md",
       "translate_attempts": 1,
       "gate_defects": 0,
@@ -1058,7 +1058,7 @@
     "docs/threads/word-list/Prompt.md": {
       "source_lang": "zh-CN",
       "source_sha256": "6c5e9dd9540229f6e2835c156d91aeb75040c695eb49efcc9d9e82bd13b9ea8f",
-      "output_sha256": "48a063f49c4190f11f868ad8740a4310f6c65a7b64278a6f010be85947c55d09",
+      "output_sha256": "3b529665d56422b1083f89fe9180f473b4e936f9c6d8bfd8f4793189eb2bbdd0",
       "english_reference": "docs/en/threads/word-list/Prompt.md",
       "translate_attempts": 1,
       "gate_defects": 0,
@@ -1114,7 +1114,7 @@
     "docs/threads/word-list/VibeCoding.md": {
       "source_lang": "zh-CN",
       "source_sha256": "e91d9e8d5ecb0bb57065529cf387b3cf2bdf0f7feaa97246d533ec22bfb5283f",
-      "output_sha256": "54831c90011fdfe9a758838c36c8ccb589eba2b4f384b4dda721387c9a4fe657",
+      "output_sha256": "bf6cd385f56a6be8c63040ca52f180118f891dea2d8476b545bff69f58a65c8e",
       "english_reference": "docs/en/threads/word-list/VibeCoding.md",
       "translate_attempts": 1,
       "gate_defects": 0,

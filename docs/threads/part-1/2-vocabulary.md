@@ -211,9 +211,9 @@ AI가 잘하는 일은 상황에 맞춘 빈칸 문제 만들기, 비슷한 표�
 
 | 단어 목록 | 과제 입구 |
 | --- | --- |
-| [Common](../word-list/Common.md) | 일상 소통과 여러 주제에 걸친 작업 |
-| [Prompt](../word-list/Prompt.md) | AI 과제, 제약, 검수 언어 |
-| [Vibe Coding](../word-list/VibeCoding.md) | 에이전트 협업과 코드 리뷰 |
+| [공통](../word-list/Common.md) | 일상 소통과 여러 주제에 걸친 작업 |
+| [프롬프트](../word-list/Prompt.md) | AI 과제, 제약, 검수 언어 |
+| [바이브 코딩](../word-list/VibeCoding.md) | 에이전트 협업과 코드 리뷰 |
 | [JavaScript](../word-list/JavaScript.md) | 브라우저, 프런트엔드, 비동기 흐름 |
 | [Python](../word-list/Python.md) | 데이터, 자동화, 스크립트 |
 | [Go](../word-list/Go.md) | 서버, 동시성, 배포 |

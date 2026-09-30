@@ -1,16 +1,16 @@
 {
   "version": 1,
   "standard": "EPUB 3.3",
-  "scope": "Main manuscript, glossary, and toolkit; archive and word lists remain online-only.",
+  "scope": "본문 원고, 용어와 방법 색인, 도구 상자. 옛글 보관함과 단어 목록은 온라인에서만 제공한다.",
   "outputs": {
     "ko-KR": {
       "file": "life-level-up-guide-ko.epub",
       "language": "ko-KR",
       "chapters": 62,
       "images": 20,
-      "bytes": 2711601,
-      "sha256": "6767037163fd14e573d9c505b7f2fc36c6f4a986a066bdb44fc8ff18df750bb9",
-      "sourceSha256": "12c9204dc15c20bd9ebbccb04bd2f2033582c6cdf21562247c31b43e4d863bb7"
+      "bytes": 2709677,
+      "sha256": "dd8c9c979318b5ee14994b5c1463d5f735aff1ee270161c150393f5574f30884",
+      "sourceSha256": "e89d88f798098cb089abc1e954f3942be12058379de69def61012dc72f731fd0"
     }
   }
 }

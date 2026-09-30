@@ -97,13 +97,13 @@
 
 ## 단어 목록
 
-- [Common](docs/threads/word-list/Common.md)
+- [공통](docs/threads/word-list/Common.md)
 - [Go](docs/threads/word-list/Go.md)
 - [Java](docs/threads/word-list/Java.md)
 - [JavaScript](docs/threads/word-list/JavaScript.md)
 - [PHP](docs/threads/word-list/PHP.md)
-- [Prompt](docs/threads/word-list/Prompt.md)
+- [프롬프트](docs/threads/word-list/Prompt.md)
 - [Python](docs/threads/word-list/Python.md)
 - [Swift](docs/threads/word-list/Swift.md)
 - [Rust](docs/threads/word-list/Rust.md)
-- [Vibe Coding](docs/threads/word-list/VibeCoding.md)
+- [바이브 코딩](docs/threads/word-list/VibeCoding.md)

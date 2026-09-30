@@ -28,6 +28,17 @@ const IGNORE_DIRS = new Set([
 ]);
 // The translation pipeline (prompts, glossary, reports) is tooling, not published content.
 const IGNORE_PATHS = new Set([join(ROOT, "scripts", "ko")]);
+// Directories git ignores (.gitignore, .git/info/exclude) are local artifacts such as nested clones.
+const GIT_IGNORED_DIRS = (() => {
+  try {
+    const listed = execFileSync("git", ["ls-files", "--others", "--ignored", "--exclude-standard", "--directory", "-z"], { cwd: ROOT });
+    return new Set(
+      listed.toString("utf8").split("\0").filter((entry) => entry.endsWith("/")).map((entry) => join(ROOT, entry.slice(0, -1))),
+    );
+  } catch {
+    return new Set();
+  }
+})();
 const PUBLIC_IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const PUBLIC_ASSET_EXTENSIONS = new Set([...PUBLIC_IMAGE_EXTENSIONS, ".svg"]);
 const TEXT_SOURCE_EXTENSIONS = new Set([".md", ".mjs", ".mts", ".ts", ".css"]);
@@ -59,7 +70,7 @@ function walk(dir, extensions, output = []) {
   for (const name of readdirSync(dir)) {
     if (IGNORE_DIRS.has(name)) continue;
     const path = join(dir, name);
-    if (IGNORE_PATHS.has(path)) continue;
+    if (IGNORE_PATHS.has(path) || GIT_IGNORED_DIRS.has(path)) continue;
     const stat = statSync(path);
     if (stat.isDirectory()) walk(path, extensions, output);
     else if (extensions.has(extname(name).toLowerCase())) output.push(path);

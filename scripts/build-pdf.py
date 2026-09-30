@@ -73,6 +73,8 @@ REQUIRED_SPACING_CHARACTERS = set(" \u00a0")
 # Filled by register_fonts(): code points of the Korean body subset and of the IPA fallback subset.
 BODY_GLYPHS: dict[int, int] = {}
 ONLINE_ROOT = "https://dosi.dev/up/"
+PDF_CREATOR = "인생 레벨업 가이드 결정적 PDF 빌더"
+PDF_PRODUCER = "ReportLab PDF 라이브러리 (인생 레벨업 가이드 한국어판)"
 ATTRIBUTION_LINE = "원작: https://github.com/byoungd/up \u00b7 중국어 원문을 한국어로 옮김"
 TITLE_PAGE_TEXT = f"{ONLINE_ROOT} {ATTRIBUTION_LINE} 지음 옮김 본문 CC BY-NC 4.0 0123456789-"
 FALLBACK_GLYPHS: dict[int, int] = {}
@@ -297,7 +299,8 @@ class InvariantCanvas(canvas.Canvas):
         self.setTitle(metadata["title"])
         self.setAuthor(metadata["author"])
         self.setSubject(metadata["subject"])
-        self.setCreator("Life Level-up Guide deterministic PDF builder")
+        self.setCreator(PDF_CREATOR)
+        self.setProducer(PDF_PRODUCER)
 
 
 class BookDocTemplate(BaseDocTemplate):
@@ -312,7 +315,9 @@ class BookDocTemplate(BaseDocTemplate):
             title=edition.title,
             author=edition.author,
             subject=edition.description,
-            creator="Life Level-up Guide deterministic PDF builder",
+            creator=PDF_CREATOR,
+            producer=PDF_PRODUCER,
+            lang=edition.language,
         )
         self.edition = edition
         self.cover_path = cover_path
@@ -747,6 +752,11 @@ def inspect_pdf(edition: Edition, target: Path, source_epub_sha256: str, chapter
     metadata_values = reader.metadata or {}
     if metadata_values.get("/Title") != edition.title or metadata_values.get("/Author") != edition.author:
         raise ValueError(f"{edition.pdf_file}: metadata mismatch")
+    if metadata_values.get("/Creator") != PDF_CREATOR or metadata_values.get("/Producer") != PDF_PRODUCER:
+        raise ValueError(f"{edition.pdf_file}: creator/producer metadata mismatch")
+    document_language = str(reader.trailer["/Root"].get("/Lang", ""))
+    if document_language != edition.language:
+        raise ValueError(f"{edition.pdf_file}: document language {document_language!r} != {edition.language}")
     first_text_page = "".join(page.extract_text() or "" for page in reader.pages[1:6])
     if edition.title not in first_text_page or edition.contents not in first_text_page:
         raise ValueError(f"{edition.pdf_file}: title or contents text missing")
@@ -879,7 +889,7 @@ def manifest_for(outputs: list[dict]) -> dict:
         "version": 2,
         "format": "PDF 1.7",
         "pageSize": "6 × 9.6 in",
-        "scope": "Main manuscript, glossary, and toolkit; archive and word lists remain online-only.",
+        "scope": "본문 원고, 용어와 방법 색인, 도구 상자. 옛글 보관함과 단어 목록은 온라인에서만 제공한다.",
         "inspector": {"name": "pypdf", "version": PYPDF_VERSION},
         "outputs": {metadata["language"]: metadata for metadata in outputs},
     }

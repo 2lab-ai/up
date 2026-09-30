@@ -4,6 +4,9 @@ const page = (text, link, source = `${link.replace(/^\//, "")}.md`) => ({
   source,
 });
 
+// Word lists keep programming-language names; the general lists get Korean labels.
+const wordListLabels = { Common: "공통", Prompt: "프롬프트", VibeCoding: "바이브 코딩" };
+
 export const navigation = [
   {
     text: "시작하기",
@@ -122,7 +125,7 @@ export const navigation = [
     text: "단어 목록",
     items: [
       ...["Common", "Go", "Java", "JavaScript", "PHP", "Prompt", "Python", "Swift", "Rust", "VibeCoding"].map((name) =>
-        page(name === "VibeCoding" ? "Vibe Coding" : name, `/threads/word-list/${name}`),
+        page(wordListLabels[name] ?? name, `/threads/word-list/${name}`),
       ),
     ],
   },

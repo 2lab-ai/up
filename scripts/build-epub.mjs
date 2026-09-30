@@ -162,6 +162,9 @@ function rewriteHtmlAttributes(content, source, rewriteLink, rewriteImage) {
 function makeXhtml({ lang, title, body, epubType = "chapter" }) {
   const safeBody = body
     .replace(/<a\b[^>]*class="header-anchor"[^>]*>[\s\S]*?<\/a>/gi, "")
+    // Site-only code-block chrome: the copy button and the language label.
+    .replace(/<button\b[^>]*\bclass="copy"[^>]*>\s*<\/button>/gi, "")
+    .replace(/<span class="lang">[^<]*<\/span>/gi, "")
     .replace(/\s+tabindex=(['"])-?\d+\1/gi, "")
     .replace(/&nbsp;/g, "&#160;")
     .replace(/&ZeroWidthSpace;/g, "&#8203;")
@@ -225,6 +228,8 @@ function validateEpubRoot(epubRoot, edition, chapterRecords) {
   const xhtmlFiles = [...files].filter((file) => file.endsWith(".xhtml"));
   for (const file of xhtmlFiles) {
     const content = readFileSync(join(oebps, file), "utf8");
+    const chrome = content.match(/class="copy"|class="lang"|Copy Code|<button\b/);
+    if (chrome) throw new Error(`${edition.file}: ${file}에 사이트 전용 요소가 남아 있습니다: ${chrome[0]}`);
     for (const match of content.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
       const href = unescapeXml(match[1]);
       if (/^(?:https?:|mailto:|tel:|data:|\/\/)/i.test(href)) continue;
@@ -537,7 +542,7 @@ try {
   const manifest = `${JSON.stringify({
     version: 1,
     standard: "EPUB 3.3",
-    scope: "Main manuscript, glossary, and toolkit; archive and word lists remain online-only.",
+    scope: "본문 원고, 용어와 방법 색인, 도구 상자. 옛글 보관함과 단어 목록은 온라인에서만 제공한다.",
     outputs: Object.fromEntries(built.map(({ metadata }) => [metadata.language, metadata])),
   }, null, 2)}\n`;
 

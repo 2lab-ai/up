@@ -395,7 +395,7 @@ test("the site ships a single Korean edition", async ({ page, request }) => {
 
 test("page metadata follows the route", async ({ page }) => {
   await page.goto("./threads/part-1/2-vocabulary");
-  const canonical = `${SITE_URL}threads/part-1/2-vocabulary/`;
+  const canonical = `${SITE_URL}threads/part-1/2-vocabulary`;
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", canonical);
   await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", canonical);
   await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", "ko_KR");
@@ -577,7 +577,7 @@ test("AI resource-layer chapter has metadata and navigation", async ({ page }) =
   await page.goto("./threads/part-3/2-ai-development-and-resource-layer");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     "href",
-    `${SITE_URL}threads/part-3/2-ai-development-and-resource-layer/`,
+    `${SITE_URL}threads/part-3/2-ai-development-and-resource-layer`,
   );
   await expect(
     page.getByRole("link", { name: "AI 개발과 리소스 계층 창업", exact: true }).first(),
@@ -1128,6 +1128,8 @@ test("site chrome, footer attribution, and missing pages are Korean", async ({ p
   const footer = page.locator(".VPFooter");
   await expect(footer).toBeVisible();
   await expect(footer).toContainText("원작: 한셴카이(byoungd)의 『인생 레벨업 가이드』");
+  await expect(footer).toContainText("저작권 © 2017–현재 byoungd와 기여자");
+  await expect(footer).not.toContainText("Copyright");
   await expect(footer).toContainText("중국어 원문을 한국어로 옮김");
   await expect(footer.getByRole("link", { name: "github.com/byoungd/up" })).toHaveAttribute("href", ORIGINAL_REPOSITORY_URL);
   await expect(footer.getByRole("link", { name: "CC BY-NC 4.0" })).toHaveAttribute(
@@ -1220,6 +1222,22 @@ test("representative pages load every local image with descriptive alt text", as
       await expect.poll(() => image.evaluate((element) => element.naturalWidth)).toBeGreaterThan(0);
     }
   }
+});
+
+test("code blocks label their language and copy button in Korean", async ({ page }) => {
+  await page.goto("./templates/learning-state");
+  const labels = await page.locator(".vp-doc div[class*='language-'] > span.lang").allTextContents();
+  expect(labels.length).toBeGreaterThan(0);
+  expect(new Set(labels)).toEqual(new Set(["마크다운", "텍스트"]));
+  await expect(page.locator(".vp-doc div[class*='language-'] > button.copy").first()).toHaveAttribute("title", "코드 복사");
+});
+
+test("the home page reaches the archive index", async ({ page, request }) => {
+  await page.goto("./");
+  const archive = page.locator("main").getByRole("link", { name: "옛글 보관함", exact: true });
+  await expect(archive).toHaveAttribute("href", "./threads/archive/");
+  const response = await request.get("threads/archive/");
+  expect(response.status()).toBe(200);
 });
 
 test("keyboard focus reaches navigation", async ({ page }) => {
